@@ -1,0 +1,109 @@
+
+\documentclass[journal]{IEEEtran}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{color}
+\usepackage{url}
+\usepackage{multirow}
+
+\DeclareMathOperator{\orth}{orth}
+\IEEEoverridecommandlockouts
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+\title{A Survey Of Attribute-based Encryption Schemes}
+
+
+\author{Qxx% <-this % stops a space
+\thanks{this is thanks}
+}% <-this % stops a space
+%\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
+%\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
+
+
+
+
+
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+
+\maketitle
+
+
+\begin{abstract}
+The abstract goes here.
+\end{abstract}
+
+\begin{IEEEkeywords}
+The keywords goes here\cite{Donald:ISCA'06}.
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+\input introd.tex
+
+\input defin.tex
+
+\input analysis.tex
+
+\input  class.tex
+
+\input  applica.tex
+
+\input  extens.tex
+
+\section{Conclusion}\label{sec:conclusion}
+The conclusion goes here.
+
+
+
+
+
+
+
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%Appendix one text goes here.
+%
+%\section{}
+%Appendix two text goes here.
+%
+%\section*{Acknowledgment}
+%
+%The authors would like to thank...
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{../bib/uestc_abe}
+
+% biography section
+\begin{IEEEbiography}{aaa}
+Biography text here.
+\end{IEEEbiography}
+
+% if you will not have a photo at all:
+\begin{IEEEbiography}{bbb}
+Biography text here.
+\end{IEEEbiography}
+
+% insert where needed to balance the two columns on the last page with
+% biographies
+%\newpage
+
+\begin{IEEEbiography}{ccc}
+Biography text here.
+\end{IEEEbiography}
+
+
+\end{document}
+
