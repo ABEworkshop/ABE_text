@@ -21,10 +21,9 @@
 \title{A Survey Of Attribute-based Encryption Schemes}
 
 
-%\author{{xxx\IEEEauthorrefmark{1}}% <-this % stops a space
-%\thanks{M. Shell was with the Department
-%of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
-%GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
+\author{Qxx% <-this % stops a space
+\thanks{this is thanks}
+}% <-this % stops a space
 %\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
 %\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
 
@@ -45,7 +44,7 @@ The abstract goes here.
 \end{abstract}
 
 \begin{IEEEkeywords}
-The keywords goes here.
+The keywords goes here\cite{Donald:ISCA'06}.
 \end{IEEEkeywords}
 
 \IEEEpeerreviewmaketitle
@@ -54,11 +53,13 @@ The keywords goes here.
 
 \input defin.tex
 
-\input analysis.tex
+\input design_philosophy.tex
 
-\input  class.tex
+\input  access_control.tex
 
-\input  applica.tex
+\input  development.tex
+
+\input  compa.tex
 
 \input  extens.tex
 
@@ -68,7 +69,8 @@ The conclusion goes here.
 
 
 
-
+\section{Conclusion}\label{sec:future of ABE}
+The future goes here.
 
 
 %\appendices
@@ -93,17 +95,17 @@ Biography text here.
 \end{IEEEbiography}
 
 % if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{bbb}
+\begin{IEEEbiography}{bbb}
 Biography text here.
-\end{IEEEbiographynophoto}
+\end{IEEEbiography}
 
 % insert where needed to balance the two columns on the last page with
 % biographies
 %\newpage
 
-\begin{IEEEbiographynophoto}{ccc}
+\begin{IEEEbiography}{ccc}
 Biography text here.
-\end{IEEEbiographynophoto}
+\end{IEEEbiography}
 
 
 \end{document}
