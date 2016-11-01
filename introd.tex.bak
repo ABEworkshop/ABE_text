@@ -3,7 +3,7 @@ Attributed based encryption(ABE) play an important role in encryption scheme of 
 
 Attributed based encryption(ABE) is actually an extension of identified based encryption(IBE) and it can regard as a special IBE that multiply identities which meet a specific constraint can decrypt the ciphertext.In ABE,that constraint is just the access policy,and user can decrypt only when attributes satisfy the policy.For integrity,there is a simple division,which is only helpful on the application context and make little sense for the more heuristic research on ABE after it has formed,of ABE into ciphertext-policy attribute-Based encryption(CP-ABE) and key-policy attribute-Based encryption(KP-ABE).For CP-ABE,user keys are associated with sets of attributes,whereas ciphertexts are associated with policies,and for KP-ABE,the case is the contrary.
 
-With the development of heuristic research on ABE,more and more ABE ±‰ÃÂ 
+With the development of heuristic research on ABE,more and more ABE variants has been growing.However,there has been no integrated overview published that should not just concludes most of topics of ABE but also figure out the logical and clear clues or directions of development of ABE from pre-birth to now.\cite{IE:survey}does the survey on ABE of access control
 Introduction goes here
 main idea is why our paper is important.
 should point out the advantage of ABE
