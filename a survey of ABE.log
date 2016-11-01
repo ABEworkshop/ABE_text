@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.6)  31 OCT 2016 00:57
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.6)  2 NOV 2016 00:49
 entering extended mode
 **a*survey*of*ABE.tex
 ("D:\temp\github\ABE\ABE_text\a survey of ABE.tex"
@@ -278,7 +278,40 @@ LaTeX Font Info:    ... okay on input line 19.
 \MPnumerator=\count115
 \makeMPintoPDFobject=\count116
 \everyMPtoPDFconversion=\toks22
-) (D:\temp\github\ABE\ABE_text\introd.tex)
+) (D:\temp\github\ABE\ABE_text\introd.tex
+
+LaTeX Warning: Citation `Li Ming:tpds' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Citation `other:12' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Citation `kp:11' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Citation `policy:16' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Citation `other:20' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Citation `cp:expressive' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Citation `Feng:survey' on page 1 undefined on input line 2.
+
+
+LaTeX Warning: Citation `IE:survey' on page 1 undefined on input line 6.
+
+
+LaTeX Warning: Citation `Su:survey' on page 1 undefined on input line 7.
+
+
+LaTeX Warning: Citation `Feng:survey' on page 1 undefined on input line 8.
+
+Missing character: There is no ¡ in font ptmri7t!
+Missing character: There is no ¯ in font ptmri7t!
+) (D:\temp\github\ABE\ABE_text\clues.tex)
 (D:\temp\github\ABE\ABE_text\defin.tex)
 (D:\temp\github\ABE\ABE_text\design_philosophy.tex
 Missing character: There is no ¡ in font ptmr7t!
@@ -287,6 +320,11 @@ Missing character: There is no ¡ in font ptmr7t!
 Missing character: There is no · in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
 Missing character: There is no ¶ in font ptmr7t!
+ [1{D:/Program Files (x86)/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{
+UGBK.sfd}}
+
+
+]
 Missing character: There is no ¡ in font ptmr7t!
 Missing character: There is no ¶ in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
@@ -294,35 +332,32 @@ Missing character: There is no · in font ptmr7t!
 )
 (D:\temp\github\ABE\ABE_text\access_control.tex)
 (D:\temp\github\ABE\ABE_text\development.tex)
-Underfull \hbox (badness 2617) in paragraph at lines 23--61
+Underfull \hbox (badness 2617) in paragraph at lines 23--63
  \OT1/ptm/m/it/10 2) Ap-plied se-cu-ri-ty: [][] \OT1/ptm/m/n/10 some in-tro-duc
 -tion and col-lu-sion
  []
 
 (D:\temp\github\ABE\ABE_text\compa.tex) (D:\temp\github\ABE\ABE_text\extens.tex
-) ("D:\temp\github\ABE\ABE_text\a survey of ABE.bbl") [1{D:/Program Files (x86)
-/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
+) ("D:\temp\github\ABE\ABE_text\a survey of ABE.bbl") [2]
+("D:\temp\github\ABE\ABE_text\a survey of ABE.aux")
 
+LaTeX Warning: There were undefined references.
 
-] [2
-
-]
-("D:\temp\github\ABE\ABE_text\a survey of ABE.aux") ) 
+ ) 
 Here is how much of TeX's memory you used:
- 2933 strings out of 495354
- 44394 string characters out of 3182740
- 101567 words of memory out of 3000000
- 6070 multiletter control sequences out of 15000+200000
- 36328 words of font info for 65 fonts, out of 3000000 for 9000
+ 2946 strings out of 495354
+ 44581 string characters out of 3182740
+ 103564 words of memory out of 3000000
+ 6079 multiletter control sequences out of 15000+200000
+ 37435 words of font info for 66 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 34i,8n,28p,264b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files (x86)/CT
-EX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/Program Files (x86)/CTEX/MiKTeX/f
-onts/type1/urw/times/utmb8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1
-/urw/times/utmbi8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/time
-s/utmr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on "a survey of ABE.pdf" (2 pages, 54541 bytes).
+ 34i,8n,28p,1328b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Program Files (x86)/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/Progr
+am Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files (
+x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><D:/Program Files (x86)/CTEX
+/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fo
+nts/type1/urw/times/utmri8a.pfb>
+Output written on "a survey of ABE.pdf" (2 pages, 62305 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
