@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.6)  2 NOV 2016 11:47
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.6)  3 NOV 2016 00:33
 entering extended mode
 **a*survey*of*ABE.tex
 ("D:\temp\github\ABE\ABE_text\a survey of ABE.tex"
@@ -320,15 +320,35 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 Missing character: There is no ¡ in font ptmr7t!
 Missing character: There is no ¯ in font ptmr7t!
-)
-! I can't write on file `"a survey of ABE.pdf"'.
-Please type another file name for output: TEST
-[1{D:/Program Files (x86)/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{U
-GBK.sfd}}
+) [1{D:/Program Files (x86)/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}
+{UGBK.sfd}}
 
 
-] (D:\temp\github\ABE\ABE_text\clues.tex)
-(D:\temp\github\ABE\ABE_text\defin.tex)
+]
+(D:\temp\github\ABE\ABE_text\clues.tex
+
+LaTeX Warning: Citation `fuzz' on page 2 undefined on input line 4.
+
+
+LaTeX Warning: Citation `Yao:Id-based encryption for complex hierarchies with a
+pplications to forward security and broadcast encryption' on page 2 undefined o
+n input line 4.
+
+
+LaTeX Warning: Citation `fuzz' on page 2 undefined on input line 4.
+
+
+LaTeX Warning: Citation `Adi Shamir:How to Share a Secret' on page 2 undefined 
+on input line 4.
+
+
+LaTeX Warning: Citation `classical:KP-ABE' on page 2 undefined on input line 4.
+
+
+
+LaTeX Warning: Citation `first:CP-ABE' on page 2 undefined on input line 4.
+
+) (D:\temp\github\ABE\ABE_text\defin.tex)
 (D:\temp\github\ABE\ABE_text\design_philosophy.tex
 Missing character: There is no ¡ in font ptmr7t!
 Missing character: There is no ¶ in font ptmr7t!
@@ -358,20 +378,20 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2974 strings out of 495354
- 45049 string characters out of 3182740
+ 2978 strings out of 495354
+ 45240 string characters out of 3182740
  105564 words of memory out of 3000000
- 6093 multiletter control sequences out of 15000+200000
+ 6098 multiletter control sequences out of 15000+200000
  39134 words of font info for 74 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 34i,8n,28p,1328b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,8n,28p,1469b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files (x86)/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/Progr
 am Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program
  Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files (x8
 6)/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><D:/Program Files (x86)/CTEX/M
 iKTeX/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on TEST.pdf (3 pages, 70661 bytes).
+Output written on "a survey of ABE.pdf" (3 pages, 71649 bytes).
 PDF statistics:
  33 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
