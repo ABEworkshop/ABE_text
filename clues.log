@@ -1,0 +1,15 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.6)  3 NOV 2016 21:13
+entering extended mode
+**clues.tex
+(D:\temp\github\ABE\ABE_text\clues.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+! Undefined control sequence.
+l.1 \section
+            {clues on the development of ABE}
+? 
+! Emergency stop.
+l.1 \section
+            {clues on the development of ABE}
+End of file on the terminal!
+

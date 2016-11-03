@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.6)  3 NOV 2016 00:33
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.6)  3 NOV 2016 21:14
 entering extended mode
 **a*survey*of*ABE.tex
 ("D:\temp\github\ABE\ABE_text\a survey of ABE.tex"
@@ -369,12 +369,15 @@ Underfull \hbox (badness 2617) in paragraph at lines 23--63
  []
 
 (D:\temp\github\ABE\ABE_text\compa.tex) (D:\temp\github\ABE\ABE_text\extens.tex
-) ("D:\temp\github\ABE\ABE_text\a survey of ABE.bbl") [2] [3
+) ("D:\temp\github\ABE\ABE_text\a survey of ABE.bbl" [2]) [3
 
 ]
 ("D:\temp\github\ABE\ABE_text\a survey of ABE.aux")
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
@@ -384,14 +387,14 @@ Here is how much of TeX's memory you used:
  6098 multiletter control sequences out of 15000+200000
  39134 words of font info for 74 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 34i,8n,28p,1469b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,8n,28p,1469b,276s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files (x86)/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/Progr
 am Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program
  Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files (x8
 6)/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><D:/Program Files (x86)/CTEX/M
 iKTeX/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on "a survey of ABE.pdf" (3 pages, 71649 bytes).
+Output written on "a survey of ABE.pdf" (3 pages, 72067 bytes).
 PDF statistics:
  33 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
