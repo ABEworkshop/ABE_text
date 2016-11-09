@@ -55,13 +55,17 @@ The keywords goes here\cite{Donald:ISCA'06}.
 
 \input design_philosophy.tex
 
-\input  access_control.tex
-
-\input  development.tex
-
-\input  compa.tex
+\input state.tex
 
 \input  extens.tex
+
+\input  access_control.tex
+
+\input  related.tex
+
+\input  future.tex
+
+
 
 \section{Conclusion}\label{sec:conclusion}
 The conclusion goes here.
