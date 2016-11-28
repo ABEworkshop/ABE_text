@@ -1,0 +1,21 @@
+\section{definition}
+introduction of framework and security model.
+
+\subsection{Framework Of ABE}
+Framework Of ABE goes here.
+
+\subsection{Security Model}
+introduction of security model.
+
+\subsubsection{Random Oracle And standard model}In a random oracle model, there exists an oracle which can be thought as a box. When taking a binary string as input, it will return a binary string as output. And everyone can not know or predict the internal workings of the oracle. A?random oracle?is an?oracle that is a theoretical?black box. When a query is performed, it responds?with a random?response which is chosen?uniformly?from its output domain. In detail, a random oracle can be thought as a perfect hash function:
+  1.For the same input, the output of the function must be the same.
+  2.The output of the function can be calculated in polynomial time.
+  3.The function is a one-way function.
+  3.The output of the function is uniformly distributed in the value of space and collisionless.
+The proof under this model needs to make a assumption that the adversary can not exploit the weakness of the hash function. In reality, however, the hash function is deterministic and its output can not be completely random and evenly distributed. Therefore, some schemes are not safe after using a real hash function instead of random oracle. Nevertheless, the security proof based on the random oracle model can meet the security requirements except for the hash function. Comparing with the standard model, the security proof based on random oracle model is easier to realize and the schemes based random oracle model usually have higher efficiency. So, most of encryption?schemes include attribute based encryption adopt random oracle model to construct their schemes.
+
+In a standard model, the adversary is only limited by amount of time and computational power available. In other words, the formal security proof in the standard only relies on the difficulty provided by the one-way trap function  (standard number theory hypothesis, such as the calculation of discrete logarithm)  and the irreversibility of a one-way hash function, and some other properties of the hash function that can be implemented in the real world. Comparing to the random oracle model, standard model has higher security, so there are many researchers researching on the encryption schemes based on the standard model.In 1998, Cramer and Shoup [?] proposed the first efficient public key cryptography scheme that can be proved to be secure under the standard model. And the difficulty assumption in this paper is the Decisional Diffie-Hellman Assumption. In the field of attribute-based encryption research, there also exits some schemes based on the standard model[?][?].
+
+\subsubsection{Select Security And Full Security}Select Security And Full Security goes here.
+
+\subsubsection{CPA and CCA}CPA and CCA goes here.
