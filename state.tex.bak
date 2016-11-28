@@ -5,23 +5,25 @@ Attribute-based encryption is firstly mentioned in\cite{fuzz},this idea originat
 \subsection{efficiency}
 1:Survey on original ABE,and some efficient technology such us constant ciphertext and constant cost in decryption.
 
-2:you describe these articles in time sequence. 
+2:You describe these articles in time sequence. 
 
 3:And also need a table to compare efficiency among articles mentioned by you.
 
 \subsection{security}
-1:survey on original ABE,and some articles,which have promoted in security,based on original ABE.
+1:Survey on original ABE,and some articles,which have promoted in security,based on original ABE.
 
-2:you describe these articles in time sequence. 
+2:You describe these articles in time sequence. 
 
 3:Also need a table to compare security among articles mentioned by you.
  
 \subsection{function}
-1:survey on original ABE,and some articles,which have promoted in function,based on original ABE.
+1:Survey on original ABE,and some articles,which have promoted in function,based on original ABE.
 
-2:
+2:You describe these articles in time sequence.
 
-\subsection{clues on the development of ABE}
+3:Also need a table to compare security among articles mentioned by you if possible.
+
+%\subsection{clues on the development of ABE}
 %The surveys above clearly display the development of ABE due to the three main clues obtained.The reveal of how we find out more detail clues is shown in this subsection.In brief,focus on the purposes and process of all or most present ABE schemes.The detailed procedures are explained as followings.Firstly,pay our attention to the all parts of process on original ABE schemes i.e\cite{classical:KP-ABE} and \cite{first:CP-ABE},and draw a picture containing three parts:components of specific scheme,participants and operations of process of these schemes,shown in Fig.~\ref{fig:original_clues}.We note that operations are actually not independent to components and participants,this division is just for discerning more clearly,and that mentioned clues above don't conclude access structure,so this method can also be used in other public-key encryption schemes.Secondly,we ligature each two parts which there are some responding relationships between,then the lines are labeled with relationships.For example,there is an "authorization" between "CA" and "user",so we line this two parts and label with "authorization".After finished lines of each existing relations,a new issue of ABE is added in this kind figure in the way concentrate attention to the purpose and the process.For example,constant ciphertext issue of ABE can be add as Fig.~\ref{fig:cons_ciphertext_added_clues},and proxy re-encryption ABE can be added as Fig.~\ref{fig:proxy_added_clues}.Finally,after surveyed the most issues of ABE,we obtain the Fig.~\ref{fig:final_clues}.All lines in Fig.~\ref{fig:final_clues} is called as detailed clues,We can clearly view the motivations or main process of present ABE schemes using our clues,so that a overview of ABE tend to be crystallized and visual.Besides,researchers also can get some possible directions of exploration of ABE though using this kind way to line parts which haven't lined in Fig.~\ref{fig:final_clues}.For example,we can construct called common constraint ABE(CCABE) through lining between plaintext and encryption.In CCABE,universal attributes is defined by some trusted authority.These attributes are divided into some groups,and each group contains arbitrary number attributes.Then according to the distributed attribute group every data owner holds,every owner in this system can define its own access policy which it wants user's attributes to satisfy in order to decrypt.And only when users attributes satisfy all or some other rules(such us threshold policy)from data owners' access policy.
 %%\begin{figure}
 %%  \centering

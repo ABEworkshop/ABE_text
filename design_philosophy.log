@@ -1,0 +1,25 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.6)  24 NOV 2016 04:04
+entering extended mode
+**D:/temp/github/ABE/ABE_text/design_philosophy.tex
+(D:/temp/github/ABE/ABE_text/design_philosophy.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+! Undefined control sequence.
+l.1 \section
+            {design philosophy of classical ABE scheme}
+? 
+! Emergency stop.
+l.1 \section
+            {design philosophy of classical ABE scheme}
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 495354
+ 221 string characters out of 3182740
+ 44842 words of memory out of 3000000
+ 3276 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 5i,0n,1p,104b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

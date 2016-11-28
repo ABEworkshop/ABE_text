@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.7.6)  19 NOV 2016 22:26
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2016.7.6)  27 NOV 2016 01:17
 entering extended mode
-**a*survey*of*ABE.tex
-("D:\temp\github\ABE\ABE_text\a survey of ABE.tex"
+**a_survey_of_ABE.tex
+(D:\temp\github\ABE\ABE_text\a_survey_of_ABE.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
 (D:\temp\github\ABE\ABE_text\IEEEtran.cls
@@ -21,7 +21,7 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
--- Using PDF output.
+-- Using DVI output.
 \@IEEEnormalsizeunitybaselineskip=\dimen105
 -- This is a 10 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen106
@@ -195,18 +195,10 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: dvips.def on input line 91.
 
-("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-("D:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
-)
-("D:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count106
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
@@ -222,10 +214,10 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigbottomskip=\skip49
 \subfigcapmargin=\dimen140
 \subfiglabelskip=\skip50
-\c@subfigure=\count107
-\c@lofdepth=\count108
-\c@subtable=\count109
-\c@lotdepth=\count110
+\c@subfigure=\count106
+\c@lofdepth=\count107
+\c@subtable=\count108
+\c@lotdepth=\count109
 
 ****************************************
 * Local config file subfigure.cfg used *
@@ -240,8 +232,11 @@ Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
-)
+Package color Info: Driver file: dvips.def on input line 130.
+
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\dvipsnam.def"
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
 ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
@@ -278,195 +273,233 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \qedsymbol=\toks32
 \thm@topsepadd=\skip57
 Package ntheorem Info: Option `thmmarks' loaded on input line 1066.
-\c@endNonectr=\count111
-\c@currNonectr=\count112
+\c@endNonectr=\count110
+\c@currNonectr=\count111
 \mysavskip=\skip58
 Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
  line 1066.
 \thm@amstmpdepth=\dimen144
 \tagwidth=\dimen145
 )
-** ATTENTION: Overriding command lockouts (line 17).
-("D:\temp\github\ABE\ABE_text\a survey of ABE.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen146
+\lightrulewidth=\dimen147
+\cmidrulewidth=\dimen148
+\belowrulesep=\dimen149
+\belowbottomsep=\dimen150
+\aboverulesep=\dimen151
+\abovetopsep=\dimen152
+\cmidrulesep=\dimen153
+\cmidrulekern=\dimen154
+\defaultaddspace=\dimen155
+\@cmidla=\count112
+\@cmidlb=\count113
+\@aboverulesep=\dimen156
+\@belowrulesep=\dimen157
+\@thisruleclass=\count114
+\@lastruleclass=\count115
+\@thisrulewidth=\dimen158
+)
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\threeparttable\threeparttable.st
+y"
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box30
+)
+** ATTENTION: Overriding command lockouts (line 22).
+(D:\temp\github\ABE\ABE_text\a_survey_of_ABE.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 -- Lines per column: 58 (exact).
-("D:\Program Files (x86)\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
-\scratchdimen=\dimen146
-\scratchbox=\box30
-\nofMPsegments=\count114
-\nofMParguments=\count115
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count116
-\MPscratchDim=\dimen147
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
-\everyMPtoPDFconversion=\toks34
-) (D:\temp\github\ABE\ABE_text\introd.tex)
-(D:\temp\github\ABE\ABE_text\defin.tex)
-(D:\temp\github\ABE\ABE_text\design_philosophy.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+(D:\temp\github\ABE\ABE_text\introd.tex) (D:\temp\github\ABE\ABE_text\defin.tex
+) (D:\temp\github\ABE\ABE_text\design_philosophy.tex
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 
 ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 
-LaTeX Warning: Citation `first_KP_ABE' on page 1 undefined on input line 40.
+LaTeX Warning: Citation `first_KP_ABE' on page 1 undefined on input line 91.
 
+\c@currdefnctr=\count116
+\c@enddefnctr=\count117
+\c@defn=\count118
 
-LaTeX Warning: Citation `A. Beimel. Secure Schemes for Secret Sharing and Key D
-istribution. PhD thesis' on page 1 undefined on input line 40.
-
-
-LaTeX Warning: Citation `Israel Institute of Technology' on page 1 undefined on
- input line 40.
-
-
-LaTeX Warning: Citation `Technion' on page 1 undefined on input line 40.
-
-
-LaTeX Warning: Citation `Haifa' on page 1 undefined on input line 40.
-
-
-LaTeX Warning: Citation `Israel' on page 1 undefined on input line 40.
-
-
-LaTeX Warning: Citation `1996.' on page 1 undefined on input line 40.
-
-\c@currdefnctr=\count119
-\c@enddefnctr=\count120
-\c@defn=\count121
-
-LaTeX Warning: Citation `Beimel' on page 1 undefined on input line 50.
+LaTeX Warning: Citation `Beimel' on page 1 undefined on input line 99.
 
 
 LaTeX Warning: Citation `A.: Secure Schemes for Secret Sharing and Key Distribu
-tion. PhD thesis' on page 1 undefined on input line 50.
+tion. PhD thesis' on page 1 undefined on input line 99.
 
 
 LaTeX Warning: Citation `Israel Institute of Technology' on page 1 undefined on
- input line 50.
+ input line 99.
 
 
-LaTeX Warning: Citation `Technion' on page 1 undefined on input line 50.
+LaTeX Warning: Citation `Technion' on page 1 undefined on input line 99.
 
 
-LaTeX Warning: Citation `Haifa' on page 1 undefined on input line 50.
+LaTeX Warning: Citation `Haifa' on page 1 undefined on input line 99.
 
 
-LaTeX Warning: Citation `Israel (1996)' on page 1 undefined on input line 50.
+LaTeX Warning: Citation `Israel (1996)' on page 1 undefined on input line 99.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
-[]\OT1/ptm/m/it/10 access
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+[][]\OT1/ptm/m/it/10 access
  []
 
 
 LaTeX Warning: Citation `classical Non-Monotonic' on page 1 undefined on input 
-line 58.
+line 107.
 
 
-LaTeX Warning: Citation `xiaohui:PRE' on page 1 undefined on input line 61.
-
-
-LaTeX Warning: Citation `classical Non-Monotonic' on page 1 undefined on input 
-line 62.
+LaTeX Warning: Citation `xiaohui:PRE' on page 1 undefined on input line 110.
 
 
 LaTeX Warning: Citation `classical Non-Monotonic' on page 1 undefined on input 
-line 64.
+line 111.
 
-[1{D:/Program Files (x86)/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{U
-GBK.sfd}}
+
+LaTeX Warning: Citation `classical Non-Monotonic' on page 1 undefined on input 
+line 113.
+
+[1
 
 
 ]
+
+LaTeX Warning: Citation `how to share' on page 2 undefined on input line 189.
+
+[2]
+
+LaTeX Warning: Citation `fist-kp' on page 3 undefined on input line 194.
+
+
+LaTeX Warning: Citation `Ibraimi' on page 3 undefined on input line 194.
+
+
+LaTeX Warning: Citation `Luan:Efficient and provable secure ciphertext-policy a
+ttribute-based encryption schemes' on page 3 undefined on input line 194.
+
+
+LaTeX Warning: Citation `Chatterjee' on page 3 undefined on input line 194.
+
+
+LaTeX Warning: Citation `Santanu:An effective ECCbased user access control sche
+me with attributebased encryption for wireless sensor networks' on page 3 undef
+ined on input line 194.
+
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ú in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--237
+[][]\OT1/ptm/m/n/10 Then, the struc-ture part choos-es ran-dom-ly
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 234--237
+$\OML/cmm/m/it/10 r[]; [] ; r[]; r[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Z[]$\O
+T1/ptm/m/n/10 , where the $\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 + \OML/cmm/m/it/1
+0 q$ \OT1/ptm/m/n/10 val-ues
+ []
+
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no ¯ in font ptmr7t!
+[3]
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ¯ in font cmr10!
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ¯ in font cmr10!
+
+
+LaTeX Warning: Citation `LSSS' on page 4 undefined on input line 353.
+
+
+LaTeX Warning: Citation `span' on page 4 undefined on input line 356.
+
+
+LaTeX Warning: Citation `span' on page 4 undefined on input line 358.
+
+
+LaTeX Warning: Citation `first_KP' on page 4 undefined on input line 359.
+
+
+LaTeX Warning: Citation `classical Non-Monotonic' on page 4 undefined on input 
+line 371.
+
 Missing character: There is no ¡ in font ptmr7t!
 Missing character: There is no ¶ in font ptmr7t!
 ) (D:\temp\github\ABE\ABE_text\state.tex
 
-LaTeX Warning: Citation `fuzz' on page 2 undefined on input line 4.
+LaTeX Warning: Citation `fuzz' on page 4 undefined on input line 4.
 
 
 LaTeX Warning: Citation `Yao:Id-based encryption for complex hierarchies with a
-pplications to forward security and broadcast encryption' on page 2 undefined o
+pplications to forward security and broadcast encryption' on page 4 undefined o
 n input line 4.
 
 
-LaTeX Warning: Citation `fuzz' on page 2 undefined on input line 4.
+LaTeX Warning: Citation `fuzz' on page 4 undefined on input line 4.
 
 
-LaTeX Warning: Citation `Adi Shamir:How to Share a Secret' on page 2 undefined 
+LaTeX Warning: Citation `Adi Shamir:How to Share a Secret' on page 4 undefined 
 on input line 4.
 
 
-LaTeX Warning: Citation `classical:KP-ABE' on page 2 undefined on input line 4.
+LaTeX Warning: Citation `classical:KP-ABE' on page 4 undefined on input line 4.
 
 
 
-LaTeX Warning: Citation `first:CP-ABE' on page 2 undefined on input line 4.
+LaTeX Warning: Citation `first:CP-ABE' on page 4 undefined on input line 4.
 
-) (D:\temp\github\ABE\ABE_text\extens.tex)
+[4]) (D:\temp\github\ABE\ABE_text\extens.tex)
 (D:\temp\github\ABE\ABE_text\related.tex
 
-LaTeX Warning: Citation `IE:survey' on page 2 undefined on input line 6.
+LaTeX Warning: Citation `IE:survey' on page 5 undefined on input line 6.
 
 
-LaTeX Warning: Citation `Su:survey' on page 2 undefined on input line 11.
+LaTeX Warning: Citation `Su:survey' on page 5 undefined on input line 11.
 
 
-LaTeX Warning: Citation `Feng:survey' on page 2 undefined on input line 14.
+LaTeX Warning: Citation `Feng:survey' on page 5 undefined on input line 14.
 
 ) (D:\temp\github\ABE\ABE_text\future.tex)
-("D:\temp\github\ABE\ABE_text\a survey of ABE.bbl" [2])
+(D:\temp\github\ABE\ABE_text\a_survey_of_ABE.bbl)
 \tf@thm=\write3
- [3
-
-]
-("D:\temp\github\ABE\ABE_text\a survey of ABE.aux")
+ [5]
+(D:\temp\github\ABE\ABE_text\a_survey_of_ABE.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3463 strings out of 495354
- 51023 string characters out of 3182740
- 112368 words of memory out of 3000000
- 6575 multiletter control sequences out of 15000+200000
- 39134 words of font info for 74 fonts, out of 3000000 for 9000
+ 3174 strings out of 495355
+ 47452 string characters out of 3182763
+ 109286 words of memory out of 3000000
+ 6286 multiletter control sequences out of 15000+200000
+ 33558 words of font info for 85 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 34i,8n,30p,2574b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files (x86)/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/Progr
-am Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Progra
-m Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program 
-Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Fi
-les (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Fil
-es (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Program
- Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files (x8
-6)/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><D:/Program Files (x86)/CTEX/M
-iKTeX/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/font
-s/type1/urw/times/utmri8a.pfb>
-Output written on "a survey of ABE.pdf" (3 pages, 100889 bytes).
-PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 32i,13n,30p,2574b,243s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+Output written on a_survey_of_ABE.dvi (5 pages, 46448 bytes).

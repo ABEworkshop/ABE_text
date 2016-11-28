@@ -1,0 +1,78 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: a_survey_of_ABE.aux
+White space in argument---line 5 of file a_survey_of_ABE.aux
+ : \citation{A.:
+ :               Secure Schemes for Secret Sharing and Key Distribution. PhD thesis}
+I'm skipping whatever remains of this command
+White space in argument---line 6 of file a_survey_of_ABE.aux
+ : \citation{Israel
+ :                  Institute of Technology}
+I'm skipping whatever remains of this command
+White space in argument---line 9 of file a_survey_of_ABE.aux
+ : \citation{Israel
+ :                  (1996)}
+I'm skipping whatever remains of this command
+White space in argument---line 10 of file a_survey_of_ABE.aux
+ : \citation{classical
+ :                     Non-Monotonic}
+I'm skipping whatever remains of this command
+White space in argument---line 12 of file a_survey_of_ABE.aux
+ : \citation{classical
+ :                     Non-Monotonic}
+I'm skipping whatever remains of this command
+White space in argument---line 13 of file a_survey_of_ABE.aux
+ : \citation{classical
+ :                     Non-Monotonic}
+I'm skipping whatever remains of this command
+White space in argument---line 25 of file a_survey_of_ABE.aux
+ : \citation{how
+ :               to share}
+I'm skipping whatever remains of this command
+White space in argument---line 31 of file a_survey_of_ABE.aux
+ : \citation{Luan:Efficient
+ :                          and provable secure ciphertext-policy attribute-based encryption schemes}
+I'm skipping whatever remains of this command
+White space in argument---line 33 of file a_survey_of_ABE.aux
+ : \citation{Santanu:An
+ :                      effective ECCbased user access control scheme with attributebased encryption for wireless sensor networks}
+I'm skipping whatever remains of this command
+White space in argument---line 38 of file a_survey_of_ABE.aux
+ : \citation{classical
+ :                     Non-Monotonic}
+I'm skipping whatever remains of this command
+White space in argument---line 40 of file a_survey_of_ABE.aux
+ : \citation{Yao:Id-based
+ :                        encryption for complex hierarchies with applications to forward security and broadcast encryption}
+I'm skipping whatever remains of this command
+White space in argument---line 42 of file a_survey_of_ABE.aux
+ : \citation{Adi
+ :               Shamir:How to Share a Secret}
+I'm skipping whatever remains of this command
+The style file: IEEEtran.bst
+Database file #1: ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 53 of file ../bib/uestc_abe.bib
+ : @article{Li 
+ :             Ming:tpds,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "first_KP_ABE"
+Warning--I didn't find a database entry for "Beimel"
+Warning--I didn't find a database entry for "Technion"
+Warning--I didn't find a database entry for "Haifa"
+Warning--I didn't find a database entry for "xiaohui:PRE"
+Warning--I didn't find a database entry for "fist-kp"
+Warning--I didn't find a database entry for "Ibraimi"
+Warning--I didn't find a database entry for "Chatterjee"
+Warning--I didn't find a database entry for "LSSS"
+Warning--I didn't find a database entry for "span"
+Warning--I didn't find a database entry for "first_KP"
+Warning--I didn't find a database entry for "fuzz"
+Warning--I didn't find a database entry for "classical:KP-ABE"
+Warning--I didn't find a database entry for "first:CP-ABE"
+Warning--I didn't find a database entry for "IE:survey"
+Warning--I didn't find a database entry for "Su:survey"
+Warning--I didn't find a database entry for "Feng:survey"
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+(There were 13 error messages)
