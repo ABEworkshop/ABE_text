@@ -2,11 +2,11 @@
 some introduction goes here.
 
 \subsection{Access Control}
-As mentioned in introduction, access control and attribute as object of authorization are most essential feature of ABE.
+As mentioned in introduction, "attribute" and "access control" are most essential difference of ABE scheme from other schemes.
 Firstly, the least fineness which still has the function of object of authorization in ABE turn into "attribute",
-instead of "identity" in IBE. 
+instead of "identity" in IBE.
 We claim that access control is that if and only if attributes satisfy the access policy, the user get the permission to decrypt and will decrypt successfully.
-In addition, attributes the participant own are usually collected in a set called attribute set. 
+In addition, attributes the participant own are usually collected in a set called attribute set.
 Moreover, those attribute sets that satisfy specific access policy is called authorized attribute set.
 
 %just as molecule
@@ -64,22 +64,22 @@ $X$ &the independent variable of polynomials\\
 
 
 
-In order to specifically express the statement "attributes satisfy the policy", 
-intuitionally, we can enumerate all situations, 
-and the access structure $\mathbb{A}$ defined as the collection of all authorized attribute sets. 
-Therefore, the statement above can be interpreted as that an authorized attribute set belongs to the set $\mathbb{A}$. 
+In order to specifically express the statement "attributes satisfy the policy",
+intuitionally, we can enumerate all situations,
+and the access structure $\mathbb{A}$ defined as the collection of all authorized attribute sets.
+Therefore, the statement above can be interpreted as that an authorized attribute set belongs to the set $\mathbb{A}$.
 %which trends to be a specifical interpretation of the statement, ,
 we call this expression as \emph{enumeration}.
-As far as the easier comprehension of access control and access structure, \emph{enumeration} performs well, 
-but obviously this expression is not brief at all. 
-Then, Boolean Formula is thought of. 
+As far as the easier comprehension of access control and access structure, \emph{enumeration} performs well,
+but obviously this expression is not brief at all.
+Then, Boolean Formula is thought of.
 In Boolean Formula, the several relations implied in access structure among attributes are pointed out directly.
-Those relations contain threshold, \emph{AND}, \emph{OR} and \emph{NOT}. 
-Many explorations on how to realize Boolean Formula in specific schemes have been done since the time of birth of ABE, 
+Those relations contain threshold, \emph{AND}, \emph{OR} and \emph{NOT}.
+Many explorations on how to realize Boolean Formula in specific schemes have been done since the time of birth of ABE,
 and so far the \emph{access tree} and \emph{circuits} have been accepted as the solution.
 More consideration that whether there is a black-box way to achieve access control is made by researches.
-In this way, inputs are associated with attributes, 
-while output is the result that policy is satisfied or not. 
+In this way, inputs are associated with attributes,
+while output is the result that policy is satisfied or not.
 i.e.the way pays little attention to the concrete relationship among attributes.
 The Boolean Function, $f$: $\{1,0\}^{n} \longrightarrow(0,1)$ , is recalled as theory model of this method.
 The input of the Boolean Function is a n-dimension vector,

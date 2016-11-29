@@ -3,12 +3,19 @@ some introduction goes here.
 
 \subsection{Access Control}
 As mentioned in introduction, "attribute" and "access control" are most essential difference of ABE scheme from other schemes.
-Firstly, the least fineness which still has the function of object of authorization in ABE turn into "attribute",
-instead of "identity" in IBE.
-We claim that access control is that if and only if attributes satisfy the access policy, the user get the permission to decrypt and will decrypt successfully.
-In addition, attributes the participant own are usually collected in a set called attribute set.
-Moreover, those attribute sets that satisfy specific access policy is called authorized attribute set.
+Before discuss "attribute" and "access control", we first introduce a new notion, authorization. 
+The authorization informally represent the process of obtaining the permission to decrypt by users. 
+Based above, we claim that "access control" is that if and only if some objects from user satisfy some specific rule from data owner, the user can be authorized.
+When access control occurs to ABE, the least fineness which still has the function of objects on authorization turns into "attribute", instead of "identity" in IBE. 
+In addition, in ABE, specific rule mentioned above means access policy or more concrete access structure which will be detailedly  discussed in our next.
+Therefore, the prerequisite of authorization can be explained as "attributes satisfy access policy". 
 
+
+On convention and also for convenience, attributes a participant owns are collected in a set called attribute set. 
+Moreover, the attribute set which satisfies specific access policy is called authorized attribute set,$\gamma$, shown on Table ~\ref{tab:notions}. 
+However, due to the fact that data owners incline to more efficient, flexible and practical way in access control, 
+there are various expressions on access policy in ABE. 
+We will survey on three main expressions in most present ABE schemes. 
 %just as molecule
 %In the beginning of ABE schemes, each attribute only have two state that users have or not have one,
 %and more states can be concluded in rear schemes.
