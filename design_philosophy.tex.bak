@@ -1,14 +1,24 @@
 \section{design philosophy of classical ABE scheme}
 some introduction goes here.
 
-\subsection{Access Control}
-As mentioned in introduction, "attribute" and "access control" are most essential difference of ABE scheme from other schemes.
-Firstly, the least fineness which still has the function of object of authorization in ABE turn into "attribute",
-instead of "identity" in IBE.
-We claim that access control is that if and only if attributes satisfy the access policy, the user get the permission to decrypt and will decrypt successfully.
-In addition, attributes the participant own are usually collected in a set called attribute set.
-Moreover, those attribute sets that satisfy specific access policy is called authorized attribute set.
+\subsection{Access Control (by Lei Xu)}
+As mentioned in introduction, ``attribute" and ``access control" are most essential difference of ABE scheme from other schemes.
+Before our formal discuss, we firstly introduce a new notion, authorization.
+Informally, the authorization signifies the process of obtaining the permission to decrypt.
+Then, we claim that ``access control" is that if and only if some objects from user satisfy a certain rule from data owner,
+the user can be authorized.
+On the one hand, ontrasted with ``identity" in IBE,
+``attribute" in ABE is the least fineness which still has the function of objects on authorization.
+On the other hand, the rule mentioned above means access policy or access structure,
+which will be surveyed below in detail.
+Based above,
+the prerequisite of authorization in ABE can be explained as ``attributes satisfy access structure ( or access policy)",
+as many ABE schemes state \cite{Cheung:CCS'07}\cite{Guojun:CCS'10}\cite{Zhibin:CCS'10}\cite{Hui:TDSC'15}\cite{Tran:TIFS'16}.
 
+For convenience, attributes the participant owns are usually collected in a set called attribute set.
+Moreover, the attribute set which satisfies specific access policy is called authorized attribute set.
+As for access policy, however, there are various expressions.
+We will survey on three main expressions in most present ABE schemes.
 %just as molecule
 %In the beginning of ABE schemes, each attribute only have two state that users have or not have one,
 %and more states can be concluded in rear schemes.
@@ -17,16 +27,16 @@ Moreover, those attribute sets that satisfy specific access policy is called aut
 %
 %Then, the "access control" is just that access policy mentioned above.
 
-
-Before our survey, the \emph{secret sharing} in access control should be firstly introduced.
+Before our survey, the conception, secret sharing, should be firstly introduced.
 To put it simply, secret sharing in ABE schemes is the operation that
-information distributed amongst attributes of each authorized attribute set achieve being reconstructed,
-while each or many but not all attributes in an authorized set(suppose these attributes can not be a collection of another authorized set) are of no use on their own.
-We can find that achieving access control is just for the purpose realizing secret share in all concrete ABE schemes,
-and detailedly obtaining the secret value, usually $s$, or an implicit expression on secret value.
-After acquire $s$ in certain form, user can decrypt successful.
-For the reason that the ABE syntax has been provided, now the discusses here is just up to gain of secret value $s$.
-Additionally, we denote several common notions in our three expressions as shown on Table ~\ref{tab:notions}.
+information distributed amongst attributes in each authorized attribute set achieve being reconstructed,
+while each or many but not all attributes in an authorized set (suppose these attributes can not be a collection of another authorized set) are of no use on their own.
+It is easy to find that achieving access control is just for the purpose realizing secret share in all ABE schemes,
+and more concretely obtaining the secret value, usually $s$, or an implicit expression on secret value.
+After acquiring $s$ in certain form, user can decrypt successful.
+For example, sometimes $A^{B\cdot s}$ is enough for decryption.
+Due to the fact that the ABE syntax has been provided, the discusses here is just up to gain of secret value $s$.
+For a clear statement, we also list several common notions as shown on Table~\ref{tab:notions}.
 \begin{table*}[t]
 \centering  % 表居中
 \caption{several common notions}
@@ -39,13 +49,13 @@ Additionally, we denote several common notions in our three expressions as shown
 Notions&Descriptions\\\hline
 $p$&the order of prime group\\\hline
 
-\multirow{2}{*}{$P=\{P_1,P_2\cdots P_u\}$} & $P_j, j\in{1,2\cdots u}$, denotes $j-th$ attribute as a unique number defined by system as a selected randomly number\\
+\multirow{2}{*}{$P=\{P_1,P_2\cdots P_u\}$} & $P_j, j\in{1,2\cdots u}$, denotes a selected random and unique number associated with the $j-th$ attribute\\
 
-&P denotes the set of $u$ numbers corresponding all u attributes \\\hline
+&P denotes the set of $u$ numbers corresponding u attributes appearing access structure\\\hline
 
-$\gamma$ &authorized set that can be used to decrypt successfully \\\hline
+$\gamma$ &authorized attribute set \\\hline
 
-$\mathbb{A}$ &access structure in \emph{enumeration}\tnote{1} \\\hline
+$\mathbb{A}$ &access structure \tnote{1} \\\hline
 
 $s$&the secret to share \\\hline
 
@@ -55,66 +65,75 @@ $X$ &the independent variable of polynomials\\
 \begin{tablenotes}
         \footnotesize
         \item[1] As our discuss above, access control has various forms in expression, so does access structure.
-        we let $\mathbb{A}$ be the substance of access structure for all expressions because of briefer formulation and easier comprehension of it. Also we will point out the correspondence between $\mathbb{A}$ and other forms blow.
+        we let $\mathbb{A}$ be the substance of access structure for all expressions because of briefer formulation and easier comprehension of it. Also we will point out the consistency between $\mathbb{A}$ and other format of access structure
       \end{tablenotes}
 
 %\label{tab:notions}
 \end{table*}
 
-
-
-
-In order to specifically express the statement "attributes satisfy the policy",
-intuitionally, we can enumerate all situations,
-and the access structure $\mathbb{A}$ defined as the collection of all authorized attribute sets.
+To put the statement ``attributes satisfy access structure ( or access policy)" into practice,
+Firstly, we can intuitionally enumerate authorized attribute sets,
+then the access structure $\mathbb{A}$ can be denoted as the collection of these sets.
 Therefore, the statement above can be interpreted as that an authorized attribute set belongs to the set $\mathbb{A}$.
 %which trends to be a specifical interpretation of the statement, ,
-we call this expression as \emph{enumeration}.
-As far as the easier comprehension of access control and access structure, \emph{enumeration} performs well,
+We call this expression as \emph{enumeration}.
+As far as the easier comprehension of access structure as well as access control, \emph{enumeration} performs well,
 but obviously this expression is not brief at all.
-Then, Boolean Formula is thought of.
-In Boolean Formula, the several relations implied in access structure among attributes are pointed out directly.
-Those relations contain threshold, \emph{AND}, \emph{OR} and \emph{NOT}.
-Many explorations on how to realize Boolean Formula in specific schemes have been done since the time of birth of ABE,
-and so far the \emph{access tree} and \emph{circuits} have been accepted as the solution.
+
+Then, new methods to express access structure are proposed by considering boolean formula,
+because boolean formula can directly point out the relations among attributes in access structure.
+These relations contain threshold, \emph{AND}, \emph{OR} and \emph{NOT}.
+In fact, explorations on how to realize Boolean Formula in ABE schemes have been made since the time of birth of ABE \cite{Goyal:CCS'06}\cite{Ostrovsky:CCS'07}\cite{Sanjam:CRYPTO'2013},
+and so far the \emph{access tree} and \emph{circuits} have been accepted as the solution \cite{Goyal:CCS'06} \cite{Sanjam:CRYPTO'2013}.
+
 More consideration that whether there is a black-box way to achieve access control is made by researches.
 In this way, inputs are associated with attributes,
-while output is the result that policy is satisfied or not.
-i.e.the way pays little attention to the concrete relationship among attributes.
-The Boolean Function, $f$: $\{1,0\}^{n} \longrightarrow(0,1)$ , is recalled as theory model of this method.
-The input of the Boolean Function is a n-dimension vector,
-and every dimension is a Boolean variable with the value of "1" or "0".
-In ABE context, each value of Boolean variable from input depends on whether user hold corresponding attribute.
-Then the output is also a boolean variable with the values of "1" or "0".
-Analogously, the value depends on whether the attributes of user set satisfy the access structure.
-As for how to realize Boolean Function in specific ABE,
-\cite{first_KP_ABE} utilized the linear secret-sharing scheme(LSSS) to address general monotone access structure.
+while output is the result that the policy is satisfied or not,
+which means that the way pays little attention to the concrete relationship among attributes.
+The boolean function, $f$: $\{1,0\}^{n} \longrightarrow(0,1)$, is as theory model of this method.
+The input of the boolean function is a n-dimension vector,
+and each dimension is a boolean variable with the value of ``1" or ``0".
+In ABE context, each value of boolean variable from input depends on whether user possess corresponding attribute.
+Then the output is also a boolean variable with the values of ``1" or ``0".
+Analogously, the value of output depends on whether the attributes of user set satisfy the access structure.
+Linear secret-sharing scheme(LSSS) is used to realize Boolean Function in practical ABE \cite{Waters:PKC'11}.
 
-Monotonicity of access structure and LSSS are introduced in our below.
-The \emph{access tree} and \emph{circuits} mentioned above are also surveyed in this subsection.
+In addition, monotonicity of access structure should be taken into account, and it will be discuss in our next.
+\emph{access tree}, \emph{circuits} and LSSS, three main expressions mentioned above are also surveyed in this subsection.
 \subsubsection{Monotonicity}
 Monotonicity is defined as follows:
 
-\newtheorem{defn}{Definition}
-\begin{defn}[Monotonicity\cite{Beimel, A.: Secure Schemes for Secret Sharing and Key Distribution. PhD thesis,Israel Institute of Technology, Technion, Haifa, Israel (1996)}]
+\newtheorem{Monotonicity}[ABE]{Definition}
+\begin{Monotonicity}[Monotonicity\cite{Beimel:phd}]
 access structure $\mathbb{A}$ is a collection of sets, and $\mathbb{A}$ is monotone if  $\forall$A,B, such that A is in $\mathbb{A}$ and A$\subseteq$ B ,then B is also in $\mathbb{A}$. Otherwise $\mathbb{A}$ is non-monotone.
-\end{defn}
+\end{Monotonicity}
 
-In Boolean Formula, monotone access structure don't involve \emph{NOT}, therefore the non-monotone access structure should support \emph{NOT}.
+In Boolean Formula, monotone access structure don't involve \emph{NOT}, while the non-monotone access structure should support \emph{NOT}.
 
-In the access control of present ABE schemes, most access structure is monotone, due to that normal methods to express attribute in access structure, such as $\rho$($i$) in LSSS and leaf node in access tree, only support the situation that each attribute is in a certain authorized set or not in, and don't support the one that an attribute is not in any authorized sets, which however is necessary to non-monotone access structure.
-So, in order to achieve non-monotone access structure, "negative attribute" is supposed
-(\cite{classical Non-Monotonic}).
-Main idea of the supposition is that attributes are divided into two values, positive and negative, and preinstall two kinds of SK and ciphertext so that all attributes(with positive and negative values) of users authorized can be expressed in a certain authorized set.
+In the access control of present ABE schemes, the majority of access structures are monotone,
+due to the fact that normal methods to express attribute in access structure, such as $\rho$($i$) in LSSS and leaf node in access tree, only support the situation that each attribute is in a certain authorized set or not in, and don't support the one that an attribute is not in any authorized sets.
+However, it is necessary to non-monotone access structure that supporting each attribute being not in any authorized attribute sets.
+In order to address non-monotone access structure with mature technology to achieve monotone access structure,
+"negative attribute" is supposed (\cite{Ostrovsky:CCS'07}).
+Based the comprehension of boolean formula ``$B~and~\overline{A}$", main idea of this supposition is shown as follows.
+Firstly, attributes are divided into two state, positive and negative.
+If a user have a attribute $A$, he holds the positive state $A$, otherwise holds the negative state $-A$.
+Then, the formula of both privacy key and ciphertext has two options for every attribute,
+so that the boolean formula containing $\overline{A}$ can be expressed.
 Nevertheless, the main problem of this method inclines to inefficient.
-Two values of each attribute imply the number of attributes in the system will be doubled too (\cite{xiaohui:PRE}).
-As for this problem,\cite{classical Non-Monotonic} has found a solution that all attributes have positive values,
-and negative values of some attributes are added according to specific systems.
-Additionally, \cite{classical Non-Monotonic} has implicitly proposed a transformation technology to meet the monotone required by LSSS. i.e.this technology can transform non-monotone access structure into monotone one(not real),
-so that more efficient expressions only supporting monotonic access structure have possibility to address non-monotone access structure using this technology.
+Two states of each attribute imply the number of attributes in the system will be doubled such us \cite{Xiaohui:ISICCS'09}.
+As for this problem, Ostrovsky et al. \cite{Ostrovsky:CCS'07} propose a solution.
+In \cite{Ostrovsky:CCS'07},
+each attribute has positive state, and negative states of some attributes are added according to specific systems.
+Additionally, the method in \cite{Ostrovsky:CCS'07} can be also regard as a general transformation technology,
+and this technology can make non-monotone structure into the monotone format to satisfy the requirement by LSSS.
+%i.e.this technology can transform non-monotone access structure into monotone one(not real),
+Therefore, more efficient expressions only supporting monotonic access structure have possibility to address non-monotone access structure using this technology.
 \subsubsection{expressions on access control}
-In this part, we survey three main expressions from most of present ABE schemes, \emph{access tree}, \emph{circuits} and \emph{linear secret sharing scheme(LSSS)}, and unless stated otherwise, by an access structure we mean a monotone access structure.
-In addition, the comparison among the three methods has been made.
+In this part, we survey three main expressions on access control from most of present ABE schemes, \emph{access tree}, \emph{circuits} and \emph{linear secret sharing scheme(LSSS)}.
+Unless stated otherwise, by an access structure we mean a monotone access structure.
+Moreover, the comparison among the three methods to achieve access control has been by us.
+
 
 \textbf{Access Tree}
 
@@ -143,13 +162,13 @@ One part called set part holds the authorized attribute set, and another called 
 
 
 In access tree, structure part chooses a polynomial $q_x$ for each node $x$ by the degree of the polynomial and points with the number of one more than degree.
-These polynomials are chosen detailedly in a top-down manner as follows.
+These polynomials are chosen concretely in a top-down manner as follows.
 %Firstly, the $index(x\prime)$ of the children $x\prime$ of node x are set as the inputs of each $q_x$.
 Firstly, beginning at the root node, for each node x,
 set the degree $d_x$ of the polynomial $q_x$ to be one less than
 the threshold value $k_x$ of that node, i.e, $d_x = k_x-1$.
 Then, for the root node r, set $q_r(0) = s$ and $d_r$ other points of the polynomial $q_r$ randomly.
-After that, for other node x, set $q_x(0)=q_{parent(x)}(index(x))$ and choose $d_x$ other points randomly,too.
+After that, for other node x, set $q_x(0)=q_{parent(x)}(index(x))$ and choose $d_x$ other points randomly, too.
 Up to every leaf node in this way, we are finally aware of that the degree of each leaf node is $1$,
 and it only has one point, i.e, each $q_x$ of leaf node has been determined as a constant by the polynomial of its parent.
 
@@ -179,21 +198,22 @@ it can't go on in certain step of obtaining $q_x(X)$ due to the lack of some poi
 \textbf{Some Analyses And Remarks On Access Tree}
 
 
-Firstly, "attributes \emph{satisfy} the policy" can be interpret on the expression of access tree as that leaf nodes have the consistency in logic with gates of tree layer by layer,
+Firstly, ``attributes \emph{satisfy} the policy" can be interpret on the expression of access tree as that leaf nodes have the consistency in logic with gates of tree layer by layer,
 such that finally $\mathcal{T}_r(\gamma)=1$.
 So, $\mathbb{A}$ can be interpret here as the leaf node with the constraints from the structure of the tree.
 %Secondly, the satisfaction companies with the achieving secret sharing as our discuss in the beginning of this subsection.
 Secondly, general access tree narrated as above is monotone for the reason that if a attribute set $\gamma$ can achieve secret share,
 another set, which contains all elements of $\gamma$ plus an arbitrary attribute having been defined by system,
 can also achieve that simply by not using the additional attribute.
-Thirdly, each node of a layer of access tree is just the structure of threshold secret sharing\cite{how to share} for the reason that $ \mathcal{T}_{x\prime}(\gamma)=1$ with the number of at least $k_x$ children.
-More specifically, "or" gate implies the threshold value 1, and "and" gate implies the threshold value number of children of the node, i.e, the threshold secret sharing is done by obtaining points with the number of one more that degree of target polynomial.
+Thirdly, each node of a layer of access tree is just the structure of threshold secret sharing\cite{Shamir:CACM'79} for the reason that $ \mathcal{T}_{x\prime}(\gamma)=1$ with the number of at least $k_x$ children.
+More specifically, ``or" gate implies the threshold value 1, and ``and" gate implies the threshold value number of children of the node, i.e, the threshold secret sharing is done by obtaining points with the number of one more that degree of target polynomial.
 Between two layers, massage is delivered by the point $(0, q_x(0))$ from nodes of low layer to a node of up layer,
 and essentially achieving the point $(0, q_x(0))$ is just the specific form in access tree of outcome that the Boolean Formula of this node $x$ are satisfied by the nodes contacted with $x$ from closest lower layer.
 
-Finally, In many specific schemes \cite{fist-kp}\cite{Ibraimi, Luan:Efficient and provable secure ciphertext-policy attribute-based encryption schemes}\cite{Chatterjee, Santanu:An effective ECCbased user access control scheme with attributebased encryption for wireless sensor networks},
+Finally, In many specific schemes \cite{Goyal:CCS'06},\cite{Bethencourt:SP'07},\cite{Taeho:TIFS'15},
 the method to build polynomials by Lagrange's interpolation.
-So whether there are other methods such us Newton interpolation to build polynomials in ABE schemes is a direction of future work.
+So whether there are other methods such us Newton interpolation to build polynomials in ABE schemes and
+whether those interpolation method can achieve schemes more efficiently are possible direction of future work.
 Moreover, every layer achieves threshold secret sharing by building polynomial, so we can consider the possibility that achieve sharing through other mathematical technologies.
 
 
@@ -207,9 +227,9 @@ and $q$ is the number of gates.
 Label $Inputs= \{1, ..., u\}$, $Wires = \{1,\ldots, u + q\}$,
 and $Gates = \{u + 1,\ldots , u + q\}$.
 The wire $n+q$ is output wire of the whole circuit.
-$A: Gates → Wires$ is a function to identify each $gate's$ first incoming wire,
-and $B: Gates → Wires$ is a function to identify each $gate's$ second incoming wire.
-Finally, $GT$: $Gates → {AND, OR}$ is a function to identifies a gate as either an \emph{AND} or \emph{OR} gate.
+$A: Gates \rightarrow Wires$ is a function to identify each $gate's$ first incoming wire,
+and $B: Gates \rightarrow Wires$ is a function to identify each $gate's$ second incoming wire.
+Finally, $GT$: $Gates \rightarrow {AND, OR}$ is a function to identifies a gate as either an \emph{AND} or \emph{OR} gate.
 
 
 Specify that $\omega > B(\omega) > A(\omega)$, where $\omega \in Gates$,
@@ -269,11 +289,11 @@ The calculating do not stop until obtains the $g_{l+1}^{r_{u+q}}$.
 \textbf{Some Analyses And Remarks On Circuit}
 
 
-Firstly, "attributes \emph{satisfy} policy" can be interpreted on the expression of circuits similar with that of access tree, i.e, $inputs$ have the consistency in logic with gates of circuit layer by layer,
+Firstly, ``attributes \emph{satisfy} policy" can be interpreted on the expression of circuits similar with that of access tree, i.e, $inputs$ have the consistency in logic with gates of circuit layer by layer,
 such that finally $C_{u+q}(x)=1$. %解释原因
 So, $\mathbb{A}$ can be interpret here as the inputs with the constraints from the structure of the circuit.
 Secondly, the circuit narrated as above is monotone.
-As for non-monotone circuit, there is a simple transformation that uses De Morgan’s rule to transform any general Boolean circuit into an equivalent monotone Boolean circuit with negation gates only allowed at the inputs,
+As for non-monotone circuit, there is a simple transformation that uses De Morgan$'$s rule to transform any general Boolean circuit into an equivalent monotone Boolean circuit with negation gates only allowed at the inputs,
 and just ignore the layer of the negation gates then non-monotone circuit become our familiar form of the monotone circuit.
 Thirdly, each gate of a layer in circuit is straightforward Boolean formula that emulate all situations on the incoming wires for that output of the gate's Boolean formula equal to $1$, %指出缺点。
 and that do nothing for that output of the gate's Boolean formula equal to $0$.
@@ -316,7 +336,7 @@ due to more prepositive parameter such us those groups and pairing operation.
 Access structure in the LSSS is described as follows.
 Firstly, define a surjection, $\rho:\{1,\ldots, \ell\} \longrightarrow \{P_1,\ldots, P_u\}$,
 where $P_j$ is shown on Table~\ref{tab:notions}.
-There is a matrix $M$ with $\ell$ rows and $n$ columns, where $\ell\geq u\geq n$.
+There is a matrix $M$ with $\ell$ rows and $n$ columns, where $\ell\geq n$.
 Row index $i\in \{1,\ldots, \ell\}$ represents the label of $i’th$ row of $M$,
 and $M_i$ represents the $i’th$ row of $M$.
 Let $\rho(i)=P_j$ so that the row index of $M$ map to attributes.
@@ -350,41 +370,118 @@ $\sum_{i\in I}(\omega_i\cdot(M_i\cdot${\boldmath{$\upsilon$}}$))=
 (\sum_{i\in I}(\omega_i\cdot M_i))\cdot${\boldmath{$\upsilon$}}$=${\boldmath{$e$}}$\cdot${\boldmath{$\upsilon$}}$=s$
 
 
-\cite{LSSS} point that each $\gamma$ can reconstruct the secret in the method by using a linear function of its pieces,
+Amos Beimel \cite{Beimel:phd} points that each $\gamma$ can reconstruct the secret in the method by using a linear function of its pieces,
 attributes in $\gamma$.
 We informally call the secret sharing scheme using linear function is Linear Secret Sharing Scheme.
-the span program \cite{span} is the known method.
+the span program \cite{Karchmer:asct'93} is the known method.
 Monotone span program (MSP) is associated monotone Boolean Function,
-and \cite{span} proved that if there is a monotone span program for some Boolean Function then there exists a linear secret
-sharing scheme for the corresponding access structure, and vice versa \cite{first_KP},
+and M. Karchmer and A. Wigderson \cite{Karchmer:asct'93} proved that if there is a monotone span program for some Boolean Function then there exists a linear secret sharing scheme for the corresponding access structure, and vice versa \cite{Waters:PKC'11},
 so matrix $M$, and those constants $\omega$ can be found for certain.
 
 
 \textbf{Some Analyses And Remarks On LSSS}
 
 
-Firstly, "attributes \emph{satisfy} policy" can be interpreted in LSSS as that
+Firstly, ``attributes \emph{satisfy} policy" can be interpreted in LSSS as that
 the row indexes achieve finding out those $\omega$ such that equation~\eqref{eq:span} holds.
 So, $\mathbb{A}$ is interpreted here as row indexes with the constraints from matrix $M$ and mapping $\rho$,
 and actually between these two objects there is a intermediate, the collection of input boolean vectors of Boolean Function.
 
-As above mentioned, general LSSS can only address monotone access structure. When it occur to non-monotone case, use technology of \cite{classical Non-Monotonic}.
+As above mentioned, general LSSS can only address monotone access structure. When it occur to non-monotone case, use technology of \cite{Ostrovsky:CCS'07}.
 
 LSSS achieve access control though the Boolean Function, so that there have no logical judgments or other consideration on relation among attributes.
-Therefore, LSSS is somewhat more expressive than above two expressions as far as automaticity and mathematics,
+Therefore, LSSS is somewhat more expressive than above two expressions as far as automaticity and mathematics.
 which implies that not only can general monotone access structure be expressed by Boolean Function
 but also LSSS can achieve access control based that.
 
-\textbf{Comparisons}
+
+
+\textbf{Comparison}
+
+
+We give a comparison among three different expressions on a monotone access structure.
+%For a fair comparison,
+For clear, we list the items we concern.
+\begin{itemize}
+  \item \textbf{Boolean Formula}. We consider how to embody the Boolean Formula in the three expressions.
+  \item \textbf{Fan-in}. In this item, we survey whether each node in access tree or each gate in circuits supports multiple( more than two) inputs at a negligible price.
+  \item \textbf{Extension Cost}. For view on scalability,
+  We find out the most costs of adding an attribute on access structure in the three expressions.
+  \item \textbf{Key Size}. For view on efficiency, we pick out three schemes based on different expressions,
+  and point out these sizes of secret key of schemes (KP-ABE).
+  For the sake of comparing as fair as possible , these three schemes have same type of attacks, chosen-plaintext attack,
+  same model used to prove security, standard model, same security, selective security, and similar assumptions that are BDDH assumption and natural multilinear generalization of the BDDH assumption.
+  Access tree and LSSS are both in \cite{Goyal:CCS'06}, while circuit is in \cite{Sanjam:CRYPTO'2013}.
+  \item \textbf{Backtracking Resistant} We call an expression resisting backtracking attack backtracking resistant. Backtracking attack firstly posed by \cite{Sanjam:CRYPTO'2013} is that decryption algorithm learns some format of the value $q_B(0)$ for gate B even though the decryption algorithm do not know $q_B(X)$ on input $att(x)$ on the condition that $parent(B)$ is a OR gate and the decryption algorithm have been aware of $q_A(0)$, the value of one of other children of $parent(B)$.
+\end{itemize}
+  We specify that those gates in access tree and in circuit only have two inputs for simpleness to compute the size of secret key.
+Comparison is shown on Table~\ref{tab:comparison}, where $C$ denotes the number of gates in circuit and $\omega$ denotes the number of the $inputs$ of circuit or the number of leaf nodes in access tree or the one of rows of matrix $M$ in LSSS.\footnote{Access tree can be convert to LSSS for the reason that LSSS can express general access structure. For two-input gate in access tree, we can construct a matrix $M$, let the number of rows be same with the number of the leaf nodes \cite{Lewko:TACT'11}} In addition, we let
+
+$|G_C|=3\frac{\omega}{2}|G_2|+\ldots+3\frac{\omega}{2^{i-1}}|G_i|+\ldots+3\cdot2|G_{log_2\omega}|+$
+
+$~~~~~~~~~2\omega|G_1|+|G_{log_2\omega+1}|$, ~($2\leq i\leq log_2\omega$)
+
+where $|G_i|$ denotes the size of the element of group $G_i$.
+Most notions above also can be found in Table~\ref{tab:notiforcom}.
+\begin{table*}[t]
+\centering  % 表居中
+\caption{a comparison among three expressions}
+\begin{tabular}{c|c|c|c|c|c}% {lccc} 表示各列元素对齐方式，left-l,right-r,center-c
+\hline
+
+
+
+Expression&Boolean Formula&Fan-in&Extension Cost&Key Size&Backtracking Resistant\\\hline
+Access Tree&direct&unrestricted&change a polynomial&$\omega|G_1|$&NO\\\hline
+Circuit&direct&restricted&add $(C+1)$ gates&at least $|G_C|$&YES\\\hline
+LSSS&black-box&$\diagdown$&row size of $M$ add 1&$\omega|G_1|$&YES
+\\
+
+
+\hline
+\end{tabular}
+\label{tab:comparison}
+\end{table*}
 
 \subsection{Design philosophy of classical ABE scheme}
 some introduction goes here.
 
-\subsubsection{KP-ABE}
-analyze article:
-\emph{Attribute-Based Encryption for Fine-Grained Access Control of Encrypted Data} Vipul Goyal  Omkant Pandeyy Amit Sahaiz Brent Waters in 《Proc of Acmccs- 2006
+\subsubsection{KP-ABE by (Li Peng)}
+As defined in [?], a KP-ABE scheme consists of four algorithms:Setup,Encryption,Key Generation and Decryption. Let a tuple$(p,g,\mathbb{G}_1,\mathbb{G}_2,e)$ denote a bilinear map, where $\mathbb{G}_1,\mathbb{G}_2$ are multiplicative cyclic groups of prim order $p$ and $e$ denote $\mathbb{G}_1 \times \mathbb{G}_1 \rightarrow \mathbb{G}_2$. A security parameter, $\lambda$, denote the size of the groups. The Lagrange coefficient $\Delta_{i,S}$ for $i \in \mathbb{Z}_p$  and a set, $S$, of elements is defined in $\mathbb{Z}_p:\Delta_{i,S}=\Pi_{j\in S,j\neq i}\frac{x-j}{i-j}$. Each attribute is associated with a unique element in $\mathbb{Z}{_p^*}$. The construction follows.\\
 
-\subsubsection{CP-ABE}
+\noindent Setup$(\lambda,U)$  The setup algorithm takes $\lambda,U$ as input parameters. Firstly,  let $U=\{1,2...n\}$ denote the universe of attributes, and define a tuple $(p,g,\mathbb{G}_1,\mathbb{G}_2,e)$ as above mentioned. Then choose a number $t_i$ uniformly at random for each attribute $i \in U$ and generate a random?value $y \in \mathbb{Z}_p$. Finally, the public parameters are published as PK=$(T_1,T_2,...,T_{|U|},Y)$, where $T_{i}=g^{t_i},i\in \{ 1,2...|U| \},Y=e(g,g)^y$. The master key is MK=$(t_1,...,t_{|U|},y)$.
+
+Encryption$(M,S,$PK$)$ The encryption algorithm takes as input a message $M\in \mathbb{G}_2 $, a set of attributes $S$ and the public parameters PK. To encrypt the message $M$ under a set of attributes $S$, it chooses a a random value $\upsilon \in \mathbb{Z}_p $. Then The ciphertext is published as CT=$(S,C'=MY^{\upsilon},\{C_{i}=T_{i}^{\upsilon}\}_{i\in S})$;
+
+Key Generation $(T,$ MK$)$  The Key Generation algorithm takes an access structure $T$ and the master key MK, then outputs a secret key SK. The SK enables the user to decrypt a message encrypted under a set of attributes $S$ if and only if $T (S)$ = 1. First let the access structure $T$ be a tree, then choose a polynomial $q_x$ for each node $x$ (including the leaves) in the tree $T$.
+
+For each node $x$ in the tree, choose a polynomial $q_x$ whose degree $d_x$ is one less than the threshold value $k_x$ of that node, that is, $d_x = k_x-1$. Firstly, for the root node $r$, set $q_r(0) = y$ and choose $d_r$ other points of the polynomial $q_r$ randomly to get the complete polynomial $q_x$.Then,  for any other node $x$, set $q_{x}(0) = q_{parent(x)}(index(x))$ , where $parent(x)$ denote the parent node of $x$ and $index(x)$ denote the number of the node, and choose $d_x$ other points randomly to completely define $q_x$. As a result, for each leaf node $x$, $q_{x}(0)$ is defined.Finally, the secret key is published as SK=$(D_x)$, where $D_{x}=g^{\frac{q_{x}(0)}{t_i}},i=att(x) $.
+Decryption (CT,SK) Firstly, define a recursive algorithm DecryptNode $($CT,SK,$x)$ that takes ciphertext CT, the private key SK and a node $x$ in the tree as input. Then it outputs a group element of $\mathbb{G}_2$ or $\bot$.
+Let $i = att(x)$. If the node x is a leaf node then:
+
+$$\text{DecryptNod}(\text{CT},\text{SK},x) = \left\{
+\begin{aligned}
+e(D_x,C_i)&=&e(g^{\frac{q_{x}(0)}{t_i}},g^{\upsilon\cdot{t_i}})\\
+&=&e(g,g)^{s\cdot{q_x(0)}}  &&\text{if} i\in S\\
+\bot && otherwise
+\end{aligned}
+\right.
+$$\\
+If $x$ is a non-leaf node, it calls DecryptNode $($CT,SK,$z)$ for each child node z. Then it stores the output as $F_z$. Let $S_x$ be an arbitrary $k_x$-sized set of child nodes $z$ such that $F_z\neq\bot $. If no such set exists then the node was not satisfied and the function returns $\bot$.\\
+Otherwise, we compute:
+$$
+\begin{aligned}
+F_x &= \prod_{z\in S_x}F_{z}^{\Delta_{t,s'_{x}}(0)}\\
+    &= \prod_{z\in S_x}(e(g,g)^{\upsilon\cdot q_z(0)})^{\Delta_{t,s'_{x}}(0)}\\
+    &= \prod_{z\in S_x}(e(g,g)^{\upsilon\cdot q_{parent(z)}(index(z))})^{\Delta_{t,s'_{x}}(0)}\\
+    &= \prod_{z\in S_x}e(g,g)^{\upsilon\cdot q_x(i)\cdot \Delta_{t,s'_{x}}(0)}\\
+    &= e(g,g)^{\upsilon\cdot q_x(0)} \text{  (using polynomial interpolation)}
+\end{aligned}
+$$
+and return the result.\\
+ After computing, the equation DecryptNode$($CT,SK, $r) = e(g, g)^{y\upsilon}= Y^\upsilon $ is true if and only if the ciphertext satisfies the tree. Since, $C'=MY^\upsilon$s the decryption algorithm simply divides out $Y^\upsilon$ and recovers the message $M$.
+
+\subsubsection{CP-ABE (by Hao Zhang)}
 analyze article:
 \emph{Ciphertext-Policy Attribute-Based Encryption}  John Bethencourt Amit Sahai Brent Waters in 2007 IEEE Symposium on Security and Privacy 2007
 

@@ -1,1 +1,3 @@
-\contentsline {defn}{{Definition}{1}{Monotonicity\cite {Beimel, A.: Secure Schemes for Secret Sharing and Key Distribution. PhD thesis,Israel Institute of Technology, Technion, Haifa, Israel (1996)}}}{1}
+\contentsline {ABE}{{Definition}{1}{}}{1}
+\contentsline {CCA}{{Definition}{2}{}}{2}
+\contentsline {Monotonicity}{{Definition}{3}{Monotonicity\cite {Beimel:phd}}}{4}

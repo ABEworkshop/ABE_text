@@ -1,16 +1,232 @@
 \section{Extension}
 some introduction goes here.
 
-\subsection{Key-abuse  Problem}
+%\subsection{Key-abuse  Problem}
+%Key-abuse  Problem goes here.
 
 \subsection{Outsource}
+With the rapid development of cloud computing, a growing number of users choose to share their sensitive?data on the clouds. To keep the data security and privacy, encrypting this data is a valid approach before uploading. In addition, this data also should be only accessed to the authenticated?users. But it is difficult for traditional public key encryption to realize this demand because it can only realize one-to-one encryption. To handle this problem, ABE is proposed, which provides one-to-many encryption and fine-grained access control of encrypted data.
+
+However, almost?all proposed ABE schemes have a main efficiency drawback, that is, computational cost for encryption and decryption is very high. More seriously, the computational cost grows with the complexity of access formula. In a resource-limited device, such as a smart phone, decrypting a ABE ciphertext is very difficult. Suppose that, you are traveling and only taking a smart phone, but your leader suddenly need you to do something immediately and send you a message which is encrypted by ABE. It¡¯s a terrible experience because you can¡¯t decrypt this message using a smart phone.
+
+To leverage computation burden on the user side, Green et al. [?] suggested to outsource decryption in attribute-based encryption. The schemes in [?] allow a cloud to translate an ABE ciphertext satisfied by that user¡¯s attributes into a (constant-size) ElGamal-style ciphertext. Of course, the coulds who perform the translation operation cannot read any part of messages and the users¡¯ private?keys. To outsource the decryption to a could, a user need to split his private key into a ¡°transformation key¡± (denoted by TK), and an El Gamal-type secret key (denoted by DK). The user give the TK to the cloud, then the could translate the ABE ciphertext into an ElGamal-style ciphertex and send it to the user. Finally, the user utilize the DK to recover the plaintext. In [?], Green et al. also proposed replayable CCA(RCCA) security schemes in which the user can check the correctness of recovered message. But in RCCA schemes,a malicious cloud could replace the original ciphertext and its tag which is used to check the correctness. So this method can not strictly guarantee the correctness of transformed ciphertext, to solve this problem, Attribute-Based Encryption with verifiable outsourced decryption was proposed by Lai et al. [?].
 
 \subsection{Proxy Re-encrypton}
+Proxy Re-encrypton goes here.
 
-\subsection{Key-abuse  Problem}
+\subsection{Multi-authority And distributed ABE}
 
-\subsection{Key-abuse  Problem}
+\subsubsection{Multi-authority And distributed ABE( Prince)}
+In Distributed systems, it will not be user-friendly for access rules for objects to be based on identities considering the various dynamic sets of users in todays computing environment. In light of the above, the incipient proposal of Attribute Based Encryption in a landmark work by A. Sahai and B. Waters in 2005\cite{Sahai:TACT'05} and later by Goyal et al\cite{Goyal:CCS'06} opened up various interests to the research community.
 
-\subsection{Key-abuse  Problem}
+In the traditional ABE scheme, there exist a central authority (CA) in charge of all attributes and responsible for the issuance of secret keys to users for decryption. Consequently, the CA can decrypt every ciphertext in the system by calculating the required secret keys at any time, this is the {\it key escrow problem} of ABE\cite{Rao:CMS'13}. This problem triggered the conceptualization of multi-authority and distributed ABE schemes. Imperatively, there are two major concepts under the ABE scheme, namely:
 
-\subsection{Key-abuse  Problem}
+Key-Policy ABE (KP-ABE). In these schemes, the secret keys are associated with an access structure, while the ciphertext is labeled with a set of attributes\cite{Sahai:TACT'05}, \cite{Goyal:CCS'06}, \cite{Chase:TCC'07}, \cite{Ostrovsky:CCS'07}.
+
+Ciphertext-Policy ABE (CP-ABE). In these schemes, the ciphertext is associated with an access structure, while the secret keys are labeled with a set of attributescite\cite{Bethencourt:SP'07},\cite{Cheung:CCS'07}, \cite{Cheung:TACT'10}.
+
+Even though some prior researchers\cite{Yuan:ICWS'05}\cite{Adelsbach:ICISC'06}\cite{Kapadia:NDSS'07}\cite{Bradshaw:CCS'04} proposed some form of multi-authority, it was noted by Müller et al\cite{Sascha:ICISC'08} that the techniques used in these applications are not collusion-resistant, so they can not be classified as ABE.
+
+
+\textbf{The first Multi-Authority}
+
+
+In 2007 Chase\cite{Chase:TCC'07} introduced what could be considered as the first  Key-Policy ABE with multi-authority since she introduced various authorities with global identifiers to keep a users' keys in sync in her scheme. However, these authorities were fixed during initialization and threshold gates were used as access policy. One dominant downside of his scheme was that, it depended on a {\it Central Authority} (CA).
+
+
+\textbf{Distributed Attribute-Based Encryption}
+
+
+One year later (2008), Müller et al\cite{Sascha:ICISC'08}, introduced the concept of Distributed Attribute-Based Encryption (DABE) using Cipertext-Policy, that supports an arbitrary number of attribute authorities where both the authorities and users could join the system any time. Nonetheless, one central authority{\em (Master)} is dedicated to the distribution of user secret keys and an arbitrary number of Attribute authorities responsible for the verification of user eligibility and the distribution of secret attribute keys to the users.
+
+Their scheme constructs access policies using the Disjointed Normal Form (DNF). Compared to earlier ABE schemes, the DABE is fairly efficient as most of its computation uses group operations in bilinear group except during the decryption stage where it uses two time of the bilinear pairing for the computation.
+Müller et al secured their scheme in the random oracle model and provided a security proof using the adaptive model.
+
+\subsubsection{ Decentralized Attribute Based Encryption}
+One natural feature of decentralized ABE systems is the absence of a central authority (CA). Lin et al\cite{Huang:INDOCRYPT'08} proposed the first non-CA multi-authority ABE taking advantage of Distributed Key Generation (DKG) protocol and Joint Zero Secret Sharing (JZSS) protocol to replace the CA. However, this scheme can only resist collusion up to collusion of {\em m} users. Where {\em m} was a fixed system parameter chosen at setup.In 2009, Chase et al\cite{Chase:CCS'09} constructed a CA-free multi-authority ABE which solved the key escrow problem in\cite{Chase:TCC'07} using distributed Pseudo Random Functions (PRF) and key-policy with AND-gate access structure. The scheme is limited to handling only a set of fixed number of authorities at system initialization.
+
+Lewko et al\cite{Lewko:TACT'11} introduced a novel decentralized multi-authority scheme which is CA-free. The scheme which is a ciphertext-policy ABE, functions entirely independently where any party can become an authority and authorities need not even be aware of each other. He based his scheme on the concept of global identifier introduced by Chase\cite{Chase:TCC'07} to bind attribute-related secret keys of a user from different authorities together, thereby preventing collusion attack. The scheme is secured in the random oracle model and proven secured using the adaptive model.
+Liu et al\cite{Huang:ESORICS'11} came up with a LSSS multi-authority CP-ABE system which has multiple CAs and authorities. The scheme is adaptively secure without random oracles unlike Lewko and Waters.
+
+
+\textbf{Decentralized Ciphertext-Policy Attribute-Based Encryption Scheme with Fast Decryption}
+
+
+In most of the multi-athorities mentioned above, the ciphertext size are huge likewise the linear-size of the bilinear pairing. To help solve this problem,\cite{Sascha:ICISC'08} propose an efficient multi-authority decentralized Ciphertext-Policy Attribute-Based Encryption scheme for Monotone Access Structures (MAS) with fast decryption, where no Central Authority exists and all authorities function independently without being aware of each other.
+
+The security of this scheme is built on the generic bilinear group model\cite{Victor:TACT'97} \cite{Boneh:TACT'05} and proven secured adaptively. It is collusion resistance and also secured against the escrow problem.
+In comparison with\cite{Lewko:TACT'11}, this scheme's decryption time is constant for general MAS giving it fast performance. Furthermore, it provides a mechanism for packing multiple messages in a single ciphertext which makes it more efficient to use.
+
+\textbf{Large universe decentralized key-policy attribute-based encryption}
+
+
+Li et al \cite{Qi:SCN'14} present a large universe decentralized key-policy ABE scheme on prime order groups without any central authority where attribute authority executes independently from the others and can join or depart the system anytime.
+
+This system supports a large universe of attributes and does not impose any bounds on the set of attributes, which will be used in encryption. It is constructed in the standard security model and proven secured with the selective model.
+
+
+\subsubsection{Privacy-Preserving in Attribute-Based Encryption}
+Over the past years Multi-Authority  ABE has been expanded and improved upon by various researchers in this field. Attribute-Based Encryption, where a user in the system can share his encrypted data based on access policy defined by him and only users whose attributes satisfy the policy can subsequently decrypt and have access to the shared data. This can be considered as an efficient and convenient primitive to use in pervasive computing environments.
+
+Even though this primitive brings flexibility, it also materialized security concerns. Notably among them is the problem where authorities can collect the attributes of users and consequently decrypt messages or in worse case, impersonate the user.
+
+Considering the security of attributes of users, Han et al\cite{Jinguang:TPDS'12} introduced the first privacy-preserving decentralized key-policy ABE scheme where each authority can issue secret keys to a user independently without knowing anything about his GID. Thereby protecting the user's privacy. Their scheme is designed in the standard security model and proven secure in the selective model.
+Using privacy-preserving key extraction protocol method and a global identifier (GID), they tied the user's access to all authorities to prevent collusion attacks.
+
+Unfortunately, by breaking the weak ties between authorities, (to remove such a connection by changing the identifier associated with particular secret keys) Ge et al\cite{Aijun:TPDS'13}, proved that the scheme "{\em Privacy-Preserving Decentralized Key-Policy Attribute-Based Encryption}" proposed by Han et al in 2012 is open collusion attacks in the standard model.
+
+In 2014, Han et al\cite{Aijun:TPDS'13} proposed a privacy-preserving decentralized CP-ABE (PPDCP-ABE) scheme where the central authority is not required and each authority can work independently without the cooperation to initialize the system and the user can convince the authorities that the attributes for which he is obtaining secret keys are monitored by them without compromising the GID and the attributes of the user. This scheme is built on standard model and proven secured in the selective model. Furthermore the scheme is based on the Privacy-Preserving Key Extract Protocol and Linear Secret Sharing Schemes.
+
+On the other hand, Wang et al\cite{Jinguang:ESRCS'14} gave a security analysis of PPDCP-ABE scheme of Han et al\cite{Aijun:TPDS'13} and point out the security weakness of their scheme. It came out that their basic decentralized ciphertext-policy ABE scheme cannot resist collusion attacks. Also, the privacy-preserving key extract protocol proposed by\cite{Aijun:TPDS'13}, allows the authority to reveal users' credentials, hence, the privacy protection of attributes cannot be provided.
+
+
+ \textbf{User Collusion Avoidance Scheme for Privacy-Preserving Decentralized Key-Policy Attribute-Based Encryption}
+
+
+More recently in september 2016, Rahulamathavan et al\cite{Minqian:CCPE'15} have proposed a user collusion avoidance scheme which preserves the user's privacy when they interact with multiple authorities to obtain decryption credentials. This they achieved by tying secret known for Attribute Authority and secret known for the user in a non-linear fashion.
+Further, by modify the scheme in \cite{Aijun:TPDS'13} using the anonymous key issuing protocol in \cite{Chase:CCS'09} to secure the bind between decryption keys and GID as well as to preserve the user's privacy while the Attribute Authority is guaranteed that the decryption-keys are the only information that the user learns from the transaction using blind IBE schemes \cite{Camenisch:PKC'15}.
+
+This scheme has been designed on the standard security model (decisional bilienar Deffie-Hellman assumption. It is proven to be secured in the selective ID model agains collusion attacks and chosen plain attacks.
+However, in terms of performance, the proposed scheme works a bit slower compared to other schemes like Han et al.
+
+\subsubsection{Revocable Decentralized Attribute-Based Encryption}
+The introduction of decentralized multi-authority thwarted most drawbacks of the single authority and brought about flexibility where different users with arbitrary attributes are given various forms of access to different types of encrypted data. In the real world, attributes of users could change periodically. This prompted researchers to investigate revocation in ABE where occasional key updates would allow only the eligible non-revoked users to be able to decrypt recently encrypted data.
+
+Revocation in ABE can be described in two major ways:
+
+1. {\em indirect revocation} \cite{Nuttapong:ICCC'09}. This form of revocation invokes key updates from the authority periodically, such that only non-revoked users' keys can receive the available updates, thereby rendering revoked users' keys useless.
+
+2. {\em direct revocation} \cite{Nuttapong:ICCC'09}. This form of revocation invokes key updates from the sender directly. This he does by stipulating the revocation list when encrypting the ciphertext.
+
+Attrapadung et al\cite{Nuttapong:ICCC'09} proposed a user-revocable ABE scheme by combining broadcast encryption schemes with ABE schemes where the data owner must take complete responsibility of maintaining the membership lists for each attribute group to ensure the direct user revocation. This scheme will not work on data outsourcing platform, since the data owner will no longer have direct control of data distribution after outsourcing the data to the external service providers.
+
+Liang et al. \cite{Xiaohui: Citeseer'10} offered a CP-ABE scheme with efficient revocation. Their construction is built on the linear secret sharing and binary tree techniques, and proven secure in the standard model. Besides the attribute set, users are also tagged with a unique identifier which can be used to revoke easily.
+
+All the above schemes\cite{Nuttapong:ICCC'09}\cite{Xiaohui: Citeseer'10} support user revocation, but they have no effect on attribute revocation.
+
+
+ \textbf{Revocable and Decentralized Attribute-Based Encryption}
+
+
+Recently Cui et al \cite{Hui: CJ'16}presented a decentralized ciphertext-policy ABE (CP-ABE) system supporting indirect revocation which splits the exclusive AA's role across multiple AAs such that the AAs can indirectly accomplish revocation by stopping updating the keys for the revoked users.
+The splitting of roles across multiple AAs, reduces the computational overhead at the same time keeping the system decentralized where by any party can become an authority by creating a public and private key pair.
+
+To prevent revoked users from combining their keys with non-revoked users (collusion), Cui et al bonded the time period and the global identifier during the key generation process at the same time keeping the global identifier away during the encryption stage.
+
+Comparatively, Cui et al's scheme could be considered scalable as against \cite{Nuttapong:ICCC'09} and \cite{Alexandra:CCS'08}. this is because an attribute can freely be added or revoked at any time without modifying the operation of the system.
+
+This scheme is securely constructed in the standard model. The dual encryption security technique is applied during the security proof. The keys and the ciphertexts are divided as normal and semi-functional: the normal keys can decrypt the semi-functional ciphertexts, the semi-functional keys can decrypt the normal ciphertexts, but the semi-functional keys cannot decrypt the semi-functional ciphertexts \cite{Brent:CRYPTO'09}.
+
+
+\subsubsection {Summary}
+
+
+
+
+\begin{table}[htp]
+\caption{default}
+\begin{center}
+\begin{tabular}{ccc}
+\hline
+ColA & ColB & ColC\\
+\hline
+43 & 200 & 75\\
+280 & 16 & 88\\
+102 & 77 & 340\\
+\hline
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}%
+
+\subsubsection{Multi-authority And distributed ABE(Ziheng Ding)}
+\indent In traditional Attribute Based Encryption(ABE) scheme, it cannot solve the problem when attributes belong to diverse servers, since these servers cannot be totally trusted by others. For instance, if attributes which are ID number and major of one user belong to governmental authority and college respectively, information is unable to be shared because government and college do not believe each other. To solve this problem, the first solution titled Multi-Authority Attribute Based Encryption\cite{Chase:TCC'07} was proposed. Two methods was introduced in this scheme. The first one is Global Identifier(GID), which means every receiver is given a unique number illustrating their identity. GID are able to be verified by all authorities, while no one would have access to it expect the user himself. Another tool is Central Authority which is totally trusted by all users and other authority. The specific scheme was divided into 5 steps:
+\\
+\textbf{System}  It output the system public key and security parameter and system public key Y$_{0}$;.   \\
+\textbf{Attribute Authority k} For authority k, authority secret key (s$_{k}$,t$_{k,1}$...t$_{k,n}$,) and authority public key (T$_{k,1}$...T$_{k,n}$) is established in this step.Besides, user u would have a unique secret key D$_{k,i}$ here.\\
+\textbf{Central Authority}  Every authority gets a central authority secret key s$_{k}$ here. Like other authority, a secret key D$_{CA}$ would be established. Noteworthy is that includes the secret key of all authorities.   \\
+\textbf{Encrypt}  this algorithm that takes a message m as input and the cipher text as output (E,E$_(CA)$).\\
+\textbf{Decrypt} Receiver has to recover the message according to its attributes.\\
+\indent The advantages are obvious. Central authority ensure that the scheme is safe even if some normal authorities are corrupted. To be more specific,when some are dishonest,the secret key of Central authority could prevent illegal decryption by other attributes which are still honest. It is also arguable that authorities are able to decrease their burden distributing secret keys as well as monitoring attributes. Since each attribute is monitored by a diverse authority and central authority monitor none. In addition,an increasing number of schemes was proposed to perfect Multi-Authority ABE with more functions. For example,in MA Verifiable ABE\cite{Qiang:JWU'08}, user has ability to check which authority gives wrong secret key and when key of authority fails in verification, he only need to send corresponding part again. In MA-ABE Scheme with Revocation \cite{XiaoFang:ICCCN'15}, revocation could be achieved by using attributes classification management.Cloud computing is also utilized in MA-ABE which is introduced in Online/offline unbounded MA-ABE for data sharing in mobile cloud computing \cite{Yinghui:Wiley'16}. 
+\indent On the other hand, central authority are prone to bring certain risks that if it was corrupted, the whole scheme would be broken. Due to reducing the severe reliance on central authority, the Secure threshold multi authority attribute based encryption without a central authority was introduced\cite{Huang Lin.{2008}}. Two protocols, distributed key generation protocol (DKG) and joint zero secret sharing protocol (JZSS), make the major contribution.Another approach is that several authorities could be in charge of the authorized specific attributes' key distribution in Efficient Statically-Secure Large-Universe Multi-Authority Attribute-Based Encryption\cite{Yannis Rouselakis.{2015}}.
+\\
+\indent In terms of security,a wide range of security models is used in these proposals,which lies in the table1.
+\\
+\begin{table}
+\caption{assumption}
+ \centering
+\scalebox{1.0}{
+\begin{tabular}{|c|c|}
+\hline
+scheme&security\\
+\hline
+\cite{Melissa Chase.{2007}}& Bilinear BDH assumption\\
+\hline
+\cite{Huang Lin.{2008}}&         Decisional BDH assumption\\
+\hline
+\cite{TANG Qiang.{2008}}&        Decisional BDH assumption\\
+\hline
+\cite{Zhen Liu.{2011}}&          Number-Theoretic assumptions\\
+\hline
+\cite{Yannis Rouselakis.{2015}}&       Complexity assumption\\
+\hline
+\cite{XiaoFang Huang.{2015}}&      Decisional BDH assumption\\
+\hline
+\cite{Qi Li.{2015}}&       z-type assumption\\
+\hline
+\cite{Yinghui Zhang.{2016}}&q-type problem\\
+\hline
+\end{tabular}}
+\end{table}
+\\
+\indent table2 and table 3 contains the comparison in the length of user's key and ciphertext and performance comparison. t$_{e1}$,t$_{e2}$ denotes the time spent on two different bilinear group operations, t$_{p}$ denotes the time spent on pairing operation, k means the number of authority. The table compares the efficiency of diverse scheme.
+\\
+\begin{table}
+\caption{the comparison in the length of user's key and ciphertext  }
+ \centering
+\begin{tabular}{|c|c|c|}
+\hline
+scheme&private key&ciphertext\\
+\hline
+\cite{Melissa Chase.{2007}}&nG$_{1}$&nG$_{1}$+G$_{2}$\\
+\hline
+\cite{Huang Lin.{2008}}&nG$_{1}$&nG$_{1}$+G$_{2}$\\
+\hline
+\cite{Zhen Liu.{2011}}&nG$_{1}$&(2n+1)G$_{1}$+G$_{2}$\\
+\hline
+\cite{Yannis Rouselakis.{2015}}&4G$_{1}$&(2n+1)G$_{2}$+4nG$_{1}$\\
+\hline
+\cite{XiaoFang Huang.{2015}}&(3n+k)G$_{1}$&(2n+1)G$_{1}$+G$_{2}$\\
+\hline
+\cite{Qi Li.{2015}}&2G$_{1}$&(5n+1)G$_{1}$+G$_{2}$\\
+\hline
+\end{tabular}
+\end{table}
+\\
+\begin{table}
+\caption{performance comparison}
+ \centering
+\begin{tabular}{|c|c|c|}
+\hline
+scheme&encryption&decryption\\
+\hline
+\cite{Melissa Chase.{2007}}&t$_{p}$+nt$_{e1}$+t$_{e2}$&t$_{p}$+kt$_{e2}$\\
+\hline
+\cite{Huang Lin.{2008}}&t$_{p}$+nt$_{e1}$+t$_{e2}$&2t$_{p}$+(2k+1)t$_{2e}$\\
+\hline
+\cite{Zhen Liu.{2011}}&t$_{p}$+3nt$_{e1}$+t$_{e2}$&(n+1)t$_{e2}$+(2n+1)t$_{p}$\\
+\hline
+\cite{Yannis Rouselakis.{2015}}&t$_{p}$+4kt$_{e1}$+(2k+1)t$_{e2}$&2t$_{p}$+3t$_{e2}$\\
+\hline
+\cite{XiaoFang Huang.{2015}}&t$_{p}$+(2n+1)t$_{e1}$+t$_{e2}$&(2k+5)t$_{p}$+(2k+5)t$_{e2}$\\
+\hline
+\cite{Qi Li.{2015}}&t$_{p}$+(3w+1)t$_{e1}$+t$_{e2}$&(3n+1)t$_{e2}$+(3n+1)t$_{p}$\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Revocation }
+Revocation goes here.
+
+\subsection{hide-policy ABE}
+hide-policy ABE goes here.

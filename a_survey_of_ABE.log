@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2016.7.6)  27 NOV 2016 01:17
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2016.7.6)  22 DEC 2016 22:14
 entering extended mode
 **a_survey_of_ABE.tex
 (D:\temp\github\ABE\ABE_text\a_survey_of_ABE.tex
@@ -323,183 +323,471 @@ LaTeX Font Info:    ... okay on input line 27.
 
 -- Lines per column: 58 (exact).
 (D:\temp\github\ABE\ABE_text\introd.tex) (D:\temp\github\ABE\ABE_text\defin.tex
-) (D:\temp\github\ABE\ABE_text\design_philosophy.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 26.
-
+LaTeX Font Info:    Try loading font information for U+msa on input line 6.
 ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 26.
+LaTeX Font Info:    Try loading font information for U+msb on input line 6.
 
 ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+\c@currABEctr=\count116
+\c@endABEctr=\count117
+\c@ABE=\count118
 
-LaTeX Warning: Citation `first_KP_ABE' on page 1 undefined on input line 91.
-
-\c@currdefnctr=\count116
-\c@enddefnctr=\count117
-\c@defn=\count118
-
-LaTeX Warning: Citation `Beimel' on page 1 undefined on input line 99.
-
-
-LaTeX Warning: Citation `A.: Secure Schemes for Secret Sharing and Key Distribu
-tion. PhD thesis' on page 1 undefined on input line 99.
-
-
-LaTeX Warning: Citation `Israel Institute of Technology' on page 1 undefined on
- input line 99.
-
-
-LaTeX Warning: Citation `Technion' on page 1 undefined on input line 99.
-
-
-LaTeX Warning: Citation `Haifa' on page 1 undefined on input line 99.
-
-
-LaTeX Warning: Citation `Israel (1996)' on page 1 undefined on input line 99.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-[][]\OT1/ptm/m/it/10 access
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
+[][]\OT1/ptm/b/n/10 Decrypt(PK,KeyGeneration(MK,PK,X), En-cryp-
  []
-
-
-LaTeX Warning: Citation `classical Non-Monotonic' on page 1 undefined on input 
-line 107.
-
-
-LaTeX Warning: Citation `xiaohui:PRE' on page 1 undefined on input line 110.
-
-
-LaTeX Warning: Citation `classical Non-Monotonic' on page 1 undefined on input 
-line 111.
-
-
-LaTeX Warning: Citation `classical Non-Monotonic' on page 1 undefined on input 
-line 113.
 
 [1
 
 
 ]
-
-LaTeX Warning: Citation `how to share' on page 2 undefined on input line 189.
-
-[2]
-
-LaTeX Warning: Citation `fist-kp' on page 3 undefined on input line 194.
-
-
-LaTeX Warning: Citation `Ibraimi' on page 3 undefined on input line 194.
-
-
-LaTeX Warning: Citation `Luan:Efficient and provable secure ciphertext-policy a
-ttribute-based encryption schemes' on page 3 undefined on input line 194.
-
-
-LaTeX Warning: Citation `Chatterjee' on page 3 undefined on input line 194.
-
-
-LaTeX Warning: Citation `Santanu:An effective ECCbased user access control sche
-me with attributebased encryption for wireless sensor networks' on page 3 undef
-ined on input line 194.
-
-Missing character: There is no ° in font cmr10!
-Missing character: There is no ˙ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no ˙ in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no ˙ in font cmr10!
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--237
+\c@currCCActr=\count119
+\c@endCCActr=\count120
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+) (D:\temp\github\ABE\ABE_text\state.tex [2])
+(D:\temp\github\ABE\ABE_text\design_philosophy.tex [3]
+\c@currMonotonicityctr=\count121
+\c@endMonotonicityctr=\count122
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 254--257
 [][]\OT1/ptm/m/n/10 Then, the struc-ture part choos-es ran-dom-ly
  []
 
 
-Underfull \hbox (badness 2753) in paragraph at lines 234--237
+Underfull \hbox (badness 2753) in paragraph at lines 254--257
 $\OML/cmm/m/it/10 r[]; [] ; r[]; r[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Z[]$\O
 T1/ptm/m/n/10 , where the $\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 + \OML/cmm/m/it/1
 0 q$ \OT1/ptm/m/n/10 val-ues
  []
 
+[5]
+Missing character: There is no ° in font cmr10!
+Missing character: There is no Ø in font cmr10!
+Missing character: There is no ° in font cmr10!
+Missing character: There is no Ø in font cmr10!
+ [6]
+Underfull \hbox (badness 2393) in paragraph at lines 450--451
+\OT1/ptm/m/n/10 scheme con-sist-s of four al-go-rithm-s:Setup,Encryption,Key
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
+
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 452--453
+\OT1/ptm/m/n/10 ram-e-ter-s. First-ly, let $\OML/cmm/m/it/10 U \OT1/cmr/m/n/10 
+= \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/c
+mm/m/it/10 :::n\OMS/cmsy/m/n/10 g$ \OT1/ptm/m/n/10 de-note the u-ni-
+ []
+
+
+Underfull \hbox (badness 2443) in paragraph at lines 452--453
+\OT1/ptm/m/n/10 verse of at-tributes, and de-fine a tu-ple $\OT1/cmr/m/n/10 (\O
+ML/cmm/m/it/10 p; g; \U/msb/m/n/10 G[]\OML/cmm/m/it/10 ; \U/msb/m/n/10 G[]\OML/
+cmm/m/it/10 ; e\OT1/cmr/m/n/10 )$
+ []
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 452--453
+\OT1/ptm/m/n/10 ly at ran-dom for each at-tribute $\OML/cmm/m/it/10 i \OMS/cmsy
+/m/n/10 2 \OML/cmm/m/it/10 U$ \OT1/ptm/m/n/10 and gen-er-ate
+ []
+
+
+Overfull \hbox (30.52324pt too wide) detected at line 469
+[]\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []; x\OT1/cmr/m/n/10 ) = []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7])
+(D:\temp\github\ABE\ABE_text\extens.tex
 Missing character: There is no ° in font ptmr7t!
 Missing character: There is no Ø in font ptmr7t!
-[3]
-Missing character: There is no ° in font cmr10!
-Missing character: There is no Ø in font cmr10!
-Missing character: There is no ° in font cmr10!
-Missing character: There is no Ø in font cmr10!
-
-
-LaTeX Warning: Citation `LSSS' on page 4 undefined on input line 353.
-
-
-LaTeX Warning: Citation `span' on page 4 undefined on input line 356.
-
-
-LaTeX Warning: Citation `span' on page 4 undefined on input line 358.
-
-
-LaTeX Warning: Citation `first_KP' on page 4 undefined on input line 359.
-
-
-LaTeX Warning: Citation `classical Non-Monotonic' on page 4 undefined on input 
-line 371.
-
 Missing character: There is no ° in font ptmr7t!
-Missing character: There is no ∂ in font ptmr7t!
-) (D:\temp\github\ABE\ABE_text\state.tex
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no ∞ in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
 
-LaTeX Warning: Citation `fuzz' on page 4 undefined on input line 4.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+
+Underfull \hbox (badness 1484) in paragraph at lines 20--21
+\OT1/ptm/m/n/10 con-crete bidi-rec-tion-al PRE scheme. This scheme al-lows
+ []
 
 
-LaTeX Warning: Citation `Yao:Id-based encryption for complex hierarchies with a
-pplications to forward security and broadcast encryption' on page 4 undefined o
-n input line 4.
+Underfull \hbox (badness 2653) in paragraph at lines 20--21
+\OT1/ptm/m/n/10 Ateniese[[]]provided identity-based PRE.The se-cu-ri-ty of
+ []
 
 
-LaTeX Warning: Citation `fuzz' on page 4 undefined on input line 4.
+Underfull \hbox (badness 2653) in paragraph at lines 20--21
+\OT1/ptm/m/n/10 new identity-based prox-y re-encryption schemes in the
+ []
 
 
-LaTeX Warning: Citation `Adi Shamir:How to Share a Secret' on page 4 undefined 
-on input line 4.
+Underfull \hbox (badness 3029) in paragraph at lines 20--21
+\OT1/ptm/m/n/10 s-tan-dard mod-el. Matsuo[[]]also pro-posed new identity-
+ []
 
 
-LaTeX Warning: Citation `classical:KP-ABE' on page 4 undefined on input line 4.
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
-LaTeX Warning: Citation `first:CP-ABE' on page 4 undefined on input line 4.
-
-[4]) (D:\temp\github\ABE\ABE_text\extens.tex)
-(D:\temp\github\ABE\ABE_text\related.tex
-
-LaTeX Warning: Citation `IE:survey' on page 5 undefined on input line 6.
+ []
 
 
-LaTeX Warning: Citation `Su:survey' on page 5 undefined on input line 11.
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
 
 
-LaTeX Warning: Citation `Feng:survey' on page 5 undefined on input line 14.
+Underfull \hbox (badness 10000) in paragraph at lines 37--43
 
-) (D:\temp\github\ABE\ABE_text\future.tex)
-(D:\temp\github\ABE\ABE_text\a_survey_of_ABE.bbl)
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 45.
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
+\OT1/ptm/m/n/10 It choos-es ran-dom $\OML/cmm/m/it/10 r[]$$[] $$r[]$ \OT1/ptm/m
+/n/10 from $\OML/cmm/m/it/10 Z[]$ \OT1/ptm/m/n/10 and set-s
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--49
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 51.
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\ueuf.fd"
+File: ueuf.fd 2009/06/22 v3.00 Euler Fraktur
+)
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+[][]$\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 d[]$ \OT1/ptm/m/n/10 ap-pears in \OT1/p
+tm/m/it/10 AS\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = \OML/cmm
+/m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]; D[]\OT1/cmr/m/n/10 ) =$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--65
+[][]\OT1/ptm/m/n/10 It then com-putes $[]$=$\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 (
+[]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) [][] \OML/cmm/m/it/10 E[] \OT1/cmr/m/n
+/10 =$
+ []
+
+
+Underfull \hbox (badness 1975) in paragraph at lines 63--65
+$\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]; h[]\OT1/cmr/m/n/10 ) 
+\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g; h\OT1
+/cmr/m/n/10 )[] = \OML/cmm/m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g; h\OT1/
+cmr/m/n/10 )[]$\OT1/ptm/m/n/10 ;
+ []
+
+
+Underfull \hbox (badness 5878) in paragraph at lines 66--68
+[][]\OT1/ptm/m/n/10 DEC(\OT1/ptm/m/it/10 C\OT1/ptm/m/n/10 , \OT1/ptm/m/it/10 us
+k\OT1/ptm/m/n/10 ): Let \OT1/ptm/m/it/10 usk \OT1/ptm/m/n/10 de-note a valid se
+-cret key
+ []
+
+
+Underfull \hbox (badness 3724) in paragraph at lines 70--71
+[][]$\OT1/cmr/m/n/10 +\OML/cmm/m/it/10 d[]$ \OT1/ptm/m/n/10 ap-pears in \OT1/pt
+m/m/it/10 AS\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = \OML/cmm/
+m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]; D[]\OT1/cmr/m/n/10 ) =$
+ []
+
+
+Underfull \hbox (badness 3724) in paragraph at lines 71--72
+[][]$\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 d[]$ \OT1/ptm/m/n/10 ap-pears in \OT1/p
+tm/m/it/10 AS\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = \OML/cmm
+/m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]; D[]\OT1/cmr/m/n/10 ) =$
+ []
+
+Missing character: There is no ¸ in font ptmr7t!
+Missing character: There is no ¸ in font ptmr7t!
+Missing character: There is no ¸ in font ptmr7t!
+[10]
+Underfull \hbox (badness 7925) in paragraph at lines 145--146
+[][]\OT1/ptm/b/n/10 User Col-lu-sion Avoid-ance Scheme for Privacy-
+ []
+
+[11]
+Underfull \hbox (badness 1365) in paragraph at lines 206--290
+\OT1/ptm/m/n/10 col-lege re-spec-tive-ly, in-for-ma-tion is un-able to be share
+d
+ []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 206--290
+[]\OT1/ptm/m/n/10 The ad-van-tages are ob-vi-ous. Cen-tral au-thor-i-ty en-sure
+
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 206--290
+\OT1/ptm/m/n/10 un-bound-ed MA-ABE for da-ta shar-ing in mo-bile cloud
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 206--290
+\OT1/ptm/m/n/10 pro-to-col (D-KG) and join-t ze-ro se-cret shar-ing pro-to-col
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--290
+\OT1/ptm/m/n/10 Secure Large-Universe Multi-Authority Attribute-Based
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--290
+
+ []
+
+[12]
+Missing character: There is no ¶ in font cmr7!
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ¶ in font ptmb7t!
+Missing character: There is no — in font ptmb7t!
+Missing character: There is no ¶ in font ptmr7t!
+Missing character: There is no — in font ptmr7t!
+Missing character: There is no ¶ in font ptmr7t!
+Missing character: There is no À in font ptmr7t!
+Missing character: There is no ¶ in font cmr7!
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ¶ in font cmr10!
+Missing character: There is no À in font cmr10!
+Missing character: There is no ¶ in font ptmr7t!
+Missing character: There is no — in font ptmr7t!
+Missing character: There is no ¶ in font ptmb7t!
+Missing character: There is no ◊ in font ptmb7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no ∞ in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no Ø in font ptmr7t!
+
+
+LaTeX Warning: Citation `NuttapongAttrapadung:{2009}' on page 13 undefined on i
+nput line 344.
+
+
+LaTeX Warning: Citation `NuttapongAttrapadung:{2009}' on page 13 undefined on i
+nput line 346.
+
+
+LaTeX Warning: Citation `NuttapongAttrapadung:{2009}' on page 13 undefined on i
+nput line 348.
+
+
+LaTeX Warning: Citation `NuttapongAttrapadung:{2009}' on page 13 undefined on i
+nput line 350.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--358
+\OT1/ptm/m/n/10 change and key leak-age may hap-pen with time.
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 292--358
+\OT1/ptm/m/n/10 scheme, the key au-thor-i-ty, who pos-sess-es the cur-ren-t
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--358
+[]\OT1/ptm/m/n/10 C=M$\OMS/cmsy/m/n/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e\OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 g; g\OT1/cmr/m/n/10 )[])[]$\OT1/ptm/m/n/10 ,   C$
+[]$=g$[]$,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--358
+
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 292--358
+[]\OT1/ptm/b/n/10 Decrypt(ct, (S, (M, $\OML/cmm/m/it/10 $\OT1/ptm/b/n/10 ))\OT
+1/ptm/m/n/10 , sk, (ID, $\OML/cmm/m/it/10  $\OT1/ptm/m/n/10 ), p-k): Sup-pose
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 292--358
+\OT1/ptm/m/n/10 re-con-struc-tion constants\OMS/cmsy/m/n/10 f\OT1/ptm/m/n/10 (i
+,$\OML/cmm/m/it/10 []$\OT1/ptm/m/n/10 )\OMS/cmsy/m/n/10 g$[]$\OT1/ptm/m/n/10 =
+Recon$[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10  \OT1/cmr/m/n/10 )$\OT1/ptm/m/n/10 .T
+hen it
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--358
+\OT1/ptm/m/n/10 K=$[] \OMS/cmsy/m/n/10 $
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--358
+
+ []
+
+
+Underfull \hbox (badness 6110) in paragraph at lines 292--358
+\OT1/ptm/m/n/10 can re-duce the au-thor-i-tys work. Shi, Yan-feng,Zheng,
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 292--358
+\OT1/ptm/m/n/10 au-tho-rize(identity)part,the trust-ed au-thor-i-ty is al-lowed
+ to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--358
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13])
+(D:\temp\github\ABE\ABE_text\related.tex)
+(D:\temp\github\ABE\ABE_text\future.tex)
+(D:\temp\github\ABE\ABE_text\a_survey_of_ABE.bbl
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ê in font ptmr7t!
+
+Underfull \hbox (badness 1742) in paragraph at lines 79--82
+[][]\OT1/ptm/m/n/8 H.-M. R. Chun-I Fan, Vin-cen-t Shi-Ming Huang, ``Arbitrary-s
+tate
+ []
+
+[14]
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+ [15]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+)
 \tf@thm=\write3
- [5]
-(D:\temp\github\ABE\ABE_text\a_survey_of_ABE.aux)
+ [16] (D:\temp\github\ABE\ABE_text\a_survey_of_ABE.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3174 strings out of 495355
- 47452 string characters out of 3182763
- 109286 words of memory out of 3000000
- 6286 multiletter control sequences out of 15000+200000
- 33558 words of font info for 85 fonts, out of 3000000 for 9000
+ 3327 strings out of 495355
+ 49564 string characters out of 3182763
+ 119286 words of memory out of 3000000
+ 6428 multiletter control sequences out of 15000+200000
+ 35866 words of font info for 93 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 32i,13n,30p,2574b,243s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,13n,28p,2574b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on a_survey_of_ABE.dvi (5 pages, 46448 bytes).
+Output written on a_survey_of_ABE.dvi (16 pages, 169776 bytes).

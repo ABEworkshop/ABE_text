@@ -1,2 +1,159 @@
-\section{Syntax of ABE Schemes}
-Syntax of ABE Schemes goes here,and don't contain security.
+\section{definition}
+We first show the notions in our paper.
+Then formal framework of attribute based encryption(ABE) are given.
+Finally, based a basic security model we give many security definitions of ABE.
+\subsection{Notions (by Lei Xu)}
+$k$ belongs to the set of natural numbers, and $1^k$ denotes the string of k ones.
+Let $(y,z,\ldots) \leftarrow A(w,x,\ldots)$ or $A(w,x,\ldots) \rightarrow (y,z,\ldots)$ denote the operation of running an algorithm $A$ with inputs $(w,x,\ldots)$ and output $(y,z,\ldots)$.
+
+We list the notions appearing in our comparison on Table~\ref{tab:notiforcom}.
+\begin{table}[t]
+\centering  % 表居中
+\caption{notions for comparison}
+\label{tab:notiforcom}
+\begin{tabular}{c|c}% {lccc} 表示各列元素对齐方式，left-l,right-r,center-c
+
+\hline
+
+
+Notions&Descriptions\\\hline
+$n$&the number of the attributes in ciphertext\\\hline
+
+$\omega$&the number of the attributes in secret key\\\hline
+
+$U$&the number of the attributes in the whole system\\\hline
+
+$C$&the number of nodes ( in access tree) or gates ( in circuits) \\\hline
+
+$k$&the number of the authorities\\\hline
+
+$|G_i|$&the size of the element in group $G_i$\\\hline
+
+$t_{e_i}$&exponential-operation cost of one time in $G_i$ \\\hline
+
+$t_p$ &pairing-operation cost of one time\\
+\hline
+\end{tabular}
+
+\end{table}
+\subsection{Framework Of ABE (by Xiping Zhang)}
+Attribute Based Encryption can be divided into two categories: Key-Policy Attribute-Based Encryption(KP-ABE) and Cipertext-Policy Attribute-Based Encryption(CP-ABE). In a CP-ABE scheme,an access structure (i.e. policy) would be associated to each ciphertext, while a user’s private key would be associated with a set of attributes. In KP-ABE scheme,on the contrary,the access structure is specified in the private key, while the ciphertexts are simply labeled with a set of descriptive attributes.
+%\\\indent\textit{Definition 1 (Attribute-Based Encryption)} An attribute-based encryption is defined by the following algorithms.
+\newtheorem{ABE}{Definition}
+\begin{ABE}
+An attribute-based encryption is defined by the following algorithms
+\end{ABE}
+\begin{itemize}
+\item\textbf{Setup}  This is a randomized algorithm that takes no input other than the implicit security parameter. It outputs the public parameters PK and a master key MK.
+\item\textbf{KeyGen(MK,PK,X)} The key generation algorithm takes as input the master key MK, public parameters PK and an permission X, It outputs a private key SK$_X$.
+\item\textbf{Encrypt(m,PK,Y)} This is a randomized algorithm that takes as input a message m, the public parameters PK and a ciphertext index Y. It outputs the ciphertext CT$_Y$.
+\item\textbf{Decrypt(PK,CT$_Y$,SK$_X$)} The decryption algorithm takes as input the public parameters PK, a ciphertext CT$_Y$, the decryption key SK$_X$. It outputs the result of decrypt m$^\prime$.
+\end{itemize}
+\textbf{correctness.}The correctness of a attribute based encryption scheme requires that the following equations hold with probability one:
+
+
+\textbf{Decrypt(PK,KeyGeneration(MK,PK,X), Encrypt(m,PK,Y))=m}\\
+\indent It should be noted that the permission X of CP-ABE is a set of attributes that describe the key while in KP-ABE is an access structure. The ciphertext index Y is an access structure in CP-ABE and is a set of attribute in KP-ABE.
+\subsection{Security Model (by Lei Xu)}
+According to the theory of provable security in public key encryption \cite{feng:05}, 
+security definitions are generally developed from the antagonistic relationship between the security goal 
+and the adversary model, 
+and the adversary model means the attack capacities the adversary owns. 
+
+With Semantic security, i.e, the indistinguishability of encryptions (IND) goal and three attacks (chosen-plaintext attack (CPA),
+non-adaptive chosen-ciphertext attack (CCA1) and adaptive chosen-ciphertext attack (CCA2)), 
+There are three security models usually taken into consideration: 
+\textbf{IND-CPA} security, \textbf{IND-CCA1} security and \textbf{IND-CCA2} security \cite{}. Due to the fact
+that the PRE is one special kind of public key encryption
+cryptosystem, PRE schemes are also expected to offer INDCPA security [12], IND-CCA1 security [18] and IND-CCA2
+security [15]. This subsection attempts to offer definitional
+union for PRE by presenting a family of attack models which
+captures the nature of CCA-security associated with PRE
+schemes and avoid the security definitions that are particular
+for each PRE subclass.
+
+
+%In this part, we briefly introduce the security models for ABE.
+%In order to avoid various security definitions which many parts of are same,
+%we first define a basic security model fully for the original ABE scheme whose framework has been defined in closest previous subsection, then,
+%we do some modifications on basic security model.
+%In addition, for the sake of avoiding distinguishing KP-ABE with CP-ABE,
+%denote $f_{as}(X,Y)=1$ as that attributes satisfy access policy.
+%The basic security game proceeds as follows:
+%\begin{itemize}
+%  \item \textbf{Setup}~ The challenger runs the Setup algorithm of ABE and gives the public parameters PK to the adversary.
+%  \item \textbf{Phase 1}~ The adversary is allowed to issue queries:
+%  \begin{enumerate}
+%    \item \emph{Private key} query, on input a permission X, the challenger runs SK$_X \leftarrow $ KeyGen(MK,PK,X), then returns to the adversary the private key SK$_X$.
+%    \item \emph{Decryption} query, on input a permission X and a ciphertext CT, the challenger runs SK$_X \leftarrow $ KeyGen(MK,PK,X) and $M \leftarrow $Decrypt(PK,CT,SK$_X$). It then returns $M$ to the adversary.
+%  \end{enumerate}
+%  \item \textbf{Challenge}~ The adversary submits two equal length messages $M_0$, $M_1$ and a ciphertext index $Y^\ast$, subject to the restriction that, $f_{as}(X,Y^\ast) \neq 1$. The challenger flips a random coin $b \in \{0,1\}$, and runs CT$_{Y^\ast} \leftarrow $ Encrypt(m$_b$,PK,$Y^\ast$) and sends CT$_{Y^\ast}$ to the adversary as its challenge ciphertext.
+%  \item \textbf{Phase 2}~ The same as Phase 1, but with the restrictions that the adversary cannot:
+%  \begin{enumerate}
+%    \item issue a \emph{Private key} query for the permissions X that $f_{as}(X,Y^\ast) = 1$.
+%    \item issue a \emph{Decryption} query for the ciphertext CT$_{Y^\ast}$.
+%  \end{enumerate}
+%  \item \textbf{Guess}~ The adversary outputs a guess b$^\prime$ of b.
+%\end{itemize}
+%\noindent
+%The advantage of an adversary in this game is defined as $|Pr[b^\prime = b] = 1|$.
+%\newtheorem{CCA}[ABE]{Definition}
+%\begin{CCA}
+%An attribute-based encryption scheme is adaptive CCA-secure with full security if all polynomial time adversaries have at most a negligible advantage in the basic security game.
+%\end{CCA}
+%
+%\subsubsection{Select Security And Full Security}
+%Security in ABE can be divided into select security and full security.
+%In select security game,
+%the adversary commits to the challenge index $Y^\ast$ before \textbf{Setup} in basic security game.
+%However, there is not the stage in full security game.
+%In other words, if a ABE scheme is secure under the select security game with the extra stage, we make it select-secure,
+%while if a ABE scheme is secure under the full security game without the extra stage, we make it full-secure.
+%Intuitionally, in ABE,
+%it is more difficult to achieve full security due to the fact that
+%the adversary does not inform of what permission he wants to challenge.
+%% 为什么难以实现
+%More specifically, it becomes select security game by changing basic security game as follows:
+%
+%\begin{itemize}
+%  \item add a \textbf{Init} stage before \textbf{Setup} where the adversary commits to the challenge index $Y^\ast$.
+%  \item in \emph{Private key} query of \textbf{Phase 1}, add a constraint that $f_{as}(X,Y^\ast) \neq 1$.
+%  \item in \textbf{Challenge}, the adversary does not submit the the challenge index $Y^\ast$.
+%\end{itemize}
+%\subsubsection{CCA and CPA}
+%Chosen-Ciphertext Attack(CCA) and Chosen-Plaintext Attack(CPA) are both used to evaluate the capacity of adversary.
+%if a scheme is secure under the CCA, then it can be called CCA-secure,
+%while if a scheme is secure under the CPA, it is CPA-secure.
+%More specifically, We say that a ABE scheme is CCA-secure if the adversary cannot make the Decryption queries in Phase 1 or Phase 2 of basic security game.
+%
+%Additionally, in some ABE subclass, a relaxant CCA model, replayable CCA(RCCA), is adopted.
+%It becomes RCCA security game by modifying the Decryption query in Phase 2 of basic security game as follow:
+%
+%Decryption query is the same as Phase 1 in basic security game,
+%but with the restriction that the adversary cannot issue a trivial \emph{Decryption} query.
+%That is , Decryption queries will be answered as in Phase 1, except that if the response would be either $M_0$ or $M_1$.
+%
+%In fact, RCCA security is just capturing the intuition that
+%``the adversary should gain nothing from seeing a legitimately generated ciphertext,
+%except for the ability to generate new ciphertexts that decrypt to the same value as the given ciphertext” \cite{Ran:CRYPTO'03}.
+%
+%%In a random oracle model, there exists an oracle which can be thought as a box. When taking a binary string as input, it will return a binary string as output. And everyone can not know or predict the internal workings of the oracle. A?random oracle?is an?oracle that is a theoretical?black box. When a query is performed, it responds?with a random?response which is chosen?uniformly?from its output domain. In detail, a random oracle can be thought as a perfect hash function:
+%%
+%%1.For the same input, the output of the function must be the same.
+%%
+%%2.The output of the function can be calculated in polynomial time.
+%%
+%%3.The function is a one-way function.
+%%
+%%4.The output of the function is uniformly distributed in the value of space and have the property of anti-collision.
+%%
+%%The proof under this model needs to make a assumption that the adversary can not exploit the weakness of the hash function. In reality, however, the hash function is deterministic and its output can not be completely random and evenly distributed. Therefore, some schemes are not safe after using a real hash function instead of random oracle. Nevertheless, the security proof based on the random oracle model can meet the security requirements except for the hash function. Comparing with the standard model, the security proof based on random oracle model is easier to realize and the schemes based random oracle model usually have higher efficiency. So, most of encryption?schemes include attribute based encryption adopt random oracle model to construct their schemes.
+%%
+%%In a standard model, the adversary is only limited by amount of time and computational power available. In other words, the formal security proof in the standard only relies on the difficulty provided by the one-way trap function  (standard number theory hypothesis, such as the calculation of discrete logarithm)  and the irreversibility of a one-way hash function, and some other properties of the hash function that can be implemented in the real world. Comparing to the random oracle model, standard model has higher security, so there are many researchers researching on the encryption schemes based on the standard model.In 1998, Cramer and Shoup [?] proposed the first efficient public key cryptography scheme that can be proved to be secure under the standard model. And the difficulty assumption in this paper is the Decisional Diffie-Hellman Assumption. In the field of attribute-based encryption research, there also exits some schemes based on the standard model[?][?].
+%\subsubsection{random oracle model and standard model}
+%Random oracle model and standard model do not belong to security model, but they are significant tools in proof of security.
+%Under random oracle model,
+%the proof of security needs to make a assumption that the adversary can not exploit the weakness of the hash function,
+%while in a standard model the adversary is only limited by amount of time and computational power available.
+%We say a ABE scheme is secure under random oracle model when the the proof utilizes random oracles in Phase 1 or Phase 2 of security game, otherwise it is secure under standard model.
+%%为什么标准模型更难。

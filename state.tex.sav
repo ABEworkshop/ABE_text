@@ -1,0 +1,48 @@
+\section{State-of-the-Art Of the ABE}
+%In this section,we attempt to survey the existing literature and constructions for ABE schemes over the period 2005-2016 from the aspects of three trunk clues,function,efficiency and security.Then we explain how do we arrive at more  logical and clear clues on the development of ABE.\subsection{the development Of ABE}
+\subsection{the birth of ABE}
+Attribute-based encryption originates from fuzz identity based encryption \cite{Sahai:TACT'05} by Amit Sahai and Brent Waters, %this idea Hierarchical identity-based encryption schemes\cite{Danfeng:CCS'04}and 
+the construct on the scheme \cite{Sahai:TACT'05} can be 
+achieved due to the inspiration from threshold secret share technology by\cite{Shamir:CACM'79}.After that,researchers pay much attention on general policy,which ties data owner with data user as a series of formalized constraint,compared with traditional point-to-point constraint(corresponding the privilege management infrastructure technology).So the access control technology is recalled,and ABE has perfectly formed just when this technology and the attribute as object of authorization are used in public-key scheme.When access control technology occurs to ABE,there are two types of models realized,i.e KP-ABE and CP-ABE.\cite{Goyal:CCS'06} is the first KP-ABE scheme and \cite{Bethencourt:SP'07} is the first CP-ABE,so these two schemes proposed sign the perfect formation of ABE.After then, apart from research on more practical access policies, which are surveyed in section 3, the directions of development of ABE can be summarized those:fuction, efficiency and security.
+\subsection{efficiency}
+ABE brings a new idea of encryption. Whereas in today?s life it is not widely used, the traditional ABE encryption and decryption speed can not make people satisfied in nowadays big data situation on the Internet. Based on this dilemma, many new ABE schemes are proposed to improve the efficiency of ABE. The first is ABE with constant ciphertext length. The length of the ciphertext depends on the number of attributes in previous ABE schemes. Keita Emura first put forward the ABE with constant ciphertext length, unlike the previous ABE schemes they put the user attributes in one set, the whole set is used as the generation of ciphertext, so that fixed the ciphertext length. Then Javier propose the collusion-resistant ABE scheme with constant ciphertext length. Even if the ABE with constant ciphertext length is not secure enough, thus in 2013 Doshi Nishant proposed a fully secure ABE with constant ciphertext length, that makes the ABE with constant ciphertext length can be in the security with a higher efficiency.
+
+\subsection{security}
+1:Survey on original ABE,and some articles,which have promoted in security,based on original ABE.
+
+2:You describe these articles in time sequence.
+
+3:Also need a table to compare security among articles mentioned by you.
+
+\subsection{function}
+Although original ABE schemes are of great significance as mentioned in our introduction,
+there are still some constraints for some specific scenario.
+For example, the principal of the university wants to send a encrypted file to those who satisfy following constraint:
+(("school: EECS" and "career: teacher") or ("career: administrator")) and "age: 35~45".
+Obviously, original ABE schemes are not able or efficient to deal with above situation.
+In this subsection, we survey the development on function based original ABE schemes.
+Firstly, in all original ABE schemes,
+there is a constraint that every attribute in original ABE schemes only has two state: a attribute is held by somebody or not.
+Chun-I Fan et al.\cite{Fan:TOC'14} straightforward
+propose the Arbitrary-State Attribute-Based Encryption in 2014.
+"career: teacher, administrator,$\ldots$" is just one attribute in our example in \cite{Fan:TOC'14},
+such that the number of designed attributes somebody receives is comparable to the number of natural attributes it has.
+In fact, in 2009,
+Rakesh Bobba et al.\cite{Bobba:ESORICS'09} have achieved multiple value assignment on an attribute, which arbitrary-state attribute is somewhat similar to.
+
+Additionally, "numerical attribute", "age" in our instance, means that the value of an attribute is numerical, i.e,
+we can compare those values using operations such us $\leq, >, \neq$ and so on.
+In the original CP-ABE scheme\cite{Bethencourt:SP'07}, "numerical attribute" and the operation on values are posed,
+but are not applied in the concrete scheme.
+Lang, Bo et al.\cite{Lang:SC'13} in 2013 achieves the construct of an ABE scheme supporting "numerical attribute" and the operation on its values.
+
+Moreover, Weighted Attribute Based Encryption is proposed by Ximeng Liu et al.\cite{Ximeng:ICC'14} to deal with the situation that in some circumstances the attributes are not always in the same position, i.e,
+different attributes have different importance.
+
+%\subsection{clues on the development of ABE}
+%The surveys above clearly display the development of ABE due to the three main clues obtained.The reveal of how we find out more detail clues is shown in this subsection.In brief,focus on the purposes and process of all or most present ABE schemes.The detailed procedures are explained as followings.Firstly,pay our attention to the all parts of process on original ABE schemes i.e\cite{classical:KP-ABE} and \cite{first:CP-ABE},and draw a picture containing three parts:components of specific scheme,participants and operations of process of these schemes,shown in Fig.~\ref{fig:original_clues}.We note that operations are actually not independent to components and participants,this division is just for discerning more clearly,and that mentioned clues above don't conclude access structure,so this method can also be used in other public-key encryption schemes.Secondly,we ligature each two parts which there are some responding relationships between,then the lines are labeled with relationships.For example,there is an "authorization" between "CA" and "user",so we line this two parts and label with "authorization".After finished lines of each existing relations,a new issue of ABE is added in this kind figure in the way concentrate attention to the purpose and the process.For example,constant ciphertext issue of ABE can be add as Fig.~\ref{fig:cons_ciphertext_added_clues},and proxy re-encryption ABE can be added as Fig.~\ref{fig:proxy_added_clues}.Finally,after surveyed the most issues of ABE,we obtain the Fig.~\ref{fig:final_clues}.All lines in Fig.~\ref{fig:final_clues} is called as detailed clues,We can clearly view the motivations or main process of present ABE schemes using our clues,so that a overview of ABE tend to be crystallized and visual.Besides,researchers also can get some possible directions of exploration of ABE though using this kind way to line parts which haven't lined in Fig.~\ref{fig:final_clues}.For example,we can construct called common constraint ABE(CCABE) through lining between plaintext and encryption.In CCABE,universal attributes is defined by some trusted authority.These attributes are divided into some groups,and each group contains arbitrary number attributes.Then according to the distributed attribute group every data owner holds,every owner in this system can define its own access policy which it wants user's attributes to satisfy in order to decrypt.And only when users attributes satisfy all or some other rules(such us threshold policy)from data owners' access policy.
+%%\begin{figure}
+%%  \centering
+%%    \includegraphics[width=0.7\columnwidth]{fig/clues.eps}
+%%  \caption{clues on the development of ABE,that's from the all parts }\label{fig:clues}
+%%\end{figure}

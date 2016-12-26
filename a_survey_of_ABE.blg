@@ -1,78 +1,189 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: a_survey_of_ABE.aux
-White space in argument---line 5 of file a_survey_of_ABE.aux
- : \citation{A.:
- :               Secure Schemes for Secret Sharing and Key Distribution. PhD thesis}
+Stuff after "}"---line 187 of file a_survey_of_ABE.aux
+ : \citation{NuttapongAttrapadung:{2009
+ :                                     }}
 I'm skipping whatever remains of this command
-White space in argument---line 6 of file a_survey_of_ABE.aux
- : \citation{Israel
- :                  Institute of Technology}
+Stuff after "}"---line 188 of file a_survey_of_ABE.aux
+ : \citation{NuttapongAttrapadung:{2009
+ :                                     }}
 I'm skipping whatever remains of this command
-White space in argument---line 9 of file a_survey_of_ABE.aux
- : \citation{Israel
- :                  (1996)}
+Stuff after "}"---line 189 of file a_survey_of_ABE.aux
+ : \citation{NuttapongAttrapadung:{2009
+ :                                     }}
 I'm skipping whatever remains of this command
-White space in argument---line 10 of file a_survey_of_ABE.aux
- : \citation{classical
- :                     Non-Monotonic}
-I'm skipping whatever remains of this command
-White space in argument---line 12 of file a_survey_of_ABE.aux
- : \citation{classical
- :                     Non-Monotonic}
-I'm skipping whatever remains of this command
-White space in argument---line 13 of file a_survey_of_ABE.aux
- : \citation{classical
- :                     Non-Monotonic}
-I'm skipping whatever remains of this command
-White space in argument---line 25 of file a_survey_of_ABE.aux
- : \citation{how
- :               to share}
-I'm skipping whatever remains of this command
-White space in argument---line 31 of file a_survey_of_ABE.aux
- : \citation{Luan:Efficient
- :                          and provable secure ciphertext-policy attribute-based encryption schemes}
-I'm skipping whatever remains of this command
-White space in argument---line 33 of file a_survey_of_ABE.aux
- : \citation{Santanu:An
- :                      effective ECCbased user access control scheme with attributebased encryption for wireless sensor networks}
-I'm skipping whatever remains of this command
-White space in argument---line 38 of file a_survey_of_ABE.aux
- : \citation{classical
- :                     Non-Monotonic}
-I'm skipping whatever remains of this command
-White space in argument---line 40 of file a_survey_of_ABE.aux
- : \citation{Yao:Id-based
- :                        encryption for complex hierarchies with applications to forward security and broadcast encryption}
-I'm skipping whatever remains of this command
-White space in argument---line 42 of file a_survey_of_ABE.aux
- : \citation{Adi
- :               Shamir:How to Share a Secret}
+Stuff after "}"---line 190 of file a_survey_of_ABE.aux
+ : \citation{NuttapongAttrapadung:{2009
+ :                                     }}
 I'm skipping whatever remains of this command
 The style file: IEEEtran.bst
 Database file #1: ../bib/uestc_abe.bib
-I was expecting a `,' or a `}'---line 53 of file ../bib/uestc_abe.bib
+You're missing a field name---line 118 of file ../bib/uestc_abe.bib
+ : 
+ : 　pages = { 763-771 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 157 of file ../bib/uestc_abe.bib
+ : 
+ : 　pages = { 2201-2210 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 168 of file ../bib/uestc_abe.bib
+ : 
+ : 　pages = { 2119-2130 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 179 of file ../bib/uestc_abe.bib
+ : 
+ : 　pages = { 1384-1393 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 190 of file ../bib/uestc_abe.bib
+ : 
+ : 　pages = { 1343-1354 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 201 of file ../bib/uestc_abe.bib
+ : 
+ : 　pulisher = { USENIX Association},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--string name "ttc" is undefined
+--line 249 of file ../bib/uestc_abe.bib
+You're missing a field name---line 262 of file ../bib/uestc_abe.bib
+ : 
+ : 　issue =  { 5 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 463 of file ../bib/uestc_abe.bib
+ :   
+ :   month = { October }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 513 of file ../bib/uestc_abe.bib
+ :   
+ :   month = { Aug.}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 532 of file ../bib/uestc_abe.bib
+ : 
+ : 　number  = { 11 }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 543 of file ../bib/uestc_abe.bib
+ : 
+ : 　number  = { 11 }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 554 of file ../bib/uestc_abe.bib
+ : 
+ : 　issue  = { 3 }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 591 of file ../bib/uestc_abe.bib
+ :   
+ :   location = { Chicago, Illinois, USA}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 645 of file ../bib/uestc_abe.bib
+ : 
+ : 　month={ July }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 886 of file ../bib/uestc_abe.bib
  : @article{Li 
  :             Ming:tpds,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "first_KP_ABE"
-Warning--I didn't find a database entry for "Beimel"
-Warning--I didn't find a database entry for "Technion"
-Warning--I didn't find a database entry for "Haifa"
-Warning--I didn't find a database entry for "xiaohui:PRE"
-Warning--I didn't find a database entry for "fist-kp"
-Warning--I didn't find a database entry for "Ibraimi"
-Warning--I didn't find a database entry for "Chatterjee"
-Warning--I didn't find a database entry for "LSSS"
-Warning--I didn't find a database entry for "span"
-Warning--I didn't find a database entry for "first_KP"
-Warning--I didn't find a database entry for "fuzz"
-Warning--I didn't find a database entry for "classical:KP-ABE"
-Warning--I didn't find a database entry for "first:CP-ABE"
-Warning--I didn't find a database entry for "IE:survey"
-Warning--I didn't find a database entry for "Su:survey"
-Warning--I didn't find a database entry for "Feng:survey"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Too many commas in name 1 of "Vipul Goyal, Omkant Pandey, Amit Sahai, Brent Waters" for entry Goyal:CCS'06
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Keita Emura, Atsuko Miyaji, Akito Nomura, Kazumasa Omote, Masakazu Soshi" for entry Keita:ISPEC'09
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Keita Emura, Atsuko Miyaji, Akito Nomura, Kazumasa Omote, Masakazu Soshi" for entry Keita:ISPEC'09
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Fuchun Guo, Yi Mu, Willy Susilo, Duncan S Wong, Vijay Varadharajan" for entry Fuchun:TIFS'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Fuchun Guo, Yi Mu, Willy Susilo, Duncan S Wong, Vijay Varadharajan" for entry Fuchun:TIFS'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Luan Ibraimi, Qiang Tang, Pieter Hartel, Willem Jonker" for entry Luan:ISPEC'09
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Liu Ximeng, Zhu Hui, Ma Jianfeng, Ma Jun, Ma Siqi" for entry Ximeng:ICC'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Liu Ximeng, Zhu Hui, Ma Jianfeng, Ma Jun, Ma Siqi" for entry Ximeng:ICC'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Hui Ma, Rui Zhang, Zhiguo Wan, Yao Lu, Suqing Lin" for entry Hui:TDSC'15
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Hui Ma, Rui Zhang, Zhiguo Wan, Yao Lu, Suqing Lin" for entry Hui:TDSC'15
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Sanjam Garg, Craig Gentry, Shai Halevi, Amit Sahai" for entry Sanjam:CRYPTO'2013
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Jung Taeho, Li Xiang-Yang, Wan Zhiguo, Wan Meng" for entry Taeho:TIFS'15
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Junzuo Lai, Robert H. Deng, Chaowen Guan, Jian Weng" for entry Junzuo:TIFS'13
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Baodong Qin, Robert H Deng, Shengli Liu, Siqi Ma" for entry Baodong:TIFS'15
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Suqing Lin, Rui Zhang, Hui Ma, Mingsheng Wang" for entry Suqing:TIFS'15
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Jin Li, Xinyi Huang, Jingwei Li, Xiaofeng Chen, Yang Xiang" for entry Jin:TPDS'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Jin Li, Xinyi Huang, Jingwei Li, Xiaofeng Chen, Yang Xiang" for entry Jin:TPDS'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Shanqing Guo, Yingpei Zeng, Juan Wei, Qiuliang Xu" for entry Shanqing:WUJ'08
+while executing---line 2419 of file IEEEtran.bst
+Warning--empty journal in Shanqing:TTC'12
+Too many commas in name 1 of "Kaitai Liang, Liming Fang, Willy Susilo, Duncan S. Wong" for entry Kaitai:INCS'13
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Kaitai Liang, Man Ho Au, Willy Susilo, Duncan S. Wong, Guomin Yang, Yong Yu" for entry Kaitai:ISPEC'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Kaitai Liang, Man Ho Au, Willy Susilo, Duncan S. Wong, Guomin Yang, Yong Yu" for entry Kaitai:ISPEC'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Kaitai Liang, Man Ho Au, Willy Susilo, Duncan S. Wong, Guomin Yang, Yong Yu" for entry Kaitai:ISPEC'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Allison Lewko, Tatsuaki Okamoto, Amit Sahai, Katsuyuki Takashima, Brent Waters" for entry Cheung:TACT'10
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Allison Lewko, Tatsuaki Okamoto, Amit Sahai, Katsuyuki Takashima, Brent Waters" for entry Cheung:TACT'10
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Huang Lin, Zhenfu Cao, Xiaohui Liang, Jun Shao" for entry Huang:INDOCRYPT'08
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Zhen Liu, Zhenfu Cao, Qiong Huang, Duncan S. Wong, Tsz Hon Yuen" for entry Zhen:ESORICS'11
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Zhen Liu, Zhenfu Cao, Qiong Huang, Duncan S. Wong, Tsz Hon Yuen" for entry Zhen:ESORICS'11
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Qi Li, Jianfeng Ma, Rui Li, Jinbo Xiong, Ximeng Liu" for entry Qi:SCN'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Qi Li, Jianfeng Ma, Rui Li, Jinbo Xiong, Ximeng Liu" for entry Qi:SCN'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Aijun Ge, Jiang Zhang, Rui Zhang, Chuangui Ma, Zhenfeng Zhang" for entry Aijun:TPDS'13
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Aijun Ge, Jiang Zhang, Rui Zhang, Chuangui Ma, Zhenfeng Zhang" for entry Aijun:TPDS'13
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Jinguang Han, Willy Susilo, Yi Mu, Jianying Zhou, Man Ho Au" for entry Jinguang:ESRCS'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Jinguang Han, Willy Susilo, Yi Mu, Jianying Zhou, Man Ho Au" for entry Jinguang:ESRCS'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Jan Camenisch, Markulf Kohlweiss, Alfredo Rial, Caroline Sheedy" for entry Camenisch:PKC'09
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Xiaohui Liang, Rongxing Lu, Xiaodong Lin, Xuemin Sherman Shen" for entry Xiaohui:Citeseer'10
+while executing---line 2419 of file IEEEtran.bst
+Warning--empty journal in Xiaohui:Citeseer'10
+Too many commas in name 1 of "XiaoFang Huang, Qi Tao, BaoDong Qin, ZhiQin Liu" for entry XiaoFang:ICCCN'15
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Yinghui Zhang, Dong Zheng, Qi Li, Jin Li, Hui Li" for entry Yinghui:Wiley'16
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Yinghui Zhang, Dong Zheng, Qi Li, Jin Li, Hui Li" for entry Yinghui:Wiley'16
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Qi Li, Jianfeng Ma, Rui Li, Jinbo Xiong, Ximeng Liu" for entry Qi:Wiley'15
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Qi Li, Jianfeng Ma, Rui Li, Jinbo Xiong, Ximeng Liu" for entry Qi:Wiley'15
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Yanfeng Shi, Qingji Zheng, Jiqiang Liu, Zhen Han" for entry Yanfeng:InSc'15
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Jin-Shu Su, Dan Cao, Xiao-Feng Wang, Yi-Pin Sun, Qiao-Lin Hu" for entry Su:JS'11
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Jin-Shu Su, Dan Cao, Xiao-Feng Wang, Yi-Pin Sun, Qiao-Lin Hu" for entry Su:JS'11
+while executing---line 2419 of file IEEEtran.bst
 
 Done.
-(There were 13 error messages)
+(There were 62 error messages)
