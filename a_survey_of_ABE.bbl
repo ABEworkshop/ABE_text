@@ -21,10 +21,14 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{Ran:CRYPTO'03}
-J.~B.~N. Ran~Canetti, Hugo~Krawczyk, ``Relaxing chosen-ciphertext security,''
-  \emph{Advances in Cryptology - CRYPTO: Annual International Cryptology
-  Conference}, pp. 565--582, 2003.
+\bibitem{Goyal:CCS'06}
+A.~S. B.~W. Vipul~Goyal, Omkant~Pandey, ``Attribute-based encryption for
+  fine-grained access control of encrypted data,'' \emph{ACM conference on
+  Computer and communications security}, pp. 89--98, 2006.
+
+\bibitem{Ling:CCS'07}
+L.~Cheung and C.~Newport, ``Provably secure ciphertext policy abe,'' \emph{ACM
+  conference on Computer and communications security}, pp. 456--465, 2007.
 
 \bibitem{Sahai:TACT'05}
 B.~W. Amit~Sahai, ``Fuzzy identity based encryption,'' \emph{Advances in
@@ -34,11 +38,6 @@ B.~W. Amit~Sahai, ``Fuzzy identity based encryption,'' \emph{Advances in
 \bibitem{Shamir:CACM'79}
 A.~Shamir, ``How to share a secret,'' \emph{Communications of the ACM},
   vol.~22, pp. 612--613, Nov. 1979.
-
-\bibitem{Goyal:CCS'06}
-A.~S. B.~W. Vipul~Goyal, Omkant~Pandey, ``Attribute-based encryption for
-  fine-grained access control of encrypted data,'' \emph{ACM conference on
-  Computer and communications security}, pp. 89--98, 2006.
 
 \bibitem{Bethencourt:SP'07}
 B.~W. John~Bethencourt, Amit~Sahai, ``Ciphertext-policy attribute-based

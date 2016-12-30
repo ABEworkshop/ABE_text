@@ -1,4 +1,12 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: a_survey_of_ABE.aux
+White space in argument---line 6 of file a_survey_of_ABE.aux
+ : \citation{Canetti-Halevi-Katz
+ :                               approach}
+I'm skipping whatever remains of this command
+Stuff after "}"---line 186 of file a_survey_of_ABE.aux
+ : \citation{NuttapongAttrapadung:{2009
+ :                                     }}
+I'm skipping whatever remains of this command
 Stuff after "}"---line 187 of file a_survey_of_ABE.aux
  : \citation{NuttapongAttrapadung:{2009
  :                                     }}
@@ -11,88 +19,87 @@ Stuff after "}"---line 189 of file a_survey_of_ABE.aux
  : \citation{NuttapongAttrapadung:{2009
  :                                     }}
 I'm skipping whatever remains of this command
-Stuff after "}"---line 190 of file a_survey_of_ABE.aux
- : \citation{NuttapongAttrapadung:{2009
- :                                     }}
-I'm skipping whatever remains of this command
 The style file: IEEEtran.bst
 Database file #1: ../bib/uestc_abe.bib
-You're missing a field name---line 118 of file ../bib/uestc_abe.bib
+You're missing a field name---line 128 of file ../bib/uestc_abe.bib
  : 
  : 　pages = { 763-771 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 157 of file ../bib/uestc_abe.bib
+You're missing a field name---line 167 of file ../bib/uestc_abe.bib
  : 
  : 　pages = { 2201-2210 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 168 of file ../bib/uestc_abe.bib
+You're missing a field name---line 178 of file ../bib/uestc_abe.bib
  : 
  : 　pages = { 2119-2130 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 179 of file ../bib/uestc_abe.bib
+You're missing a field name---line 189 of file ../bib/uestc_abe.bib
  : 
  : 　pages = { 1384-1393 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 190 of file ../bib/uestc_abe.bib
+You're missing a field name---line 200 of file ../bib/uestc_abe.bib
  : 
  : 　pages = { 1343-1354 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 201 of file ../bib/uestc_abe.bib
+You're missing a field name---line 211 of file ../bib/uestc_abe.bib
  : 
  : 　pulisher = { USENIX Association},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--string name "ttc" is undefined
---line 249 of file ../bib/uestc_abe.bib
-You're missing a field name---line 262 of file ../bib/uestc_abe.bib
+--line 259 of file ../bib/uestc_abe.bib
+You're missing a field name---line 272 of file ../bib/uestc_abe.bib
  : 
  : 　issue =  { 5 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 463 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 473 of file ../bib/uestc_abe.bib
  :   
  :   month = { October }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 513 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 523 of file ../bib/uestc_abe.bib
  :   
  :   month = { Aug.}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 532 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 542 of file ../bib/uestc_abe.bib
  : 
  : 　number  = { 11 }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 543 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 553 of file ../bib/uestc_abe.bib
  : 
  : 　number  = { 11 }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 554 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 564 of file ../bib/uestc_abe.bib
  : 
  : 　issue  = { 3 }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 591 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 601 of file ../bib/uestc_abe.bib
  :   
  :   location = { Chicago, Illinois, USA}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 645 of file ../bib/uestc_abe.bib
+You're missing a field name---line 655 of file ../bib/uestc_abe.bib
  : 
  : 　month={ July }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 886 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 896 of file ../bib/uestc_abe.bib
  : @article{Li 
  :             Ming:tpds,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "feng:05"
+Warning--I didn't find a database entry for "security:98"
+Warning--I didn't find a database entry for "classic:IBE"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -186,4 +193,4 @@ Too many commas in name 1 of "Jin-Shu Su, Dan Cao, Xiao-Feng Wang, Yi-Pin Sun, Q
 while executing---line 2419 of file IEEEtran.bst
 
 Done.
-(There were 62 error messages)
+(There were 63 error messages)

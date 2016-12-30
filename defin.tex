@@ -36,7 +36,7 @@ $t_p$ &pairing-operation cost of one time\\
 \end{tabular}
 
 \end{table}
-\subsection{Framework Of ABE (by Xiping Zhang)}
+\subsection{Framework (by Xiping Zhang)}
 Attribute Based Encryption can be divided into two categories: Key-Policy Attribute-Based Encryption(KP-ABE) and Cipertext-Policy Attribute-Based Encryption(CP-ABE). In a CP-ABE scheme,an access structure (i.e. policy) would be associated to each ciphertext, while a user’s private key would be associated with a set of attributes. In KP-ABE scheme,on the contrary,the access structure is specified in the private key, while the ciphertexts are simply labeled with a set of descriptive attributes.
 %\\\indent\textit{Definition 1 (Attribute-Based Encryption)} An attribute-based encryption is defined by the following algorithms.
 \newtheorem{ABE}{Definition}
@@ -45,34 +45,59 @@ An attribute-based encryption is defined by the following algorithms
 \end{ABE}
 \begin{itemize}
 \item\textbf{Setup}  This is a randomized algorithm that takes no input other than the implicit security parameter. It outputs the public parameters PK and a master key MK.
-\item\textbf{KeyGen(MK,PK,X)} The key generation algorithm takes as input the master key MK, public parameters PK and an permission X, It outputs a private key SK$_X$.
-\item\textbf{Encrypt(m,PK,Y)} This is a randomized algorithm that takes as input a message m, the public parameters PK and a ciphertext index Y. It outputs the ciphertext CT$_Y$.
-\item\textbf{Decrypt(PK,CT$_Y$,SK$_X$)} The decryption algorithm takes as input the public parameters PK, a ciphertext CT$_Y$, the decryption key SK$_X$. It outputs the result of decrypt m$^\prime$.
+\item\textbf{KeyGen}(MK,PK,X) The key generation algorithm takes as input the master key MK, public parameters PK and an permission X, It outputs a private key SK$_X$.
+\item\textbf{Encrypt}(m,PK,Y) This is a randomized algorithm that takes as input a message m, the public parameters PK and a ciphertext index Y. It outputs the ciphertext CT$_Y$.
+\item\textbf{Decrypt}(PK,CT$_Y$,SK$_X$) The decryption algorithm takes as input the public parameters PK, a ciphertext CT$_Y$, the decryption key SK$_X$. It outputs the result of decrypt m$^\prime$.
 \end{itemize}
-\textbf{correctness.}The correctness of a attribute based encryption scheme requires that the following equations hold with probability one:
+\textbf{correctness}. The correctness of a attribute based encryption scheme requires that the following equations hold with probability one:
 
 
-\textbf{Decrypt(PK,KeyGeneration(MK,PK,X), Encrypt(m,PK,Y))=m}\\
+\textbf{Decrypt}(PK,\textbf{KeyGen}(MK,PK,X), \textbf{Encrypt}(m,PK,Y))=m\\
 \indent It should be noted that the permission X of CP-ABE is a set of attributes that describe the key while in KP-ABE is an access structure. The ciphertext index Y is an access structure in CP-ABE and is a set of attribute in KP-ABE.
+In addition, for the sake of avoiding distinguishing KP-ABE with CP-ABE,
+denote $f_{as}(X,Y)=1$ as that attributes satisfy access policy.
 \subsection{Security Model (by Lei Xu)}
-According to the theory of provable security in public key encryption \cite{feng:05}, 
-security definitions are generally developed from the antagonistic relationship between the security goal 
-and the adversary model, 
-and the adversary model means the attack capacities the adversary owns. 
+According to the theory of provable security in public key encryption \cite{feng:05},
+security definitions are generally developed from the antagonistic relationship between the security goal
+and the adversary model,
+and the adversary model means the attack capacities the adversary owns.
+With Semantic security ( i.e, the indistinguishability of encryptions (IND)) goal and three attacks (chosen-plaintext attack (CPA),
+non-adaptive chosen-ciphertext attack (CCA1) and adaptive chosen-ciphertext attack (CCA2)).
+There are three security models usually taken into consideration:
+\textbf{IND-CPA} security, \textbf{IND-CCA1} security and \textbf{IND-CCA2} security in order of increasing strength \cite{security:98}.
+However, present ABE schemes offer only two security models, \textbf{IND-ABE-CPA} security \cite{Goyal:CCS'06} and \textbf{IND-ABE-CCA2} security \cite{Ling:CCS'07},
+due to the fact that the direct construct of ABE schemes can usually be achieved the weakest \textbf{IND-ABE-CPA} security of above three securities, and that compound construct with assistant technology, such as Canetti-Halevi-Katz approach \cite{Canetti-Halevi-Katz approach} for stronger security has already been competent for \textbf{IND-ABE-CCA2}.
 
-With Semantic security, i.e, the indistinguishability of encryptions (IND) goal and three attacks (chosen-plaintext attack (CPA),
-non-adaptive chosen-ciphertext attack (CCA1) and adaptive chosen-ciphertext attack (CCA2)), 
-There are three security models usually taken into consideration: 
-\textbf{IND-CPA} security, \textbf{IND-CCA1} security and \textbf{IND-CCA2} security \cite{security:98}. Due to the fact
-that the PRE is one special kind of public key encryption
-cryptosystem, PRE schemes are also expected to offer IND-CPA security [12], IND-CCA1 security [18] and IND-CCA2
-security [15]. This subsection attempts to offer definitional
-union for PRE by presenting a family of attack models which
-captures the nature of CCA-security associated with PRE
-schemes and avoid the security definitions that are particular
-for each PRE subclass.
+Compared with normal public key encryption, 
+ABE has some subtle variations and restrictions for the reason of the fine-grained property. 
+Fine-grained property mentioned above means granting differential access rights to a set of users and
+allowing flexibility in specifying the access rights of individual users. 
+In ABE, both of the characteristics of fine-grained access control naturally result in that
+it is most probable that the adversary can obtain the private keys for the many permission X( i.e, attribute sets for CP-ABE or access structure for KP-ABE) from other users or from adversary himself. 
+Therefore, when the weakest \textbf{IND-CPA} of three security models is straightforward defined on ABE, 
+the ABE scheme under \textbf{IND-CPA} is completely insecure. 
+Other security models have the same issue. 
+This issue of ABE bears some resemblance the one of identity-based encryption \cite{classic:IBE}. 
+%紧抓变化和限制
+So, for the purpose that the security model can evaluate the security, 
+the capacity to query private keys for the many permission X must be given to the adversary in any attack model of ABE, 
+and the private key generation oracle $\mathcal{O}_{keygen}$ is used to simulate such query. 
+Thus, different levels to access the decryption oracle $\mathcal{O}_{dec}$ result in different attack models. 
 
+Despite the capability to query private keys can be simulated by the private key generation oracle $\mathcal{O}_{keygen}$, 
+accessing to this oracle without any restriction is not necessary for the adversary to obtain such capability. 
+In an effort to avoid the trivial success for the adversary, 
+the definition of the private key generation oracle must contain the non-trivial restriction. 
+Particularly, 
+on condition that the challenge ciphertext index $Y^\ast$ associated with the challenge ciphertext has been submitted,
+private key generation oracle $\mathcal{O}_{keygen}$ is not allowed to issue queries for private keys for the permission $X_j$,
+where $f_{as}(X_j,Y^\ast)=1$ for all $j$. 
+Similarly, the decryption oracle $\mathcal{O}_{dec}$ have the same restriction. 
 
+In this section, we first describe the details of key generation oracle $\mathcal{O}_{keygen}$ and 
+decryption oracle $\mathcal{O}_{dec}$ in ABE. 
+Then, we will discuss different chosen-ciphertext attack models for ABE on the basis of the availability of above two oracles in each phase of the security game. 
+Finally, formal security definitions will be given. 
 %In this part, we briefly introduce the security models for ABE.
 %In order to avoid various security definitions which many parts of are same,
 %we first define a basic security model fully for the original ABE scheme whose framework has been defined in closest previous subsection, then,

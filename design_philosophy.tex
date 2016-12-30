@@ -7,7 +7,7 @@ Before our formal discuss, we firstly introduce a new notion, authorization.
 Informally, the authorization signifies the process of obtaining the permission to decrypt.
 Then, we claim that ``access control" is that if and only if some objects from user satisfy a certain rule from data owner,
 the user can be authorized.
-On the one hand, ontrasted with ``identity" in IBE,
+On the one hand, contrasted with ``identity" in IBE,
 ``attribute" in ABE is the least fineness which still has the function of objects on authorization.
 On the other hand, the rule mentioned above means access policy or access structure,
 which will be surveyed below in detail.
@@ -447,16 +447,17 @@ LSSS&black-box&$\diagdown$&row size of $M$ add 1&$\omega|G_1|$&YES
 some introduction goes here.
 
 \subsubsection{KP-ABE by (Li Peng)}
-As defined in [?], a KP-ABE scheme consists of four algorithms:Setup,Encryption,Key Generation and Decryption. Let a tuple$(p,g,\mathbb{G}_1,\mathbb{G}_2,e)$ denote a bilinear map, where $\mathbb{G}_1,\mathbb{G}_2$ are multiplicative cyclic groups of prim order $p$ and $e$ denote $\mathbb{G}_1 \times \mathbb{G}_1 \rightarrow \mathbb{G}_2$. A security parameter, $\lambda$, denote the size of the groups. The Lagrange coefficient $\Delta_{i,S}$ for $i \in \mathbb{Z}_p$  and a set, $S$, of elements is defined in $\mathbb{Z}_p:\Delta_{i,S}=\Pi_{j\in S,j\neq i}\frac{x-j}{i-j}$. Each attribute is associated with a unique element in $\mathbb{Z}{_p^*}$. The construction follows.\\
+As defined in \cite{Goyal:CCS'06}, a KP-ABE scheme consists of four algorithms: Setup,Encryption,Key Generation and Decryption. Let a tuple$(p,g,\mathbb{G}_1,\mathbb{G}_2,e)$ denote a bilinear map, where $\mathbb{G}_1,\mathbb{G}_2$ are multiplicative cyclic groups of prim order $p$ and $e$ denote $\mathbb{G}_1 \times \mathbb{G}_1 \rightarrow \mathbb{G}_2$. A security parameter, $\lambda$, denote the size of the groups. The Lagrange coefficient $\Delta_{i,S}$ for $i \in \mathbb{Z}_p$  and a set, $S$, of elements is defined in $\mathbb{Z}_p:\Delta_{i,S}=\Pi_{j\in S,j\neq i}\frac{x-j}{i-j}$. Each attribute is associated with a unique element in $\mathbb{Z}{_p^*}$. The construction follows.\\
 
-\noindent Setup$(\lambda,U)$  The setup algorithm takes $\lambda,U$ as input parameters. Firstly,  let $U=\{1,2...n\}$ denote the universe of attributes, and define a tuple $(p,g,\mathbb{G}_1,\mathbb{G}_2,e)$ as above mentioned. Then choose a number $t_i$ uniformly at random for each attribute $i \in U$ and generate a random?value $y \in \mathbb{Z}_p$. Finally, the public parameters are published as PK=$(T_1,T_2,...,T_{|U|},Y)$, where $T_{i}=g^{t_i},i\in \{ 1,2...|U| \},Y=e(g,g)^y$. The master key is MK=$(t_1,...,t_{|U|},y)$.
+\noindent \textbf{Setup} $(\lambda,U)$  The setup algorithm takes $\lambda,U$ as input parameters. Firstly,  let $U=\{1,2...n\}$ denote the universe of attributes, and define a tuple $(p,g,\mathbb{G}_1,\mathbb{G}_2,e)$ as above mentioned. Then choose a number $t_i$ uniformly at random for each attribute $i \in U$ and generate a random?value $y \in \mathbb{Z}_p$. Finally, the public parameters are published as PK=$(T_1,T_2,...,T_{|U|},Y)$, where $T_{i}=g^{t_i},i\in \{ 1,2...|U| \},Y=e(g,g)^y$. The master key is MK=$(t_1,...,t_{|U|},y)$.
 
-Encryption$(M,S,$PK$)$ The encryption algorithm takes as input a message $M\in \mathbb{G}_2 $, a set of attributes $S$ and the public parameters PK. To encrypt the message $M$ under a set of attributes $S$, it chooses a a random value $\upsilon \in \mathbb{Z}_p $. Then The ciphertext is published as CT=$(S,C'=MY^{\upsilon},\{C_{i}=T_{i}^{\upsilon}\}_{i\in S})$;
+\textbf{Encryption} $(M,S,$PK$)$ The encryption algorithm takes as input a message $M\in \mathbb{G}_2 $, a set of attributes $S$ and the public parameters PK. To encrypt the message $M$ under a set of attributes $S$, it chooses a a random value $\upsilon \in \mathbb{Z}_p $. Then The ciphertext is published as CT=$(S,C'=MY^{\upsilon},\{C_{i}=T_{i}^{\upsilon}\}_{i\in S})$;
 
-Key Generation $(T,$ MK$)$  The Key Generation algorithm takes an access structure $T$ and the master key MK, then outputs a secret key SK. The SK enables the user to decrypt a message encrypted under a set of attributes $S$ if and only if $T (S)$ = 1. First let the access structure $T$ be a tree, then choose a polynomial $q_x$ for each node $x$ (including the leaves) in the tree $T$.
+\textbf{Key Generation} $(T,$ MK$)$  The Key Generation algorithm takes an access structure $T$ and the master key MK, then outputs a secret key SK. The SK enables the user to decrypt a message encrypted under a set of attributes $S$ if and only if $T (S)$ = 1. First let the access structure $T$ be a tree, then choose a polynomial $q_x$ for each node $x$ (including the leaves) in the tree $T$.
 
 For each node $x$ in the tree, choose a polynomial $q_x$ whose degree $d_x$ is one less than the threshold value $k_x$ of that node, that is, $d_x = k_x-1$. Firstly, for the root node $r$, set $q_r(0) = y$ and choose $d_r$ other points of the polynomial $q_r$ randomly to get the complete polynomial $q_x$.Then,  for any other node $x$, set $q_{x}(0) = q_{parent(x)}(index(x))$ , where $parent(x)$ denote the parent node of $x$ and $index(x)$ denote the number of the node, and choose $d_x$ other points randomly to completely define $q_x$. As a result, for each leaf node $x$, $q_{x}(0)$ is defined.Finally, the secret key is published as SK=$(D_x)$, where $D_{x}=g^{\frac{q_{x}(0)}{t_i}},i=att(x) $.
-Decryption (CT,SK) Firstly, define a recursive algorithm DecryptNode $($CT,SK,$x)$ that takes ciphertext CT, the private key SK and a node $x$ in the tree as input. Then it outputs a group element of $\mathbb{G}_2$ or $\bot$.
+
+\textbf{Decryption} (CT,SK) Firstly, define a recursive algorithm DecryptNode $($CT,SK,$x)$ that takes ciphertext CT, the private key SK and a node $x$ in the tree as input. Then it outputs a group element of $\mathbb{G}_2$ or $\bot$.
 Let $i = att(x)$. If the node x is a leaf node then:
 
 $$\text{DecryptNod}(\text{CT},\text{SK},x) = \left\{
