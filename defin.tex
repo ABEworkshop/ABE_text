@@ -68,36 +68,48 @@ There are three security models usually taken into consideration:
 However, present ABE schemes offer only two security models, \textbf{IND-ABE-CPA} security \cite{Goyal:CCS'06} and \textbf{IND-ABE-CCA2} security \cite{Ling:CCS'07},
 due to the fact that the direct construct of ABE schemes can usually be achieved the weakest \textbf{IND-ABE-CPA} security of above three securities, and that compound construct with assistant technology, such as Canetti-Halevi-Katz approach \cite{Canetti-Halevi-Katz approach} for stronger security has already been competent for \textbf{IND-ABE-CCA2}.
 
-Compared with normal public key encryption, 
-ABE has some subtle variations and restrictions for the reason of the fine-grained property. 
+Compared with normal public key encryption,
+ABE has some subtle variations and restrictions for the reason of the fine-grained property.
 Fine-grained property mentioned above means granting differential access rights to a set of users and
-allowing flexibility in specifying the access rights of individual users. 
+allowing flexibility in specifying the access rights of individual users.
 In ABE, both of the characteristics of fine-grained access control naturally result in that
-it is most probable that the adversary can obtain the private keys for the many permission X( i.e, attribute sets for CP-ABE or access structure for KP-ABE) from other users or from adversary himself. 
-Therefore, when the weakest \textbf{IND-CPA} of three security models is straightforward defined on ABE, 
-the ABE scheme under \textbf{IND-CPA} is completely insecure. 
-Other security models have the same issue. 
-This issue of ABE bears some resemblance the one of identity-based encryption \cite{classic:IBE}. 
+it is most probable that the adversary can obtain the private keys for the many permission X( i.e, attribute sets for CP-ABE or access structure for KP-ABE) from other users or from adversary himself.
+Therefore, when the weakest \textbf{IND-CPA} of three security models is straightforward defined on ABE,
+the ABE scheme under \textbf{IND-CPA} is completely insecure.
+Other security models have the same issue.
+This issue of ABE bears some resemblance the one of identity-based encryption \cite{classic:IBE}.
 %紧抓变化和限制
-So, for the purpose that the security model can evaluate the security, 
-the capacity to query private keys for the many permission X must be given to the adversary in any attack model of ABE, 
-and the private key generation oracle $\mathcal{O}_{keygen}$ is used to simulate such query. 
-Thus, different levels to access the decryption oracle $\mathcal{O}_{dec}$ result in different attack models. 
+So, for the most basic purpose that the security model can evaluate the security,
+the capacity to query private keys for the many permission X must be given to the adversary in any attack model of ABE,
+and the private key generation oracle $\mathcal{O}_{keygen}$ is used to simulate such query.
+Thus, different levels to access the decryption oracle $\mathcal{O}_{dec}$ result in different attack models.
 
-Despite the capability to query private keys can be simulated by the private key generation oracle $\mathcal{O}_{keygen}$, 
-accessing to this oracle without any restriction is not necessary for the adversary to obtain such capability. 
-In an effort to avoid the trivial success for the adversary, 
-the definition of the private key generation oracle must contain the non-trivial restriction. 
-Particularly, 
+Despite the capability to query private keys can be simulated by the private key generation oracle $\mathcal{O}_{keygen}$,
+accessing to this oracle without any restriction is not necessary for the adversary to obtain such capability.
+In an effort to avoid the trivial success for the adversary, which makes no sense for demonstrating the security. 
+the definition of the private key generation oracle must contain the non-trivial restriction.
+Particularly,
 on condition that the challenge ciphertext index $Y^\ast$ associated with the challenge ciphertext has been submitted,
 private key generation oracle $\mathcal{O}_{keygen}$ is not allowed to issue queries for private keys for the permission $X_j$,
-where $f_{as}(X_j,Y^\ast)=1$ for all $j$. 
-Similarly, the decryption oracle $\mathcal{O}_{dec}$ have the same restriction. 
+where $f_{as}(X_j,Y^\ast)=1$ for all $j$.
+Similarly, the decryption oracle $\mathcal{O}_{dec}$ for ABE have the same restriction.
 
-In this section, we first describe the details of key generation oracle $\mathcal{O}_{keygen}$ and 
-decryption oracle $\mathcal{O}_{dec}$ in ABE. 
-Then, we will discuss different chosen-ciphertext attack models for ABE on the basis of the availability of above two oracles in each phase of the security game. 
-Finally, formal security definitions will be given. 
+In this section, we first describe the details of key generation oracle $\mathcal{O}_{keygen}$ and
+decryption oracle $\mathcal{O}_{dec}$ in ABE.
+Then, we will discuss different chosen-ciphertext attack models for ABE on the basis of the availability of above two oracles in each phase of the security game.
+Finally, formal security definitions will be given.
+
+\subsubsection{oracles}
+we discuss the two oracles involved in the security games for ABE scheme, 
+which can be queried by the adversary in an adaptive manner in the security game.  
+In addition, the restriction of non-trivial query mentioned above should be met. 
+\begin{itemize}
+  \item $\mathcal{O}_{keygen}$: On input a permission X, outputs a private key SK$_X$ \leftarrow \textbf{KeyGen}((MK,PK,X)). 
+  if the challenge ciphertext index $Y^\ast$ has not been submitted yet, 
+  the inputs X do not have any constraint.
+  Otherwise, those inputs $X_j$ satisfying $f_{as}(X_j,Y)=1$ are invalid input for $\mathcal{O}_{keygen}$. 
+  \item  Odec: On input % X 还是Y? phase1 有没有$f_{as}(X_j,Y)不等于1$ 的限制？
+\end{itemize}
 %In this part, we briefly introduce the security models for ABE.
 %In order to avoid various security definitions which many parts of are same,
 %we first define a basic security model fully for the original ABE scheme whose framework has been defined in closest previous subsection, then,
