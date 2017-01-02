@@ -47,7 +47,7 @@ An attribute-based encryption is defined by the following algorithms
 \item\textbf{Setup}  This is a randomized algorithm that takes no input other than the implicit security parameter. It outputs the public parameters PK and a master key MK.
 \item\textbf{KeyGen}(MK,PK,X) The key generation algorithm takes as input the master key MK, public parameters PK and an permission X, It outputs a private key SK$_X$.
 \item\textbf{Encrypt}(m,PK,Y) This is a randomized algorithm that takes as input a message m, the public parameters PK and a ciphertext index Y. It outputs the ciphertext CT$_Y$.
-\item\textbf{Decrypt}(PK,CT$_Y$,SK$_X$) The decryption algorithm takes as input the public parameters PK, a ciphertext CT$_Y$, the decryption key SK$_X$. It outputs the result of decrypt m$^\prime$.
+\item\textbf{Decrypt}(PK,CT$_Y$,SK$_X$) The decryption algorithm takes as input the public parameters PK, a ciphertext CT$_Y$, the decryption key SK$_X$. It outputs the result of decrypt m.
 \end{itemize}
 \textbf{correctness}. The correctness of a attribute based encryption scheme requires that the following equations hold with probability one:
 
@@ -63,13 +63,13 @@ and the adversary model,
 and the adversary model means the attack capacities the adversary owns.
 With Semantic security ( i.e, the indistinguishability of encryptions (IND)) goal and three attacks (chosen-plaintext attack (CPA),
 non-adaptive chosen-ciphertext attack (CCA1) and adaptive chosen-ciphertext attack (CCA2)).
-There are three security models usually taken into consideration:
+There are three security models usually taken into consideration: 
 \textbf{IND-CPA} security, \textbf{IND-CCA1} security and \textbf{IND-CCA2} security in order of increasing strength \cite{security:98}.
 However, present ABE schemes offer only two security models, \textbf{IND-ABE-CPA} security \cite{Goyal:CCS'06} and \textbf{IND-ABE-CCA2} security \cite{Ling:CCS'07},
 due to the fact that the direct construct of ABE schemes can usually be achieved the weakest \textbf{IND-ABE-CPA} security of above three securities, and that compound construct with assistant technology, such as Canetti-Halevi-Katz approach \cite{Canetti-Halevi-Katz approach} for stronger security has already been competent for \textbf{IND-ABE-CCA2}.
 
 Compared with normal public key encryption,
-ABE has some subtle variations and restrictions for the reason of the fine-grained property.
+ABE has some subtle variations for the reason of the fine-grained property.
 Fine-grained property mentioned above means granting differential access rights to a set of users and
 allowing flexibility in specifying the access rights of individual users.
 In ABE, both of the characteristics of fine-grained access control naturally result in that
@@ -84,32 +84,81 @@ the capacity to query private keys for the many permission X must be given to th
 and the private key generation oracle $\mathcal{O}_{keygen}$ is used to simulate such query.
 Thus, different levels to access the decryption oracle $\mathcal{O}_{dec}$ result in different attack models.
 
+The most difference between ABE and IBE appears at the private key generation oracle $\mathcal{O}_{keygen}$ and 
+the decryption oracle $\mathcal{O}_{dec}$ in security model. 
+In ABE $\mathcal{O}_{keygen}$ put the permission X as input, 
+but the ciphertext as the input of $\mathcal{O}_{dec}$ is associated with ciphertext index Y, 
+instead of the same thing at the positions of X and Y for ABE (identity strings ID)\cite{classic:IBE}.
+The reason is that 
+In IBE the encryption and key generation both operate on the identity strings ID, 
+while ciphertext is generated from Y and SK is the product of X for ABE. 
+
+Based on discussion above, in following parts, we first describe the details of key generation oracle $\mathcal{O}_{keygen}$ and
+decryption oracle $\mathcal{O}_{dec}$ in ABE.
+Then, we will discuss different chosen-ciphertext attack models for ABE on the basis of the availability of above two oracles in each phase of the security game.
+Finally, formal security definitions will be given.
+
+\subsubsection{Oracles}
+we describe the two oracles involved in the security games for ABE scheme,
+which can be queried by the adversary in an adaptive manner in the security game.
+The aim of these oracles defined here is to provide the adversary with the attack capacity in attack model.
+
+\begin{itemize}
+  \item $\mathcal{O}_{keygen}$: On input a permission X, outputs a private key SK$_X \leftarrow$ \textbf{KeyGen}((MK,PK,X)).
+  If the challenge ciphertext index $Y^\ast$ has not been submitted yet,
+  the inputs X do not have any constraint.
+  Otherwise, those inputs $X_j$ satisfying $f_{as}(X_j,Y)=1$ are invalid for $\mathcal{O}_{keygen}$.
+  \item $\mathcal{O}_{dec}$: On input a ciphertext CT$_Y$ encrypted to Y, 
+  $\mathcal{O}_{dec}$ create a X, which make $f_{as}(X,Y)=1$ hold. 
+  Then runs SK$_X \leftarrow$ \textbf{KeyGen}((MK,PK,X)) and m $\leftarrow$ \textbf{Decrypt}(PK,CT$_Y$,SK$_X$).
+  Finally, outputs the m. Note that the input can be the ciphertext encrypted to $Y^\ast$, 
+  while the challenge ciphertext CT$^\ast$ submitted is invalid input for $\mathcal{O}_{keygen}$. 
+\end{itemize}
+
 Despite the capability to query private keys can be simulated by the private key generation oracle $\mathcal{O}_{keygen}$,
 accessing to this oracle without any restriction is not necessary for the adversary to obtain such capability.
-In an effort to avoid the trivial success for the adversary, which makes no sense for demonstrating the security. 
+In an effort to avoid the trivial success for the adversary, which makes no sense for demonstrating the security.
 the definition of the private key generation oracle must contain the non-trivial restriction.
 Particularly,
 on condition that the challenge ciphertext index $Y^\ast$ associated with the challenge ciphertext has been submitted,
 private key generation oracle $\mathcal{O}_{keygen}$ is not allowed to issue queries for private keys for the permission $X_j$,
 where $f_{as}(X_j,Y^\ast)=1$ for all $j$.
-Similarly, the decryption oracle $\mathcal{O}_{dec}$ for ABE have the same restriction.
+Similarly, the decryption oracle $\mathcal{O}_{dec}$ for ABE have the analogous restriction.
 
-In this section, we first describe the details of key generation oracle $\mathcal{O}_{keygen}$ and
-decryption oracle $\mathcal{O}_{dec}$ in ABE.
-Then, we will discuss different chosen-ciphertext attack models for ABE on the basis of the availability of above two oracles in each phase of the security game.
-Finally, formal security definitions will be given.
+\subsubsection{Attack Model}
+For the briefness, We do not adopt the mnemonic way in \cite{pk:security} to describe the attack model for ABE. 
+additionally, due to the fact that the practical combinations of oracles in ABE is not so many \cite{xiong:pre}, 
+We simply enumerate these reasonable combinations.  
+We first assume $\mathcal{O}_{1}$ and $\mathcal{O}_{2}$ respectively to be the sets of the $\mathcal{O}_{keygen}$ oracle and $\mathcal{O}_{dec}$ oracle that are available in \textbf{Phase} 1 and \textbf{Phase} 2. 
+As the discussion at the beginning of this section, 
+any security model should conclude the private key generation oracle $\mathcal{O}_{keygen}$, 
+so $\mathcal{O}_{1}$ and $\mathcal{O}_{2}$ may be one of the two values, 
+$\{\mathcal{O}_{keygen}\}$ and $\{\mathcal{O}_{keygen},\mathcal{O}_{dec}\}$. 
+The attack models have been enumerated on Table~\ref{tab:attackmodel}.
+\begin{table}[h]
+\centering  % 表居中
+\caption{different attack models for ABE}
+\label{tab:attackmodel}
+\begin{tabular}{|c|c|c|}% {lccc} 表示各列元素对齐方式，left-l,right-r,center-c
 
-\subsubsection{oracles}
-we discuss the two oracles involved in the security games for ABE scheme, 
-which can be queried by the adversary in an adaptive manner in the security game.  
-In addition, the restriction of non-trivial query mentioned above should be met. 
-\begin{itemize}
-  \item $\mathcal{O}_{keygen}$: On input a permission X, outputs a private key SK$_X$ \leftarrow \textbf{KeyGen}((MK,PK,X)). 
-  if the challenge ciphertext index $Y^\ast$ has not been submitted yet, 
-  the inputs X do not have any constraint.
-  Otherwise, those inputs $X_j$ satisfying $f_{as}(X_j,Y)=1$ are invalid input for $\mathcal{O}_{keygen}$. 
-  \item  Odec: On input % X 还是Y? phase1 有没有$f_{as}(X_j,Y)不等于1$ 的限制？
-\end{itemize}
+\hline
+
+
+$\mathcal{O}_{1}$ & $\mathcal{O}_{2}$ & Attack Models\\\hline
+$\{\mathcal{O}_{keygen}\}$ & $\{\mathcal{O}_{keygen}\}$& CPA\\\hline
+
+$\{\mathcal{O}_{keygen},\mathcal{O}_{dec}\}$&$\{\mathcal{O}_{keygen}\}$& CCA1\\\hline
+
+$\{\mathcal{O}_{keygen},\mathcal{O}_{dec}\}$&$\{\mathcal{O}_{keygen},\mathcal{O}_{dec}\}$&CCA2\\
+
+\hline
+\end{tabular}
+
+\end{table}
+ 
+Although there has not been a present ABE scheme with CCA1 security, 
+we also describe CCA1 attack model in order to deal with the situation that the ABE scheme under CCA1 attack without any assistant technologies appears.
+
 %In this part, we briefly introduce the security models for ABE.
 %In order to avoid various security definitions which many parts of are same,
 %we first define a basic security model fully for the original ABE scheme whose framework has been defined in closest previous subsection, then,
