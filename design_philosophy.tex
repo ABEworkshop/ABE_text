@@ -71,7 +71,7 @@ $X$ &the independent variable of polynomials\\
 %\label{tab:notions}
 \end{table*}
 
-To put the statement ``attributes satisfy access structure ( or access policy)" into practice,
+To put the statement ``attributes satisfy access structure (or access policy)" into practice,
 Firstly, we can intuitionally enumerate authorized attribute sets,
 then the access structure $\mathbb{A}$ can be denoted as the collection of these sets.
 Therefore, the statement above can be interpreted as that an authorized attribute set belongs to the set $\mathbb{A}$.
@@ -90,7 +90,7 @@ More consideration that whether there is a black-box way to achieve access contr
 In this way, inputs are associated with attributes,
 while output is the result that the policy is satisfied or not,
 which means that the way pays little attention to the concrete relationship among attributes.
-The boolean function, $f$: $\{1,0\}^{n} \longrightarrow(0,1)$, is as theory model of this method.
+The boolean function, $f$: $\{1,0\}^{n} \rightarrow(0,1)$, is as theory model of this method.
 The input of the boolean function is a n-dimension vector,
 and each dimension is a boolean variable with the value of ``1" or ``0".
 In ABE context, each value of boolean variable from input depends on whether user possess corresponding attribute.
@@ -185,8 +185,8 @@ In this way, $\mathcal{T}$ is the same as $\mathcal{T}_r$.
 Every node have two case, being leaf node and non-leaf one.
 For each leaf node $x$, specific constant is given if and only if $att(x)\in \gamma$, and denote $\mathcal{T}_x(\gamma)=1$, so the $q_x(X)$ can be calculated by the degree $d_x=0$  and the point containing an arbitrary number coupled with constant.
 After that, set part can find a point in $q_{parent(x)}(X)$ containing $index(x)$ coupled with $q_x(0)$.
-where $X$ is shown on Table ~\ref{tab:notions}.
-For each non-leaf node $x$, evaluate $mathcal{T}_{x\prime}(\gamma)$ for all children $x\prime$ of node $x$, and
+where $X$ is shown on Table~\ref{tab:notions}.
+For each non-leaf node $x$, evaluate $\mathcal{T}_{x\prime}(\gamma)$ for all children $x\prime$ of node $x$, and
 if and only if at least $k_x$ children equal to 1, i.e. at least $k_x$ points of $q_x(X)$ can be obtained, $\mathcal{T}_x(\gamma)=1$,
 so the $q_x(X)$ can be calculated by the degree $d_x=k_x-1$ and optional $k_x$ points gotten from children.
 After that, set part can again find a point in $q_{parent(x)}(X)$ containing $index(x)$ coupled with $q_x(0)$.
@@ -334,7 +334,7 @@ due to more prepositive parameter such us those groups and pairing operation.
 
 
 Access structure in the LSSS is described as follows.
-Firstly, define a surjection, $\rho:\{1,\ldots, \ell\} \longrightarrow \{P_1,\ldots, P_u\}$,
+Firstly, define a surjection, $\rho:\{1,\ldots, \ell\} \\rightarrow \{P_1,\ldots, P_u\}$,
 where $P_j$ is shown on Table~\ref{tab:notions}.
 There is a matrix $M$ with $\ell$ rows and $n$ columns, where $\ell\geq n$.
 Row index $i\in \{1,\ldots, \ell\}$ represents the label of $i’th$ row of $M$,
@@ -347,17 +347,17 @@ $M_{\gamma}$ is constituted by combining $M_i$ for all $i\in I$.
 
 
 Now, we reveal how to achieve secret sharing.
-Structure part generate a column vector {\boldmath{$\upsilon$}}$=(s,r_2,\ldots,r_n)$,
+Structure part generate a column vector {\boldmath{$\upsilon$}}$=(s,r_2,\ldots,r_n)^T$,
 where $s$ is the secret to be shared, and $r_2,\ldots, r_n \in Z_p$ are randomly chosen.
 Then computes $M_i\cdot${\boldmath{$\upsilon$}} for all $i\in\{1,\ldots, \ell\}$.
 
 
 
-\begin{equation*}\label{eq:span}
+\begin{equation}\label{eq:span}
 %
-\sum_{i\in I}(\omega_i\cdot M_i)=\mathbf{e}
+\sum_{i\in I}(\omega_i\cdot M_i)=\bm{e}
 %\sfdsgsdg
-\end{equation*}
+\end{equation}
 
 
 For set part, $M_i\cdot${\boldmath{$\upsilon$}} for $i\in I$ have been known.
@@ -415,32 +415,38 @@ For clear, we list the items we concern.
   \item \textbf{Backtracking Resistant} We call an expression resisting backtracking attack backtracking resistant. Backtracking attack firstly posed by \cite{Sanjam:CRYPTO'2013} is that decryption algorithm learns some format of the value $q_B(0)$ for gate B even though the decryption algorithm do not know $q_B(X)$ on input $att(x)$ on the condition that $parent(B)$ is a OR gate and the decryption algorithm have been aware of $q_A(0)$, the value of one of other children of $parent(B)$.
 \end{itemize}
   We specify that those gates in access tree and in circuit only have two inputs for simpleness to compute the size of secret key.
-Comparison is shown on Table~\ref{tab:comparison}, where $C$ denotes the number of gates in circuit and $\omega$ denotes the number of the $inputs$ of circuit or the number of leaf nodes in access tree or the one of rows of matrix $M$ in LSSS.\footnote{Access tree can be convert to LSSS for the reason that LSSS can express general access structure. For two-input gate in access tree, we can construct a matrix $M$, let the number of rows be same with the number of the leaf nodes \cite{Lewko:TACT'11}} In addition, we let
-
-$|G_C|=3\frac{\omega}{2}|G_2|+\ldots+3\frac{\omega}{2^{i-1}}|G_i|+\ldots+3\cdot2|G_{log_2\omega}|+$
-
-$~~~~~~~~~2\omega|G_1|+|G_{log_2\omega+1}|$, ~($2\leq i\leq log_2\omega$)
-
-where $|G_i|$ denotes the size of the element of group $G_i$.
-Most notions above also can be found in Table~\ref{tab:notiforcom}.
+Comparison is shown on Table~\ref{tab:comparison}, where $C$ denotes the number of gates in circuit and $\omega$ denotes the number of the $inputs$ of circuit or the number of leaf nodes in access tree or the one of rows of matrix $M$ in LSSS.\footnote{Access tree can be convert to LSSS for the reason that LSSS can express general access structure. For two-input gate in access tree, we can construct a matrix $M$, let the number of rows be same with the number of the leaf nodes \cite{Lewko:EUROCRYPT'11}} 
+%In addition, we let
+%
+%$|G_C|=3\frac{\omega}{2}|G_2|+\ldots+3\frac{\omega}{2^{i-1}}|G_i|+\ldots+3\cdot2|G_{log_2\omega}|+$
+%
+%$~~~~~~~~~2\omega|G_1|+|G_{log_2\omega+1}|$, ~($2\leq i\leq log_2\omega$)
+%
+%where $|G_i|$ denotes the size of the element of group $G_i$.
+All notions used in Table~\ref{tab:comparison} can be found in Table~\ref{tab:notiforcom}.
 \begin{table*}[t]
 \centering  % 表居中
 \caption{a comparison among three expressions}
-\begin{tabular}{c|c|c|c|c|c}% {lccc} 表示各列元素对齐方式，left-l,right-r,center-c
-\hline
+\begin{tabular}{cccccc}% {lccc} 表示各列元素对齐方式，left-l,right-r,center-c
+\toprule
 
 
 
-Expression&Boolean Formula&Fan-in&Extension Cost&Key Size&Backtracking Resistant\\\hline
-Access Tree&direct&unrestricted&change a polynomial&$\omega|G_1|$&NO\\\hline
-Circuit&direct&restricted&add $(C+1)$ gates&at least $|G_C|$&YES\\\hline
-LSSS&black-box&$\diagdown$&row size of $M$ add 1&$\omega|G_1|$&YES
-\\
+Expression&Boolean Formula&Fan-in&Extension Cost&Key Size&Backtracking Resistant\\
+\midrule
+Access Tree \cite{Goyal:CCS'06}&direct&unrestricted&change a polynomial&$\omega|G_1|$&NO\\
+Circuit \cite{Sanjam:CRYPTO'2013}&direct&restricted&add $(C+1)$ gates&at least $|G_C| \tnote{1}$&YES\\
+LSSS \cite{Goyal:CCS'06}&black-box&$\diagdown$&row size of $M$ add 1&$\omega|G_1|$&YES\\
 
 
-\hline
+\bottomrule
 \end{tabular}
 \label{tab:comparison}
+\centering
+\begin{tablenotes}
+        \footnotesize
+         \item[1] ~~~~~~~~~~~~~~~~~~~~~where $|G_C|=3\frac{\omega}{2}|G_2|+\ldots+3\frac{\omega}{2^{i-1}}|G_i|+\ldots+3\cdot2|G_{log_2\omega}|+2\omega|G_1|+|G_{log_2\omega+1}|$, ~($2\leq i\leq log_2\omega$)
+      \end{tablenotes}
 \end{table*}
 
 \subsection{Design philosophy of classical ABE scheme}
@@ -449,16 +455,16 @@ some introduction goes here.
 \subsubsection{KP-ABE by (Li Peng)}
 As defined in \cite{Goyal:CCS'06}, a KP-ABE scheme consists of four algorithms: Setup,Encryption,Key Generation and Decryption. Let a tuple$(p,g,\mathbb{G}_1,\mathbb{G}_2,e)$ denote a bilinear map, where $\mathbb{G}_1,\mathbb{G}_2$ are multiplicative cyclic groups of prim order $p$ and $e$ denote $\mathbb{G}_1 \times \mathbb{G}_1 \rightarrow \mathbb{G}_2$. A security parameter, $\lambda$, denote the size of the groups. The Lagrange coefficient $\Delta_{i,S}$ for $i \in \mathbb{Z}_p$  and a set, $S$, of elements is defined in $\mathbb{Z}_p:\Delta_{i,S}=\Pi_{j\in S,j\neq i}\frac{x-j}{i-j}$. Each attribute is associated with a unique element in $\mathbb{Z}{_p^*}$. The construction follows.\\
 
-\noindent \textbf{Setup} $(\lambda,U)$  The setup algorithm takes $\lambda,U$ as input parameters. Firstly,  let $U=\{1,2...n\}$ denote the universe of attributes, and define a tuple $(p,g,\mathbb{G}_1,\mathbb{G}_2,e)$ as above mentioned. Then choose a number $t_i$ uniformly at random for each attribute $i \in U$ and generate a random?value $y \in \mathbb{Z}_p$. Finally, the public parameters are published as PK=$(T_1,T_2,...,T_{|U|},Y)$, where $T_{i}=g^{t_i},i\in \{ 1,2...|U| \},Y=e(g,g)^y$. The master key is MK=$(t_1,...,t_{|U|},y)$.
+\noindent \textbf{Setup}$(\lambda, U)$~The setup algorithm takes $\lambda,U$ as input parameters. Firstly,  let $U=\{1,2...n\}$ denote the universe of attributes, and define a tuple $(p,g,\mathbb{G}_1,\mathbb{G}_2,e)$ as above mentioned. Then choose a number $t_i$ uniformly at random for each attribute $i \in U$ and generate a random?value $y \in \mathbb{Z}_p$. Finally, the public parameters are published as PK=$(T_1,T_2,...,T_{|U|},Y)$, where $T_{i}=g^{t_i},i\in \{ 1,2...|U| \},Y=e(g,g)^y$. The master key is MK=$(t_1,...,t_{|U|},y)$.
 
-\textbf{Encryption} $(M,S,$PK$)$ The encryption algorithm takes as input a message $M\in \mathbb{G}_2 $, a set of attributes $S$ and the public parameters PK. To encrypt the message $M$ under a set of attributes $S$, it chooses a a random value $\upsilon \in \mathbb{Z}_p $. Then The ciphertext is published as CT=$(S,C'=MY^{\upsilon},\{C_{i}=T_{i}^{\upsilon}\}_{i\in S})$;
+\noindent \textbf{Encryption}$(M,S,$ PK$)$~The encryption algorithm takes as input a message $M\in \mathbb{G}_2 $, a set of attributes $S$ and the public parameters PK. To encrypt the message $M$ under a set of attributes $S$, it chooses a a random value $\upsilon \in \mathbb{Z}_p $. Then The ciphertext is published as CT=$(S,C'=MY^{\upsilon},\{C_{i}=T_{i}^{\upsilon}\}_{i\in S})$;
 
-\textbf{Key Generation} $(T,$ MK$)$  The Key Generation algorithm takes an access structure $T$ and the master key MK, then outputs a secret key SK. The SK enables the user to decrypt a message encrypted under a set of attributes $S$ if and only if $T (S)$ = 1. First let the access structure $T$ be a tree, then choose a polynomial $q_x$ for each node $x$ (including the leaves) in the tree $T$.
+\noindent \textbf{Key Generation}$(\mathcal{T},$ MK$)$~The Key Generation algorithm takes an access structure $\mathcal{T}$ and the master key MK, then outputs a secret key SK. The SK enables the user to decrypt a message encrypted under a set of attributes $S$ if and only if $\mathcal{T}(S)$ = 1. First let the access structure $\mathcal{T}$ be a tree, then choose a polynomial $q_x$ for each node $x$ (including the leaves) in the tree $\mathcal{T}$.
 
 For each node $x$ in the tree, choose a polynomial $q_x$ whose degree $d_x$ is one less than the threshold value $k_x$ of that node, that is, $d_x = k_x-1$. Firstly, for the root node $r$, set $q_r(0) = y$ and choose $d_r$ other points of the polynomial $q_r$ randomly to get the complete polynomial $q_x$.Then,  for any other node $x$, set $q_{x}(0) = q_{parent(x)}(index(x))$ , where $parent(x)$ denote the parent node of $x$ and $index(x)$ denote the number of the node, and choose $d_x$ other points randomly to completely define $q_x$. As a result, for each leaf node $x$, $q_{x}(0)$ is defined.Finally, the secret key is published as SK=$(D_x)$, where $D_{x}=g^{\frac{q_{x}(0)}{t_i}},i=att(x) $.
 
-\textbf{Decryption} (CT,SK) Firstly, define a recursive algorithm DecryptNode $($CT,SK,$x)$ that takes ciphertext CT, the private key SK and a node $x$ in the tree as input. Then it outputs a group element of $\mathbb{G}_2$ or $\bot$.
-Let $i = att(x)$. If the node x is a leaf node then:
+\noindent \textbf{Decryption}$($CT$,$ SK$)$~Firstly, define a recursive algorithm DecryptNode $($CT$, $SK$,x)$ that takes ciphertext CT, the private key SK and a node $x$ in the tree as input. Then it outputs a group element of $\mathbb{G}_2$ or $\bot$.
+Let $i = att(x)$. If the node $x$ is a leaf node then:
 
 $$\text{DecryptNod}(\text{CT},\text{SK},x) = \left\{
 \begin{aligned}
@@ -468,7 +474,10 @@ e(D_x,C_i)&=&e(g^{\frac{q_{x}(0)}{t_i}},g^{\upsilon\cdot{t_i}})\\
 \end{aligned}
 \right.
 $$\\
-If $x$ is a non-leaf node, it calls DecryptNode $($CT,SK,$z)$ for each child node z. Then it stores the output as $F_z$. Let $S_x$ be an arbitrary $k_x$-sized set of child nodes $z$ such that $F_z\neq\bot $. If no such set exists then the node was not satisfied and the function returns $\bot$.\\
+
+
+
+If $x$ is a non-leaf node, it calls DecryptNode$($CT$,$ SK$,z)$ for each child node $z$. Then it stores the output as $F_z$. Let $S_x$ be an arbitrary $k_x$-sized set of child nodes $z$ such that $F_z\neq\bot $. If no such set exists then the node was not satisfied and the function returns $\bot$.\\
 Otherwise, we compute:
 $$
 \begin{aligned}
@@ -480,9 +489,11 @@ F_x &= \prod_{z\in S_x}F_{z}^{\Delta_{t,s'_{x}}(0)}\\
 \end{aligned}
 $$
 and return the result.\\
- After computing, the equation DecryptNode$($CT,SK, $r) = e(g, g)^{y\upsilon}= Y^\upsilon $ is true if and only if the ciphertext satisfies the tree. Since, $C'=MY^\upsilon$s the decryption algorithm simply divides out $Y^\upsilon$ and recovers the message $M$.
+ After computing, the equation DecryptNode$($CT$,$ SK$,r) = e(g, g)^{y\upsilon}= Y^\upsilon $ is true if and only if the ciphertext satisfies the tree. Since, $C'=MY^\upsilon$s the decryption algorithm simply divides out $Y^\upsilon$ and recovers the message $M$.
 
 \subsubsection{CP-ABE (by Hao Zhang)}
-analyze article:
-\emph{Ciphertext-Policy Attribute-Based Encryption}  John Bethencourt Amit Sahai Brent Waters in 2007 IEEE Symposium on Security and Privacy 2007
-
+In Attribute-Based Encryption scheme is generally divided into two categories. One is key- policy attribute based encryption, in key-policy attribute based en- cryption, ciphertexts are associated with sets of descriptive attributes, and users? keys are associated with policies. Other is ciphertext-policy attribute-based en- cryption, in ciphertext-policy attribute-based encryption user?s private key will be associated with an arbitrary number of attributes expressed as strings. The most important to CP-ABE is access structure, CP-ABE has a variety of access struc- tures. For example, the tree in mathematics is one of its access structure, where nodes of the access structure are composed of threshold gates and the leaves de- scribe attributes. However, for CP-ABE scheme there is a very important prop- erty that is the collusion resistance. There are a number of ways to implement collusion resistance, John Bethencourt[] in his article gives one of the solutions of specific meth- ods. An ciphertext-policy attribute based encryption scheme con- sists of four fundamental algorithms:
+Setup, Encrypt, KeyGen, and Decrypt.\newline\newline  Setup. The setup algorithm takes no input other than the implicit security parameter. It outputs the public parameters PK and a master key MK.
+\newline\newline Encrypt(PK, M, A).The encryption algorithm takes as input the public parame- ters PK, a message M, and an access structure A over the universe of attributes. The algorithm will encrypt M and produce a ciphertext C such that only a user that possesses a set of attributes that satisfies the access structure will be able to decrypt the message. We will assume that the ciphertext implicitly contains A.\newline\newline
+Key Generation(MK, S ). The key generation al- gorithm takes as input the master key MK and a set of attributes S that describe the key. It outputs a private key SK.\newline\newline
+Decrypt(PK, C, SK). takes as input the public parameters PK, a ciphertext C, which contains an access policy A, and a private key SK, which is a private key for a set S of attributes. If the set S of attributes satisfies the access structure A then the algorithm will decrypt the ciphertext and return a message M.

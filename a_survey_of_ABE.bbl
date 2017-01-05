@@ -21,6 +21,15 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Feng:jcr'14}
+C.~C. Deng-Guo~Feng, ``Research on attribute-based cryptography,''
+  \emph{Journal of Cryptologic Research}, vol.~1, no.~1, pp. 1--12, 2014.
+
+\bibitem{Mihir:CRYPTO'98}
+D.~P. P.~R. Mihir~Bellare, Anand~Desai, ``Relations among notions of security
+  for public-key encryption schemes,'' \emph{Advances in Cryptology - CRYPTO:
+  Annual International Cryptology Conference}, pp. 26--45, 1998.
+
 \bibitem{Goyal:CCS'06}
 A.~S. B.~W. Vipul~Goyal, Omkant~Pandey, ``Attribute-based encryption for
   fine-grained access control of encrypted data,'' \emph{ACM conference on
@@ -30,7 +39,29 @@ A.~S. B.~W. Vipul~Goyal, Omkant~Pandey, ``Attribute-based encryption for
 L.~Cheung and C.~Newport, ``Provably secure ciphertext policy abe,'' \emph{ACM
   conference on Computer and communications security}, pp. 456--465, 2007.
 
-\bibitem{Sahai:TACT'05}
+\bibitem{Ran:EUROCRYPT'04}
+J.~K. Ran~Canetti, Shai~Halevi, ``Chosen-ciphertext security from
+  identity-based encryption,'' \emph{Advances in Cryptology - EUROCRYPT: Annual
+  International Conference on the Theory and Applications of Cryptographic
+  Techniques}, pp. 207--222, 2004.
+
+\bibitem{Zhiguang:ITSC'16}
+S.~W. J.~B. Zhiguang~Qin, Hu~Xiong, ``Identity-based encryption from the weil
+  pairing,'' \emph{IEEE Transactions on Services Computing}, vol.~PP, pp. 1--1,
+  2016.
+
+\bibitem{Bethencourt:SP'07}
+B.~W. John~Bethencourt, Amit~Sahai, ``Ciphertext-policy attribute-based
+  encryption,'' \emph{IEEE symposium on security and privacy}, pp. 321--334,
+  2007.
+
+\bibitem{Weiran:ESORICS'14}
+Q.~W. B. Q. Y.~Z. Weiran~Liu, Jianwei~Liu, ``Practical direct chosen ciphertext
+  secure key-policy attribute-based encryption with public ciphertext test,''
+  \emph{Computer Security - ESORICS: European Symposium on Research in Computer
+  Security}, pp. 91--108, 2014.
+
+\bibitem{Sahai:EUROCRYPT'05}
 B.~W. Amit~Sahai, ``Fuzzy identity based encryption,'' \emph{Advances in
   Cryptology - EUROCRYPT: Annual International Conference on the Theory and
   Applications of Cryptographic Techniques}, pp. 457--473, 2005.
@@ -38,11 +69,6 @@ B.~W. Amit~Sahai, ``Fuzzy identity based encryption,'' \emph{Advances in
 \bibitem{Shamir:CACM'79}
 A.~Shamir, ``How to share a secret,'' \emph{Communications of the ACM},
   vol.~22, pp. 612--613, Nov. 1979.
-
-\bibitem{Bethencourt:SP'07}
-B.~W. John~Bethencourt, Amit~Sahai, ``Ciphertext-policy attribute-based
-  encryption,'' \emph{IEEE symposium on security and privacy}, pp. 321--334,
-  2007.
 
 \bibitem{Keita:ISPEC'09}
 A.~N. K. O. M.~S. Keita~Emura, Atsuko~Miyaji, ``A ciphertext-policy
@@ -158,7 +184,7 @@ W.~Z. W.~M. Jung~Taeho, Li Xiang-Yang, ``Control cloud data access privilege
 M.~Karchmer and A.~Wigderson, ``On span programs,'' \emph{The Eighth Annual
   Structure in Complexity Theory}, pp. 102--111, 1993.
 
-\bibitem{Lewko:TACT'11}
+\bibitem{Lewko:EUROCRYPT'11}
 B.~W. Allison~Lewko, ``Decentralizing attribute-based encryption,''
   \emph{Advances in Cryptology - EUROCRYPT: Annual International Conference on
   the Theory and Applications of Cryptographic Techniques}, pp. 568--588, 2011.
@@ -187,7 +213,7 @@ J.~L. X. C. Y.~X. Jin~Li, Xinyi~Huang, ``Securely outsourcing attribute-based
   encryption with checkability,'' \emph{IEEE transactions on parallel and
   distributed systems}, 2014.
 
-\bibitem{Matt:TACT'98}
+\bibitem{Matt:EUROCRYPT'98}
 M.~B.~B. Strauss, ``Divertible protocols and atomic proxy cryptography,''
   \emph{Advances in Cryptology - EUROCRYPT: Annual International Conference on
   the Theory and Applications of Cryptographic Techniques}, pp. 127--144, 1998.
@@ -241,7 +267,7 @@ R.~D. Y.~Sreenivasa~Rao, ``Decentralized ciphertext-policy attribute-based
 M.~Chase, ``Multi-authority attribute based encryption,'' \emph{Theory of
   Cryptography Conference}, pp. 515--534, Feb. 2007.
 
-\bibitem{Cheung:TACT'10}
+\bibitem{Cheung:EUROCRYPT'10}
 A.~S. K. T. B.~W. Allison~Lewko, Tatsuaki~Okamoto, ``Fully secure functional
   encryption: Attribute-based encryption and (hierarchical) inner product
   encryption,'' \emph{Advances in Cryptology - EUROCRYPT: Annual International
@@ -289,12 +315,12 @@ Q.~H. D. S. W. T. H.~Y. Zhen~Liu, Zhenfu~Cao, ``Fully secure multi-authority
   \emph{Computer Security - ESORICS: European Symposium on Research in Computer
   Security}, pp. 278--297, 2011.
 
-\bibitem{Victor:TACT'97}
+\bibitem{Victor:EUROCRYPT'97}
 V.~Shoup, ``Lower bounds for discrete logarithms and related problems,''
   \emph{Advances in Cryptology - EUROCRYPT: Annual International Conference on
   the Theory and Applications of Cryptographic Techniques}, pp. 256--266, 1997.
 
-\bibitem{Boneh:TACT'05}
+\bibitem{Boneh:EUROCRYPT'05}
 E.-J.~G. Dan~Boneh, Xavier~Boyen, ``Hierarchical identity based encryption with
   constant size ciphertext,'' \emph{Advances in Cryptology - EUROCRYPT: Annual
   International Conference on the Theory and Applications of Cryptographic
@@ -316,11 +342,11 @@ R.~Z. C. M. Z.~Z. Aijun~Ge, Jiang~Zhang, ``Security analysis of a
   scheme,'' \emph{IEEE transactions on parallel and distributed systems},
   vol.~24, pp. 2319--2321, 2013.
 
-\bibitem{Jinguang:ESRCS'14}
+\bibitem{Jinguang:ESORICS'14}
 Y.~M. J. Z. M. H.~A. Jinguang~Han, Willy~Susilo, ``Ppdcp-abe:
   privacy-preserving decentralized ciphertext-policy attribute-based
-  encryption,'' \emph{European Symposium on Research in Computer Security}, pp.
-  73--90, 2014.
+  encryption,'' \emph{Computer Security - ESORICS: European Symposium on
+  Research in Computer Security}, pp. 73--90, 2014.
 
 \bibitem{Minqian:CCPE'15}
 C.~C. Minqian~Wang, Zhenfeng~Zhang, ``Security analysis of a privacy-preserving
@@ -419,9 +445,5 @@ M.-S.~H. Cheng-Chi~Lee, Pei-Shan~Chung, ``A survey on attribute-based
 \bibitem{Su:JS'11}
 X.-F. W. Y.-P. S. Q.-L.~H. Jin-Shu~Su, Dan~Cao, ``Attribute based encryption
   schemes,'' \emph{Journal of Software}, vol.~22, pp. 1299--1315, June 2011.
-
-\bibitem{Feng:jcr'14}
-C.~C. Deng-Guo~Feng, ``Research on attribute-based cryptography,''
-  \emph{Journal of Cryptologic Research}, vol.~1, no.~1, pp. 1--12, 2014.
 
 \end{thebibliography}

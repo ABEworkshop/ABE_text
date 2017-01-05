@@ -1,109 +1,111 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: a_survey_of_ABE.aux
-White space in argument---line 6 of file a_survey_of_ABE.aux
- : \citation{Canetti-Halevi-Katz
- :                               approach}
-I'm skipping whatever remains of this command
-Stuff after "}"---line 186 of file a_survey_of_ABE.aux
+Stuff after "}"---line 222 of file a_survey_of_ABE.aux
  : \citation{NuttapongAttrapadung:{2009
  :                                     }}
 I'm skipping whatever remains of this command
-Stuff after "}"---line 187 of file a_survey_of_ABE.aux
+Stuff after "}"---line 223 of file a_survey_of_ABE.aux
  : \citation{NuttapongAttrapadung:{2009
  :                                     }}
 I'm skipping whatever remains of this command
-Stuff after "}"---line 188 of file a_survey_of_ABE.aux
+Stuff after "}"---line 224 of file a_survey_of_ABE.aux
  : \citation{NuttapongAttrapadung:{2009
  :                                     }}
 I'm skipping whatever remains of this command
-Stuff after "}"---line 189 of file a_survey_of_ABE.aux
+Stuff after "}"---line 225 of file a_survey_of_ABE.aux
  : \citation{NuttapongAttrapadung:{2009
  :                                     }}
 I'm skipping whatever remains of this command
 The style file: IEEEtran.bst
 Database file #1: ../bib/uestc_abe.bib
-You're missing a field name---line 128 of file ../bib/uestc_abe.bib
+You're missing a field name---line 163 of file ../bib/uestc_abe.bib
  : 
  : 　pages = { 763-771 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 167 of file ../bib/uestc_abe.bib
+You're missing a field name---line 202 of file ../bib/uestc_abe.bib
  : 
  : 　pages = { 2201-2210 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 178 of file ../bib/uestc_abe.bib
+You're missing a field name---line 213 of file ../bib/uestc_abe.bib
  : 
  : 　pages = { 2119-2130 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 189 of file ../bib/uestc_abe.bib
+You're missing a field name---line 224 of file ../bib/uestc_abe.bib
  : 
  : 　pages = { 1384-1393 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 200 of file ../bib/uestc_abe.bib
+You're missing a field name---line 235 of file ../bib/uestc_abe.bib
  : 
  : 　pages = { 1343-1354 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 211 of file ../bib/uestc_abe.bib
+You're missing a field name---line 246 of file ../bib/uestc_abe.bib
  : 
  : 　pulisher = { USENIX Association},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--string name "ttc" is undefined
---line 259 of file ../bib/uestc_abe.bib
-You're missing a field name---line 272 of file ../bib/uestc_abe.bib
+--line 294 of file ../bib/uestc_abe.bib
+You're missing a field name---line 307 of file ../bib/uestc_abe.bib
  : 
  : 　issue =  { 5 },
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 473 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 508 of file ../bib/uestc_abe.bib
  :   
  :   month = { October }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 523 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 558 of file ../bib/uestc_abe.bib
  :   
  :   month = { Aug.}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 542 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 577 of file ../bib/uestc_abe.bib
  : 
  : 　number  = { 11 }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 553 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 588 of file ../bib/uestc_abe.bib
  : 
  : 　number  = { 11 }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 564 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 599 of file ../bib/uestc_abe.bib
  : 
  : 　issue  = { 3 }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 601 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 636 of file ../bib/uestc_abe.bib
  :   
  :   location = { Chicago, Illinois, USA}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 655 of file ../bib/uestc_abe.bib
+You're missing a field name---line 690 of file ../bib/uestc_abe.bib
  : 
  : 　month={ July }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 896 of file ../bib/uestc_abe.bib
+I was expecting a `,' or a `}'---line 931 of file ../bib/uestc_abe.bib
  : @article{Li 
  :             Ming:tpds,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "feng:05"
-Warning--I didn't find a database entry for "security:98"
-Warning--I didn't find a database entry for "classic:IBE"
+Warning--I didn't find a database entry for "Dan:CRYPTO'01"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Too many commas in name 1 of "Mihir Bellare, Anand Desai, David Pointcheval, Phillip Rogaway" for entry Mihir:CRYPTO'98
+while executing---line 2419 of file IEEEtran.bst
 Too many commas in name 1 of "Vipul Goyal, Omkant Pandey, Amit Sahai, Brent Waters" for entry Goyal:CCS'06
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Zhiguang Qin, Hu Xiong, Shikun Wu, Jennifer Batamuliza" for entry Zhiguang:ITSC'16
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Weiran Liu, Jianwei Liu, Qianhong Wu, Bo Qin, Yunya Zhou" for entry Weiran:ESORICS'14
+while executing---line 2419 of file IEEEtran.bst
+Too many commas in name 1 of "Weiran Liu, Jianwei Liu, Qianhong Wu, Bo Qin, Yunya Zhou" for entry Weiran:ESORICS'14
 while executing---line 2419 of file IEEEtran.bst
 Too many commas in name 1 of "Keita Emura, Atsuko Miyaji, Akito Nomura, Kazumasa Omote, Masakazu Soshi" for entry Keita:ISPEC'09
 while executing---line 2419 of file IEEEtran.bst
@@ -148,9 +150,9 @@ Too many commas in name 1 of "Kaitai Liang, Man Ho Au, Willy Susilo, Duncan S. W
 while executing---line 2419 of file IEEEtran.bst
 Too many commas in name 1 of "Kaitai Liang, Man Ho Au, Willy Susilo, Duncan S. Wong, Guomin Yang, Yong Yu" for entry Kaitai:ISPEC'14
 while executing---line 2419 of file IEEEtran.bst
-Too many commas in name 1 of "Allison Lewko, Tatsuaki Okamoto, Amit Sahai, Katsuyuki Takashima, Brent Waters" for entry Cheung:TACT'10
+Too many commas in name 1 of "Allison Lewko, Tatsuaki Okamoto, Amit Sahai, Katsuyuki Takashima, Brent Waters" for entry Cheung:EUROCRYPT'10
 while executing---line 2419 of file IEEEtran.bst
-Too many commas in name 1 of "Allison Lewko, Tatsuaki Okamoto, Amit Sahai, Katsuyuki Takashima, Brent Waters" for entry Cheung:TACT'10
+Too many commas in name 1 of "Allison Lewko, Tatsuaki Okamoto, Amit Sahai, Katsuyuki Takashima, Brent Waters" for entry Cheung:EUROCRYPT'10
 while executing---line 2419 of file IEEEtran.bst
 Too many commas in name 1 of "Huang Lin, Zhenfu Cao, Xiaohui Liang, Jun Shao" for entry Huang:INDOCRYPT'08
 while executing---line 2419 of file IEEEtran.bst
@@ -166,9 +168,9 @@ Too many commas in name 1 of "Aijun Ge, Jiang Zhang, Rui Zhang, Chuangui Ma, Zhe
 while executing---line 2419 of file IEEEtran.bst
 Too many commas in name 1 of "Aijun Ge, Jiang Zhang, Rui Zhang, Chuangui Ma, Zhenfeng Zhang" for entry Aijun:TPDS'13
 while executing---line 2419 of file IEEEtran.bst
-Too many commas in name 1 of "Jinguang Han, Willy Susilo, Yi Mu, Jianying Zhou, Man Ho Au" for entry Jinguang:ESRCS'14
+Too many commas in name 1 of "Jinguang Han, Willy Susilo, Yi Mu, Jianying Zhou, Man Ho Au" for entry Jinguang:ESORICS'14
 while executing---line 2419 of file IEEEtran.bst
-Too many commas in name 1 of "Jinguang Han, Willy Susilo, Yi Mu, Jianying Zhou, Man Ho Au" for entry Jinguang:ESRCS'14
+Too many commas in name 1 of "Jinguang Han, Willy Susilo, Yi Mu, Jianying Zhou, Man Ho Au" for entry Jinguang:ESORICS'14
 while executing---line 2419 of file IEEEtran.bst
 Too many commas in name 1 of "Jan Camenisch, Markulf Kohlweiss, Alfredo Rial, Caroline Sheedy" for entry Camenisch:PKC'09
 while executing---line 2419 of file IEEEtran.bst
@@ -193,4 +195,4 @@ Too many commas in name 1 of "Jin-Shu Su, Dan Cao, Xiao-Feng Wang, Yi-Pin Sun, Q
 while executing---line 2419 of file IEEEtran.bst
 
 Done.
-(There were 63 error messages)
+(There were 66 error messages)

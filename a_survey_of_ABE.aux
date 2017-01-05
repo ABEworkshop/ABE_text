@@ -1,10 +1,10 @@
 \relax 
-\citation{feng:05}
-\citation{security:98}
+\citation{Feng:jcr'14}
+\citation{Mihir:CRYPTO'98}
 \citation{Goyal:CCS'06}
 \citation{Ling:CCS'07}
-\citation{Canetti-Halevi-Katz approach}
-\citation{classic:IBE}
+\citation{Ran:EUROCRYPT'04}
+\citation{Dan:CRYPTO'01}
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces notions for comparison}}{1}}
 \newlabel{tab:notiforcom}{{I}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {I}introduction}{1}}
@@ -13,8 +13,22 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Framework (by Xiping Zhang)}{1}}
 \@writefile{thm}{\contentsline {ABE}{{Definition}{1}{}}{1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Security Model (by Lei Xu)}{1}}
-\citation{Sahai:TACT'05}
-\citation{Sahai:TACT'05}
+\citation{Dan:CRYPTO'01}
+\citation{Mihir:CRYPTO'98}
+\citation{Zhiguang:ITSC'16}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-C}1}Oracles}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-C}2}Attack Model}{2}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces different attack models for ABE}}{2}}
+\newlabel{tab:attackmodel}{{II}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-C}3}Attack Definition}{2}}
+\@writefile{thm}{\contentsline {ABEgame}{{Definition}{2}{}}{2}}
+\@writefile{thm}{\contentsline {ABEsec}{{Definition}{3}{}}{2}}
+\citation{Goyal:CCS'06}
+\citation{Bethencourt:SP'07}
+\citation{Ran:EUROCRYPT'04}
+\citation{Ling:CCS'07}
+\citation{Weiran:ESORICS'14}
+\citation{Sahai:EUROCRYPT'05}
 \citation{Shamir:CACM'79}
 \citation{Goyal:CCS'06}
 \citation{Bethencourt:SP'07}
@@ -27,11 +41,11 @@
 \citation{Fan:TOC'14}
 \citation{Fan:TOC'14}
 \citation{Bobba:ESORICS'09}
-\@writefile{toc}{\contentsline {section}{\numberline {III}State-of-the-Art}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}the birth of ABE (by Lei Xu)}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}efficiency (by Hao Zhang)}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}security (by Yi Wang)}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}function (by Lei Xu)}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}State-of-the-Art}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}the birth of ABE (by Lei Xu)}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}efficiency (by Hao Zhang)}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}security (by Yi Wang)}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}function (by Lei Xu)}{3}}
 \citation{Bethencourt:SP'07}
 \citation{Lang:SC'13}
 \citation{Lang:SC'13}
@@ -53,13 +67,13 @@
 \citation{Ostrovsky:CCS'07}
 \citation{Ostrovsky:CCS'07}
 \citation{Ostrovsky:CCS'07}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}design philosophy}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Access Control (by Lei Xu)}{3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}1}Monotonicity}{3}}
-\@writefile{thm}{\contentsline {Monotonicity}{{Definition}{2}{Monotonicity\cite {Beimel:phd}}}{3}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces several common notions}}{4}}
-\newlabel{tab:notions}{{II}{4}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}2}expressions on access control}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}design philosophy}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Access Control (by Lei Xu)}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}1}Monotonicity}{4}}
+\@writefile{thm}{\contentsline {Monotonicity}{{Definition}{4}{Monotonicity\cite {Beimel:phd}}}{4}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces several common notions}}{5}}
+\newlabel{tab:notions}{{III}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}2}expressions on access control}{5}}
 \citation{Shamir:CACM'79}
 \citation{Goyal:CCS'06}
 \citation{Bethencourt:SP'07}
@@ -72,16 +86,19 @@
 \citation{Goyal:CCS'06}
 \citation{Sanjam:CRYPTO'2013}
 \citation{Sanjam:CRYPTO'2013}
-\citation{Lewko:TACT'11}
-\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces choosing depends on different situation in incoming wires}}{6}}
-\newlabel{tab:csitua}{{III}{6}}
-\newlabel{eq:span}{{\unhbox \voidb@x \hbox {IV-A}2}{6}}
+\citation{Lewko:EUROCRYPT'11}
 \citation{Goyal:CCS'06}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Design philosophy of classical ABE scheme}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}1}KP-ABE by (Li Peng)}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}2}CP-ABE (by Hao Zhang)}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Extension}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Outsource (By Li Peng)}{7}}
+\citation{Sanjam:CRYPTO'2013}
+\citation{Goyal:CCS'06}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces choosing depends on different situation in incoming wires}}{7}}
+\newlabel{tab:csitua}{{IV}{7}}
+\newlabel{eq:span}{{1}{7}}
+\citation{Goyal:CCS'06}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces a comparison among three expressions}}{8}}
+\newlabel{tab:comparison}{{V}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Design philosophy of classical ABE scheme}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}1}KP-ABE by (Li Peng)}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}2}CP-ABE (by Hao Zhang)}{8}}
 \citation{Matthew:USENIX'11}
 \citation{Matthew:USENIX'11}
 \citation{Matthew:USENIX'11}
@@ -95,7 +112,21 @@
 \citation{Matthew:USENIX'11}
 \citation{Matthew:USENIX'11}
 \citation{Hui:TDSC'15}
-\citation{Matt:TACT'98}
+\citation{Matthew:USENIX'11}
+\citation{Junzuo:TIFS'13}
+\citation{Baodong:TIFS'15}
+\citation{Suqing:TIFS'15}
+\citation{Hui:TDSC'15}
+\citation{Hui:TDSC'15}
+\citation{Matthew:USENIX'11}
+\citation{Junzuo:TIFS'13}
+\citation{Baodong:TIFS'15}
+\citation{Suqing:TIFS'15}
+\citation{Hui:TDSC'15}
+\citation{Hui:TDSC'15}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Extension}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Outsource (By Li Peng)}{9}}
+\citation{Matt:EUROCRYPT'98}
 \citation{Giuseppe:TISSEC'06}
 \citation{Matthew:ACNS'07}
 \citation{Chu:ISC'07}
@@ -105,22 +136,22 @@
 \citation{Shanqing:TTC'12}
 \citation{Kaitai:INCS'13}
 \citation{Kaitai:ISPEC'14}
-\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces a comparison among three expressions}}{8}}
-\newlabel{tab:comparison}{{IV}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Proxy Re-encrypton (by Yi Wang)}{8}}
 \citation{Xiaohui:ISICCS'09}
-\citation{Sahai:TACT'05}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Efficiency Comparison }}{10}}
+\newlabel{tab:test}{{VI}{10}}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Communication Cost Comparison }}{10}}
+\newlabel{tab:test}{{VII}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Proxy Re-encrypton (by Yi Wang)}{10}}
+\citation{Sahai:EUROCRYPT'05}
 \citation{Goyal:CCS'06}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Multi-authority And distributed ABE}{9}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}1}Multi-authority And distributed ABE( by Prince)}{9}}
 \citation{Rao:CMS'13}
-\citation{Sahai:TACT'05}
+\citation{Sahai:EUROCRYPT'05}
 \citation{Goyal:CCS'06}
 \citation{Chase:TCC'07}
 \citation{Ostrovsky:CCS'07}
 \citation{Bethencourt:SP'07}
 \citation{Cheung:CCS'07}
-\citation{Cheung:TACT'10}
+\citation{Cheung:EUROCRYPT'10}
 \citation{Yuan:ICWS'05}
 \citation{Adelsbach:ICISC'06}
 \citation{Kapadia:NDSS'07}
@@ -128,25 +159,27 @@
 \citation{Sascha:ICISC'08}
 \citation{Chase:TCC'07}
 \citation{Sascha:ICISC'08}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Multi-authority And distributed ABE}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}1}Multi-authority And distributed ABE( by Prince)}{11}}
 \citation{Huang:INDOCRYPT'08}
 \citation{Chase:CCS'09}
 \citation{Chase:TCC'07}
-\citation{Lewko:TACT'11}
+\citation{Lewko:EUROCRYPT'11}
 \citation{Chase:TCC'07}
 \citation{Zhen:ESORICS'11}
 \citation{Sascha:ICISC'08}
-\citation{Victor:TACT'97}
-\citation{Boneh:TACT'05}
-\citation{Lewko:TACT'11}
+\citation{Victor:EUROCRYPT'97}
+\citation{Boneh:EUROCRYPT'05}
+\citation{Lewko:EUROCRYPT'11}
 \citation{Qi:SCN'14}
 \citation{Jinguang:TPDS'12}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}2} Decentralized Attribute Based Encryption( by Prince)}{10}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}3}Privacy-Preserving in Attribute-Based Encryption( by Prince)}{10}}
 \citation{Aijun:TPDS'13}
 \citation{Aijun:TPDS'13}
-\citation{Jinguang:ESRCS'14}
+\citation{Jinguang:ESORICS'14}
 \citation{Aijun:TPDS'13}
 \citation{Aijun:TPDS'13}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}2} Decentralized Attribute Based Encryption( by Prince)}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}3}Privacy-Preserving in Attribute-Based Encryption( by Prince)}{12}}
 \citation{Minqian:CCPE'15}
 \citation{Aijun:TPDS'13}
 \citation{Chase:CCS'09}
@@ -162,8 +195,6 @@
 \citation{Alexandra:CCS'08}
 \citation{Brent:CRYPTO'09}
 \citation{Chase:TCC'07}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}4}Revocable Decentralized Attribute-Based Encryption( by Prince)}{11}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}5}Summary( by Prince)}{11}}
 \citation{Qiang:JWU'08}
 \citation{XiaoFang:ICCCN'15}
 \citation{Yinghui:Wiley'16}
@@ -175,6 +206,11 @@
 \citation{Yannis:FC'15}
 \citation{XiaoFang:ICCCN'15}
 \citation{Qi:Wiley'15}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}4}Revocable Decentralized Attribute-Based Encryption( by Prince)}{13}}
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces default}}{13}}
+\newlabel{default}{{VIII}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}5}Summary( by Prince)}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}6}Multi-authority And distributed ABE (by Ziheng Ding)}{13}}
 \citation{Nuttapong:ICCC'09}
 \citation{Nuttapong:ICCC'09}
 \citation{Xiaohui:Citeseer'10}
@@ -189,103 +225,104 @@
 \citation{NuttapongAttrapadung:{2009}}
 \citation{Xiaohui:Citeseer'10}
 \citation{Qiang:GLOBECOM'12}
-\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces default}}{12}}
-\newlabel{default}{{V}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}6}Multi-authority And distributed ABE (by Ziheng Ding)}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Revocation (by Xiping Zhang)}{12}}
+\@writefile{lot}{\contentsline {table}{\numberline {IX}{\ignorespaces the comparison in the length of user's key and ciphertext }}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Revocation (by Xiping Zhang)}{14}}
 \citation{Lee:JNS'13}
 \citation{Su:JS'11}
 \citation{Feng:jcr'14}
-\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces the comparison in the length of user's key and ciphertext }}{13}}
-\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces comparison among revocation}}{13}}
-\newlabel{tab:comvoca}{{VII}{13}}
 \bibstyle{IEEEtran}
 \bibdata{../bib/uestc_abe}
-\bibcite{Goyal:CCS'06}{1}
-\bibcite{Ling:CCS'07}{2}
-\bibcite{Sahai:TACT'05}{3}
-\bibcite{Shamir:CACM'79}{4}
-\bibcite{Bethencourt:SP'07}{5}
-\bibcite{Keita:ISPEC'09}{6}
-\bibcite{Javier:PKC'10}{7}
-\bibcite{Nishant:Wiley'14}{8}
-\bibcite{Fuchun:TIFS'14}{9}
-\bibcite{Luan:ISPEC'09}{10}
-\bibcite{Tadanori:ACNS'16}{11}
-\bibcite{Fan:TOC'14}{12}
-\bibcite{Bobba:ESORICS'09}{13}
-\bibcite{Lang:SC'13}{14}
-\bibcite{Ximeng:ICC'14}{15}
-\bibcite{Cheung:CCS'07}{16}
-\bibcite{Guojun:CCS'10}{17}
-\bibcite{Zhibin:CCS'10}{18}
-\bibcite{Hui:TDSC'15}{19}
-\bibcite{Tran:TIFS'16}{20}
-\bibcite{Ostrovsky:CCS'07}{21}
-\bibcite{Sanjam:CRYPTO'2013}{22}
-\bibcite{Waters:PKC'11}{23}
-\bibcite{Beimel:phd}{24}
-\bibcite{Xiaohui:ISICCS'09}{25}
-\bibcite{Taeho:TIFS'15}{26}
-\bibcite{Karchmer:asct'93}{27}
-\bibcite{Lewko:TACT'11}{28}
-\bibcite{Matthew:USENIX'11}{29}
-\bibcite{Junzuo:TIFS'13}{30}
-\bibcite{Baodong:TIFS'15}{31}
-\bibcite{Suqing:TIFS'15}{32}
-\bibcite{Jin:TPDS'14}{33}
-\bibcite{Matt:TACT'98}{34}
-\bibcite{Giuseppe:TISSEC'06}{35}
-\bibcite{Matthew:ACNS'07}{36}
-\bibcite{Chu:ISC'07}{37}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Related work(by Lei xu)}{14}}
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Future work}{14}}
-\@writefile{toc}{\contentsline {section}{\numberline {VIII}Conclusion}{14}}
-\newlabel{sec:conclusion}{{VIII}{14}}
-\@writefile{toc}{\contentsline {section}{References}{14}}
-\bibcite{Toshihiko:ICPC'07}{38}
-\bibcite{Shanqing:WUJ'08}{39}
-\bibcite{Shanqing:TTC'12}{40}
-\bibcite{Kaitai:INCS'13}{41}
-\bibcite{Kaitai:ISPEC'14}{42}
-\bibcite{Rao:CMS'13}{43}
-\bibcite{Chase:TCC'07}{44}
-\bibcite{Cheung:TACT'10}{45}
-\bibcite{Yuan:ICWS'05}{46}
-\bibcite{Adelsbach:ICISC'06}{47}
-\bibcite{Kapadia:NDSS'07}{48}
-\bibcite{Bradshaw:CCS'04}{49}
-\bibcite{Sascha:ICISC'08}{50}
-\bibcite{Huang:INDOCRYPT'08}{51}
-\bibcite{Chase:CCS'09}{52}
-\bibcite{Zhen:ESORICS'11}{53}
-\bibcite{Victor:TACT'97}{54}
-\bibcite{Boneh:TACT'05}{55}
-\bibcite{Qi:SCN'14}{56}
-\bibcite{Jinguang:TPDS'12}{57}
-\bibcite{Aijun:TPDS'13}{58}
-\bibcite{Jinguang:ESRCS'14}{59}
-\bibcite{Minqian:CCPE'15}{60}
-\bibcite{Camenisch:PKC'09}{61}
-\bibcite{Nuttapong:ICCC'09}{62}
-\bibcite{Xiaohui:Citeseer'10}{63}
-\bibcite{Hui:CJ'16}{64}
-\bibcite{Alexandra:CCS'08}{65}
-\bibcite{Brent:CRYPTO'09}{66}
-\bibcite{Qiang:JWU'08}{67}
-\bibcite{XiaoFang:ICCCN'15}{68}
-\bibcite{Yinghui:Wiley'16}{69}
-\bibcite{Yannis:FC'15}{70}
-\bibcite{Qi:Wiley'15}{71}
-\bibcite{Pratish:ISC'15}{72}
-\bibcite{Qiang:GLOBECOM'12}{73}
-\bibcite{Yanfeng:InSc'15}{74}
-\bibcite{Zhen:CJ'15}{75}
-\bibcite{Shlomi:CyberSecurity'12}{76}
-\bibcite{Lee:JNS'13}{77}
-\bibcite{Su:JS'11}{78}
-\bibcite{Feng:jcr'14}{79}
-\@writefile{toc}{\contentsline {section}{Biographies}{16}}
-\@writefile{toc}{\contentsline {subsection}{aaa}{16}}
-\@writefile{toc}{\contentsline {subsection}{bbb}{16}}
-\@writefile{toc}{\contentsline {subsection}{ccc}{16}}
+\bibcite{Feng:jcr'14}{1}
+\bibcite{Mihir:CRYPTO'98}{2}
+\bibcite{Goyal:CCS'06}{3}
+\bibcite{Ling:CCS'07}{4}
+\bibcite{Ran:EUROCRYPT'04}{5}
+\@writefile{lot}{\contentsline {table}{\numberline {X}{\ignorespaces comparison among revocation}}{15}}
+\newlabel{tab:comvoca}{{X}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Related work(by Lei xu)}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Future work}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Conclusion}{15}}
+\newlabel{sec:conclusion}{{VIII}{15}}
+\@writefile{toc}{\contentsline {section}{References}{15}}
+\bibcite{Zhiguang:ITSC'16}{6}
+\bibcite{Bethencourt:SP'07}{7}
+\bibcite{Weiran:ESORICS'14}{8}
+\bibcite{Sahai:EUROCRYPT'05}{9}
+\bibcite{Shamir:CACM'79}{10}
+\bibcite{Keita:ISPEC'09}{11}
+\bibcite{Javier:PKC'10}{12}
+\bibcite{Nishant:Wiley'14}{13}
+\bibcite{Fuchun:TIFS'14}{14}
+\bibcite{Luan:ISPEC'09}{15}
+\bibcite{Tadanori:ACNS'16}{16}
+\bibcite{Fan:TOC'14}{17}
+\bibcite{Bobba:ESORICS'09}{18}
+\bibcite{Lang:SC'13}{19}
+\bibcite{Ximeng:ICC'14}{20}
+\bibcite{Cheung:CCS'07}{21}
+\bibcite{Guojun:CCS'10}{22}
+\bibcite{Zhibin:CCS'10}{23}
+\bibcite{Hui:TDSC'15}{24}
+\bibcite{Tran:TIFS'16}{25}
+\bibcite{Ostrovsky:CCS'07}{26}
+\bibcite{Sanjam:CRYPTO'2013}{27}
+\bibcite{Waters:PKC'11}{28}
+\bibcite{Beimel:phd}{29}
+\bibcite{Xiaohui:ISICCS'09}{30}
+\bibcite{Taeho:TIFS'15}{31}
+\bibcite{Karchmer:asct'93}{32}
+\bibcite{Lewko:EUROCRYPT'11}{33}
+\bibcite{Matthew:USENIX'11}{34}
+\bibcite{Junzuo:TIFS'13}{35}
+\bibcite{Baodong:TIFS'15}{36}
+\bibcite{Suqing:TIFS'15}{37}
+\bibcite{Jin:TPDS'14}{38}
+\bibcite{Matt:EUROCRYPT'98}{39}
+\bibcite{Giuseppe:TISSEC'06}{40}
+\bibcite{Matthew:ACNS'07}{41}
+\bibcite{Chu:ISC'07}{42}
+\bibcite{Toshihiko:ICPC'07}{43}
+\bibcite{Shanqing:WUJ'08}{44}
+\bibcite{Shanqing:TTC'12}{45}
+\bibcite{Kaitai:INCS'13}{46}
+\bibcite{Kaitai:ISPEC'14}{47}
+\bibcite{Rao:CMS'13}{48}
+\bibcite{Chase:TCC'07}{49}
+\bibcite{Cheung:EUROCRYPT'10}{50}
+\bibcite{Yuan:ICWS'05}{51}
+\bibcite{Adelsbach:ICISC'06}{52}
+\bibcite{Kapadia:NDSS'07}{53}
+\bibcite{Bradshaw:CCS'04}{54}
+\bibcite{Sascha:ICISC'08}{55}
+\bibcite{Huang:INDOCRYPT'08}{56}
+\bibcite{Chase:CCS'09}{57}
+\bibcite{Zhen:ESORICS'11}{58}
+\bibcite{Victor:EUROCRYPT'97}{59}
+\bibcite{Boneh:EUROCRYPT'05}{60}
+\bibcite{Qi:SCN'14}{61}
+\bibcite{Jinguang:TPDS'12}{62}
+\bibcite{Aijun:TPDS'13}{63}
+\bibcite{Jinguang:ESORICS'14}{64}
+\bibcite{Minqian:CCPE'15}{65}
+\bibcite{Camenisch:PKC'09}{66}
+\bibcite{Nuttapong:ICCC'09}{67}
+\bibcite{Xiaohui:Citeseer'10}{68}
+\bibcite{Hui:CJ'16}{69}
+\bibcite{Alexandra:CCS'08}{70}
+\bibcite{Brent:CRYPTO'09}{71}
+\bibcite{Qiang:JWU'08}{72}
+\bibcite{XiaoFang:ICCCN'15}{73}
+\bibcite{Yinghui:Wiley'16}{74}
+\bibcite{Yannis:FC'15}{75}
+\bibcite{Qi:Wiley'15}{76}
+\bibcite{Pratish:ISC'15}{77}
+\bibcite{Qiang:GLOBECOM'12}{78}
+\bibcite{Yanfeng:InSc'15}{79}
+\bibcite{Zhen:CJ'15}{80}
+\bibcite{Shlomi:CyberSecurity'12}{81}
+\bibcite{Lee:JNS'13}{82}
+\bibcite{Su:JS'11}{83}
+\@writefile{toc}{\contentsline {section}{Biographies}{17}}
+\@writefile{toc}{\contentsline {subsection}{aaa}{17}}
+\@writefile{toc}{\contentsline {subsection}{bbb}{17}}
+\@writefile{toc}{\contentsline {subsection}{ccc}{17}}

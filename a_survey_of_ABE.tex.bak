@@ -61,9 +61,9 @@ The keywords goes here.
 
 \input defin.tex
 
-\input design_philosophy.tex
-
 \input state.tex
+
+\input design_philosophy.tex
 
 \input  extens.tex
 
