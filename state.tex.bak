@@ -1,7 +1,7 @@
 \section{State-of-the-Art}
 %In this section,we attempt to survey the existing literature and constructions for ABE schemes over the period 2005-2016 from the aspects of three trunk clues,function,efficiency and security.Then we explain how do we arrive at more  logical and clear clues on the development of ABE.\subsection{the development Of ABE}
 \subsection{the birth of ABE (by Lei Xu)}
-Attribute-based encryption originates from fuzz identity based encryption \cite{Sahai:TACT'05} by Amit Sahai and Brent Waters. %this idea Hierarchical identity-based encryption schemes\cite{Danfeng:CCS'04}and
+Attribute-based encryption originates from fuzz identity based encryption \cite{Sahai:EUROCRYPT'05} by Amit Sahai and Brent Waters. %this idea Hierarchical identity-based encryption schemes\cite{Danfeng:CCS'04}and
 Fuzz identity based encryption supports decrypting by the attributes with selectable lower-limit number,
 due to use of the threshold secret sharing technology \cite{Shamir:CACM'79}.
 After that, beyond the threshold policy, much attention on general policy has been paid.
@@ -11,8 +11,8 @@ which supports general relationship among attributes.
 Access control technology just performs well,
 and attribute-based encryption has perfectly formed only when this technology are put into use.
 More specifically, by using access control technology, ABE inherently includes two types of manners, KP-ABE and CP-ABE.
-Goyal et al. \cite{Goyal:CCS'06} propose the first KP-ABE scheme,
-while John Bethencourt et al. \cite{Bethencourt:SP'07} constructs the first CP-ABE scheme.
+Goyal \emph{et al.} \cite{Goyal:CCS'06} propose the first KP-ABE scheme,
+while John Bethencourt \emph{et al.} \cite{Bethencourt:SP'07} constructs the first CP-ABE scheme.
 These two schemes concretely achieve the access control,
 so we contend that they sign the birth of ABE.
 Since then, the researches on ABE tend to be booming,
@@ -40,22 +40,22 @@ So, some schemes with additional functions are proposed in order to support the 
 
 In this subsection, we survey the development on additional function compared with original ABE schemes.
 First constraint in original ABE schemes is that each attribute only has two state: a attribute is held by somebody or not.
-Chun-I Fan et al.\cite{Fan:TOC'14} straightforward propose the Arbitrary-State Attribute-Based Encryption in 2014.
+Chun-I Fan \emph{et al.} \cite{Fan:TOC'14} straightforward propose the Arbitrary-State Attribute-Based Encryption in 2014.
 In \cite{Fan:TOC'14}, ``teacher'' and ``administrator'' are two values of the only one attribute ``career" in our example,
 i.e, the scheme has the function supporting attribute with many values.
 This kind function leads to the fact that the number of designed attributes somebody receives is comparable to the number of natural attributes it has.
 In fact, in 2009,
-Rakesh Bobba et al.\cite{Bobba:ESORICS'09} have achieved multiple value assignment on an attribute, which arbitrary-state attribute is somewhat similar to.
+Rakesh Bobba \emph{et al.} \cite{Bobba:ESORICS'09} have achieved multiple value assignment on an attribute, which arbitrary-state attribute is somewhat similar to.
 
 Additionally, ``numerical attribute", ``age" in our instance, means that the value of an attribute is numerical, i.e,
 we can compare those values using operations such us $\leq, >, \neq$ and so on.
 In the original CP-ABE scheme\cite{Bethencourt:SP'07}, ``numerical attribute" and the operation on values has been posed,
 but not applied in the concrete scheme.
-Lang, Bo et al.\cite{Lang:SC'13} in 2013 achieves the construct of an ABE scheme supporting ``numerical attribute" and the operation on its values.
+Lang, Bo \emph{et al.} \cite{Lang:SC'13} in 2013 achieves the construct of an ABE scheme supporting ``numerical attribute" and the operation on its values.
 Having the function supporting ``numerical attribute" and the operation on values, ABE schemes can achieve more
 effective data self-protection mechanisms in open environments such as Cloud computing \cite{Lang:SC'13}.
 
-Moreover, Weighted Attribute Based Encryption is proposed by Ximeng Liu et al.\cite{Ximeng:ICC'14} to deal with the situation that in some circumstances the attributes are not always in the same position, i.e,
+Moreover, Weighted Attribute Based Encryption is proposed by Ximeng Liu \emph{et al.}\cite{Ximeng:ICC'14} to deal with the situation that in some circumstances the attributes are not always in the same position, i.e,
 different attributes have different importance.
 
 %\subsection{clues on the development of ABE}

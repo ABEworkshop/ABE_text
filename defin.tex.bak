@@ -3,7 +3,7 @@ We first show the notions in our paper.
 Then formal framework of attribute based encryption (ABE) are given.
 Finally, based a basic security model we give many security definitions of ABE.
 \subsection{Notions (by Lei Xu)}
-$\mathbb{N}$ denotes the set of natural numbers. 
+$\mathbb{N}$ denotes the set of natural numbers.
 $\lambda \in \mathbb{N}$ and $1^\lambda$ denotes the string of $\lambda$ ones.
 Let $(y,z,\ldots) \leftarrow A(w,x,\ldots)$ or $A(w,x,\ldots) \rightarrow (y,z,\ldots)$ denote the operation of running an algorithm $A$ with inputs $(w,x,\ldots)$ and output $(y,z,\ldots)$.
 
@@ -45,18 +45,19 @@ Attribute Based Encryption can be divided into two categories: Key-Policy Attrib
 An attribute-based encryption is defined by the following algorithms
 \end{ABE}
 \begin{itemize}
-\item\textbf{Setup}  This is a randomized algorithm that takes no input other than the implicit security parameter. It outputs the public parameters PK and a master key MK.
-\item\textbf{KeyGen}(MK,PK,X) The key generation algorithm takes as input the master key MK, public parameters PK and an permission X, It outputs a private key SK$_X$.
-\item\textbf{Encrypt}(m,PK,Y) This is a randomized algorithm that takes as input a message m, the public parameters PK and a ciphertext index Y. It outputs the ciphertext CT$_Y$.
-\item\textbf{Decrypt}(PK,CT$_Y$,SK$_X$) The decryption algorithm takes as input the public parameters PK, a ciphertext CT$_Y$, the decryption key SK$_X$. It outputs the result of decrypt m.
+\item\textbf{Setup}$(\lambda,U)$~This is a randomized algorithm that takes the inputs, security parameter $\lambda$ and system attribute set $U$. It outputs the public parameters PK and a master key MK.
+\item\textbf{KeyGen}$($MK$,$ PK$,X)$~The key generation algorithm takes as input the master key MK, public parameters PK and an permission $X$, It outputs a private key SK$_X$.
+\item\textbf{Encrypt}$(M,$ PK$,Y)$~This is a randomized algorithm that takes as input a message $M$, the public parameters PK and a ciphertext index $Y$. It outputs the ciphertext CT$_Y$.
+\item\textbf{Decrypt}$($PK$,$ CT$_Y,$ SK$_X)$~The decryption algorithm takes as input the public parameters PK, a ciphertext CT$_Y$, the decryption key SK$_X$. It outputs the result of decrypt $M$.
 \end{itemize}
 \textbf{correctness}. The correctness of a attribute based encryption scheme requires that the following equations hold with probability one:
 
+\textbf{Decrypt}(PK$,$ \textbf{KeyGen}(MK$,$ PK$,X$), \textbf{Encrypt}($M,$ PK$,Y$))=$M$\\
 
-\textbf{Decrypt}(PK,\textbf{KeyGen}(MK,PK,X), \textbf{Encrypt}(m,PK,Y))=m\\
-\indent It should be noted that the permission X of CP-ABE is a set of attributes that describe the key while in KP-ABE is an access structure. The ciphertext index Y is an access structure in CP-ABE and is a set of attribute in KP-ABE.
-In addition, for the sake of avoiding distinguishing KP-ABE with CP-ABE,
-denote $f_{as}(X,Y)=1$ as that attributes satisfy access policy.
+
+\indent It should be noted that the permission $X$ of CP-ABE is a set of attributes that describe the key while in KP-ABE is an access structure. The ciphertext index $Y$ is an access structure in CP-ABE and is a set of attribute in KP-ABE. 
+In addition, for the sake of avoiding distinguishing KP-ABE with CP-ABE, 
+denote $f_{as}(X,Y)=1$ as that attributes satisfy access policy. 
 \subsection{Security Model (by Lei Xu)}
 According to the theory of provable security in public key encryption \cite{Feng:jcr'14},
 security definitions are generally developed from the antagonistic relationship between the security goal
@@ -74,25 +75,25 @@ ABE has some subtle variations for the reason of the fine-grained property.
 Fine-grained property mentioned above means granting differential access rights to a set of users and
 allowing flexibility in specifying the access rights of individual users.
 In ABE, both of the characteristics of fine-grained access control naturally result in that
-it is most probable that the adversary can obtain the private keys for the many permission X( i.e, attribute sets for CP-ABE or access structure for KP-ABE) from other users or from adversary himself.
+it is most probable that the adversary can obtain the private keys for the many permission $X$( i.e, attribute sets for CP-ABE or access structure for KP-ABE) from other users or from adversary himself.
 Therefore, when the weakest \textbf{IND-CPA} of three security models is straightforward defined on ABE,
 the ABE scheme under \textbf{IND-CPA} is completely insecure.
 Other security models have the same issue.
 This issue of ABE bears some resemblance the one of identity-based encryption \cite{Dan:CRYPTO'01}.
 %紧抓变化和限制
 So, for the most basic purpose that the security model can evaluate the security,
-the capacity to query private keys for the many permission X must be given to the adversary in any attack model of ABE,
+the capacity to query private keys for the many permission $X$ must be given to the adversary in any attack model of ABE,
 and the private key generation oracle $\mathcal{O}_{keygen}$ is used to simulate such query.
 Thus, different levels to access the decryption oracle $\mathcal{O}_{dec}$ result in different attack models.
 
 The most difference between ABE and IBE appears at the private key generation oracle $\mathcal{O}_{keygen}$ and
 the decryption oracle $\mathcal{O}_{dec}$ in security model.
-In ABE $\mathcal{O}_{keygen}$ put the permission X as input,
-but the ciphertext as the input of $\mathcal{O}_{dec}$ is associated with ciphertext index Y,
-instead of the same thing at the positions of X and Y for ABE (identity strings ID)\cite{Dan:CRYPTO'01}.
+In ABE $\mathcal{O}_{keygen}$ put the permission $X$ as input,
+but the ciphertext as the input of $\mathcal{O}_{dec}$ is associated with ciphertext index $Y$,
+instead of the same thing at the positions of $X$ and $Y$ for ABE (identity strings ID)\cite{Dan:CRYPTO'01}.
 The reason is that
 In IBE the encryption and key generation both operate on the identity strings ID,
-while ciphertext is generated from Y and SK is the product of X for ABE.
+while ciphertext is generated from $Y$ and SK is the product of $X$ for ABE.
 
 Based on discussion above, in following parts, we first describe the details of key generation oracle $\mathcal{O}_{keygen}$ and
 decryption oracle $\mathcal{O}_{dec}$ in ABE.
@@ -105,14 +106,14 @@ which can be queried by the adversary in an adaptive manner in the security game
 The aim of these oracles defined here is to provide the adversary with the attack capacity in attack model.
 
 \begin{itemize}
-  \item $\mathcal{O}_{keygen}$: On input a permission X, outputs a private key SK$_X \leftarrow$ \textbf{KeyGen}((MK,PK,X)).
+  \item $\mathcal{O}_{keygen}$: On input a permission $X$, outputs a private key SK$_X \leftarrow$ \textbf{KeyGen}$($MK$,$PK,$X)$.
   If the challenge ciphertext index $Y^\ast$ has not been submitted yet,
-  the inputs X do not have any constraint.
-  Otherwise, those inputs $X_j$ satisfying $f_{as}(X_j,Y)=1$ are invalid for $\mathcal{O}_{keygen}$.
-  \item $\mathcal{O}_{dec}$: On input a ciphertext CT$_Y$ encrypted to Y,
-  $\mathcal{O}_{dec}$ create a X, which make $f_{as}(X,Y)=1$ hold.
-  Then runs SK$_X \leftarrow$ \textbf{KeyGen}((MK,PK,X)) and m $\leftarrow$ \textbf{Decrypt}(PK,CT$_Y$,SK$_X$).
-  Finally, outputs the m. Note that the input can be the ciphertext encrypted to $Y^\ast$,
+  the inputs $X$ do not have any constraint.
+  Otherwise, those inputs $X_i$ satisfying $f_{as}(X_i,Y)=1$ are invalid for $\mathcal{O}_{keygen}$.
+  \item $\mathcal{O}_{dec}$: On input a ciphertext CT$_Y$ encrypted to $Y$,
+  $\mathcal{O}_{dec}$ create a $X$, which make $f_{as}(X,Y)=1$ hold.
+  Then runs SK$_X \leftarrow$ \textbf{KeyGen}$($MK$,$ PK$,X)$ and $M \leftarrow$ \textbf{Decrypt}$($PK$,$ CT$_Y,$ SK$_X)$.
+  Finally, outputs the $M$. Note that the input can be the ciphertext encrypted to $Y^\ast$,
   while the challenge ciphertext CT$^\ast$ submitted is invalid input for $\mathcal{O}_{keygen}$.
 \end{itemize}
 
@@ -122,8 +123,8 @@ In an effort to avoid the trivial success for the adversary, which makes no sens
 the definition of the private key generation oracle must contain the non-trivial restriction.
 Particularly,
 on condition that the challenge ciphertext index $Y^\ast$ associated with the challenge ciphertext has been submitted,
-private key generation oracle $\mathcal{O}_{keygen}$ is not allowed to issue queries for private keys for the permission $X_j$,
-where $f_{as}(X_j,Y^\ast)=1$ for all $j$.
+private key generation oracle $\mathcal{O}_{keygen}$ is not allowed to issue queries for private keys for the permission $X_i$,
+where $f_{as}(X_i,Y^\ast)=1$ for all $j$.
 Similarly, the decryption oracle $\mathcal{O}_{dec}$ for ABE have the analogous restriction.
 
 \subsubsection{Attack Model}
@@ -170,16 +171,16 @@ the only difference lies in whether or not $\mathcal{A}_1$ and $\mathcal{A}_2$ a
 Let $\Sigma$ = (\textbf{Setup}, \textbf{KeyGen}, \textbf{Encrypt}, \textbf{Decrypt}) be a attribute-based encryption scheme,
 $\mathcal{A} = (\mathcal{A}_1, \mathcal{A}_2)$ be a probabilistic polynomial-time adversary and
 $\mathcal{O}_1$ and $\mathcal{O}_2$ be the set of available oracles for $\mathcal{A}_1$ and $\mathcal{A}_2$, respectively.
-For the security parameter $k \in N$ and $atk \in \{CPA, CCA1, CCA2\}$,
+For the security parameter $k \in \mathbb{N}$ and $atk \in \{CPA, CCA1, CCA2\}$,
 the indistinguishability game is defined by the following experiment.
 \end{ABEgame}
 \textbf{Exp}$_{\Sigma,\mathcal{A},b}^{IND-atk}(k)$:
 \begin{eqnarray*}
-  (MK, PK) &\leftarrow& \textbf{Setup}(\lambda, U); \\
-  (m_0, m_1, Y^\ast) &\leftarrow& \mathcal{A}_1^{\mathcal{O}_1}(PK); \\
+  (\text{MK}, \text{PK}) &\leftarrow& \textbf{Setup}(\lambda,U); \\
+  (M_0,M_1,Y^\ast) &\leftarrow& \mathcal{A}_1^{\mathcal{O}_1}(\text{PK}); \\
   b &\leftarrow& \{0, 1\}; \\
-  CT^\ast &\leftarrow& \textbf{Encrypt}(PK, Y^\ast, m_b); \\
-  b^\prime &\leftarrow& \mathcal{A}_2^{\mathcal{O}_2}(PK, CT^\ast, m_0, m_1, Y^\ast).
+  CT^\ast &\leftarrow& \textbf{Encrypt}(\text{PK},Y^\ast,M_b); \\
+  b^\prime &\leftarrow& \mathcal{A}_2^{\mathcal{O}_2}(\text{PK},CT^\ast,M_0,M_1,Y^\ast).
 \end{eqnarray*}
 where $\mathcal{O}_1$ and $\mathcal{O}_2$ are defined according to the attack model atk,
 as described on Table~\ref{tab:attackmodel}.
