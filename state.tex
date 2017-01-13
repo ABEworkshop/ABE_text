@@ -1,7 +1,8 @@
 \section{State-of-the-Art}
 %In this section,we attempt to survey the existing literature and constructions for ABE schemes over the period 2005-2016 from the aspects of three trunk clues,function,efficiency and security.Then we explain how do we arrive at more  logical and clear clues on the development of ABE.\subsection{the development Of ABE}
 \subsection{the birth of ABE (by Lei Xu)}
-Attribute-based encryption originates from fuzz identity based encryption \cite{Sahai:EUROCRYPT'05} by Amit Sahai and Brent Waters. %this idea Hierarchical identity-based encryption schemes\cite{Danfeng:CCS'04}and
+Attribute-based encryption originates from fuzz identity based encryption \cite{Sahai:EUROCRYPT'05} by Sahai and Waters. 
+%this idea Hierarchical identity-based encryption schemes\cite{Danfeng:CCS'04}and
 Fuzz identity based encryption supports decrypting by the attributes with selectable lower-limit number,
 due to use of the threshold secret sharing technology \cite{Shamir:CACM'79}.
 After that, beyond the threshold policy, much attention on general policy has been paid.
@@ -12,15 +13,15 @@ Access control technology just performs well,
 and attribute-based encryption has perfectly formed only when this technology are put into use.
 More specifically, by using access control technology, ABE inherently includes two types of manners, KP-ABE and CP-ABE.
 Goyal \emph{et al.} \cite{Goyal:CCS'06} propose the first KP-ABE scheme,
-while John Bethencourt \emph{et al.} \cite{Bethencourt:SP'07} constructs the first CP-ABE scheme.
+while Bethencourt \emph{et al.} \cite{Bethencourt:SP'07} constructs the first CP-ABE scheme.
 These two schemes concretely achieve the access control,
 so we contend that they sign the birth of ABE.
 Since then, the researches on ABE tend to be booming,
 and we summarize the trunk directions of development on ABE,
 i.e, function, efficiency, security and expressions on access control.
 \subsection{efficiency (by Hao Zhang)}
-ABE brings a new idea of encryption. Whereas in today's life it is not widely used, the traditional ABE encryption and decryption speed can not make people satisfied in nowadays big data situation on the Internet. Based on this dilemma, many new ABE schemes are proposed to improve the efficiency of ABE. The first is ABE with constant ciphertext length. The length of the ciphertext depends on the number of attributes in previous ABE schemes. Keita Emura \cite{Keita:ISPEC'09} first put forward the ABE with constant ciphertext length, unlike the previous ABE schemes they put the user attributes in one set, the whole set is used as the generation of ciphertext, so that fixed the ciphertext length. Then Javier \cite{Javier:PKC'10} propose the collusion-resistant ABE scheme with constant ciphertext length. Even if the ABE with constant ciphertext length is not secure enough, thus in 2013 Nishant Doshi \cite{Nishant:Wiley'14} proposed a fully secure ABE with constant ciphertext length, that makes the ABE with constant ciphertext length can be in the security with a higher efficiency.
-	However, in order to improve the efficiency of the ABE scheme, not only the constant ciphertext length of this scheme. Fuchun Guo \cite{Fuchun:TIFS'14} in 2014 proposed a constant keys length rather than the ciphertext length of the ABE scheme makes ABE scheme can be applied to lightweight devices. In addition to constant ciphertext and constant keys way, there is another way to improve efficiency. Luan Ibraimi \cite{Luan:ISPEC'09} proposed a highly efficient CP-ABE scheme with "?" and "?" access structure. By operating on the access structure, decryption is used only once to improve efficiency. Nuttapong Attrapadung \cite{Tadanori:ACNS'16} proposed the size of the ciphertext and the size of the key tradeoff scheme can be carried out directly to improve the efficiency of ABE scheme.
+ABE brings a new idea of encryption. Whereas in today's life it is not widely used, the traditional ABE encryption and decryption speed can not make people satisfied in nowadays big data situation on the Internet. Based on this dilemma, many new ABE schemes are proposed to improve the efficiency of ABE. The first is ABE with constant ciphertext length. The length of the ciphertext depends on the number of attributes in previous ABE schemes. Emura \cite{Keita:ISPEC'09} first put forward the ABE with constant ciphertext length, unlike the previous ABE schemes they put the user attributes in one set, the whole set is used as the generation of ciphertext, so that fixed the ciphertext length. Then Herranz \cite{Javier:PKC'10} propose the collusion-resistant ABE scheme with constant ciphertext length. Even if the ABE with constant ciphertext length is not secure enough, thus in 2013 Doshi \cite{Nishant:Wiley'14} proposed a fully secure ABE with constant ciphertext length, that makes the ABE with constant ciphertext length can be in the security with a higher efficiency.
+	However, in order to improve the efficiency of the ABE scheme, not only the constant ciphertext length of this scheme. Guo \cite{Fuchun:TIFS'14} in 2014 proposed a constant keys length rather than the ciphertext length of the ABE scheme makes ABE scheme can be applied to lightweight devices. In addition to constant ciphertext and constant keys way, there is another way to improve efficiency. Ibraimi \cite{Luan:ISPEC'09} proposed a highly efficient CP-ABE scheme with "?" and "?" access structure. By operating on the access structure, decryption is used only once to improve efficiency. Attrapadung \cite{Nuttapong:ACNS'16} proposed the size of the ciphertext and the size of the key tradeoff scheme can be carried out directly to improve the efficiency of ABE scheme.
 	In the ABE scheme there is a common method to enhance efficiency, that is outsource. The ABE program outsourcing the complex encryption process and decryption process outsourcing to the cloud server.Let high-performance server to help us to compute the most complicated part of the scheme, and we only accept the results of the final operation out.
 
 \subsection{security (by Yi Wang)}
@@ -40,22 +41,22 @@ So, some schemes with additional functions are proposed in order to support the 
 
 In this subsection, we survey the development on additional function compared with original ABE schemes.
 First constraint in original ABE schemes is that each attribute only has two state: a attribute is held by somebody or not.
-Chun-I Fan \emph{et al.} \cite{Fan:TOC'14} straightforward propose the Arbitrary-State Attribute-Based Encryption in 2014.
+Fan \emph{et al.} \cite{Fan:TOC'14} straightforward propose the Arbitrary-State Attribute-Based Encryption in 2014.
 In \cite{Fan:TOC'14}, ``teacher'' and ``administrator'' are two values of the only one attribute ``career" in our example,
 i.e, the scheme has the function supporting attribute with many values.
 This kind function leads to the fact that the number of designed attributes somebody receives is comparable to the number of natural attributes it has.
 In fact, in 2009,
-Rakesh Bobba \emph{et al.} \cite{Bobba:ESORICS'09} have achieved multiple value assignment on an attribute, which arbitrary-state attribute is somewhat similar to.
+Bobba \emph{et al.} \cite{Bobba:ESORICS'09} have achieved multiple value assignment on an attribute, which arbitrary-state attribute is somewhat similar to.
 
 Additionally, ``numerical attribute", ``age" in our instance, means that the value of an attribute is numerical, i.e,
 we can compare those values using operations such us $\leq, >, \neq$ and so on.
 In the original CP-ABE scheme\cite{Bethencourt:SP'07}, ``numerical attribute" and the operation on values has been posed,
 but not applied in the concrete scheme.
-Lang, Bo \emph{et al.} \cite{Lang:SC'13} in 2013 achieves the construct of an ABE scheme supporting ``numerical attribute" and the operation on its values.
+Lang \emph{et al.} \cite{Lang:SC'13} in 2013 achieves the construct of an ABE scheme supporting ``numerical attribute" and the operation on its values.
 Having the function supporting ``numerical attribute" and the operation on values, ABE schemes can achieve more
 effective data self-protection mechanisms in open environments such as Cloud computing \cite{Lang:SC'13}.
 
-Moreover, Weighted Attribute Based Encryption is proposed by Ximeng Liu \emph{et al.} \cite{Ximeng:ICC'14} to deal with the situation that in some circumstances the attributes are not always in the same position, i.e,
+Moreover, Weighted Attribute Based Encryption is proposed by Liu \emph{et al.} \cite{Ximeng:ICC'14} to deal with the situation that in some circumstances the attributes are not always in the same position, i.e,
 different attributes have different importance.
 
 %\subsection{clues on the development of ABE}

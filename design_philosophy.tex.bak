@@ -3,20 +3,20 @@ some introduction goes here.
 
 \subsection{Access Control (by Lei Xu)}
 As mentioned in introduction, ``attribute" and ``access control" are most essential difference of ABE scheme from other schemes.
-Before our formal discuss, we firstly introduce a new notion, authorization.
-Informally, the authorization signifies the process of obtaining the permission to decrypt.
+Before our formal discuss, we firstly introduce a new notion, qualification.
+Informally, the qualification signifies the process of obtaining the permission to decrypt.
 Then, we claim that ``access control" is that if and only if some objects from user satisfy a certain rule from data owner,
-the user can be authorized.
+the user can be qualified.
 On the one hand, contrasted with ``identity" in IBE,
-``attribute" in ABE is the least fineness which still has the function of objects on authorization.
+``attribute" in ABE is the least fineness which still has the function of objects on qualification.
 On the other hand, the rule mentioned above means access policy or access structure,
 which will be surveyed below in detail.
 Based above,
-the prerequisite of authorization in ABE can be explained as ``attributes satisfy access structure ( or access policy)",
+the prerequisite of qualification in ABE can be explained as ``attributes satisfy access structure ( or access policy)",
 as many ABE schemes state \cite{Cheung:CCS'07}\cite{Guojun:CCS'10}\cite{Zhibin:CCS'10}\cite{Hui:TDSC'15}\cite{Tran:TIFS'16}.
 
 For convenience, attributes the participant owns are usually collected in a set called attribute set.
-Moreover, the attribute set which satisfies specific access policy is called authorized attribute set.
+Moreover, the attribute set which satisfies specific access policy is called qualified attribute set.
 As for access policy, however, there are various expressions.
 We will survey on three main expressions in most present ABE schemes.
 %just as molecule
@@ -29,8 +29,8 @@ We will survey on three main expressions in most present ABE schemes.
 
 Before our survey, the conception, secret sharing, should be firstly introduced.
 To put it simply, secret sharing in ABE schemes is the operation that
-information distributed amongst attributes in each authorized attribute set achieve being reconstructed,
-while each or many but not all attributes in an authorized set (suppose these attributes can not be a collection of another authorized set) are of no use on their own.
+information distributed amongst attributes in each qualified attribute set achieve being reconstructed,
+while each or many but not all attributes in a qualified set (suppose these attributes can not be a collection of another qualified set) are of no use on their own.
 It is easy to find that achieving access control is just for the purpose realizing secret share in all ABE schemes,
 and more concretely obtaining the secret value, usually $s$, or an implicit expression on secret value.
 After acquiring $s$ in certain form, user can decrypt successful.
@@ -53,7 +53,7 @@ $p$&the order of prime group\\\hline
 
 &P denotes the set of $u$ numbers corresponding u attributes appearing access structure\\\hline
 
-$\gamma$ &authorized attribute set \\\hline
+$\gamma$ &qualified attribute set \\\hline
 
 $\mathbb{A}$ &access structure \tnote{1} \\\hline
 
@@ -72,9 +72,9 @@ $X$ &the independent variable of polynomials\\
 \end{table*}
 
 To put the statement ``attributes satisfy access structure (or access policy)" into practice,
-Firstly, we can intuitionally enumerate authorized attribute sets,
+Firstly, we can intuitionally enumerate qualified attribute sets,
 then the access structure $\mathbb{A}$ can be denoted as the collection of these sets.
-Therefore, the statement above can be interpreted as that an authorized attribute set belongs to the set $\mathbb{A}$.
+Therefore, the statement above can be interpreted as that a qualified attribute set belongs to the set $\mathbb{A}$.
 %which trends to be a specifical interpretation of the statement, ,
 We call this expression as \emph{enumeration}.
 As far as the easier comprehension of access structure as well as access control, \emph{enumeration} performs well,
@@ -111,8 +111,8 @@ access structure $\mathbb{A}$ is a collection of sets, and $\mathbb{A}$ is monot
 In Boolean Formula, monotone access structure don't involve \emph{NOT}, while the non-monotone access structure should support \emph{NOT}.
 
 In the access control of present ABE schemes, the majority of access structures are monotone,
-due to the fact that normal methods to express attribute in access structure, such as $\rho$($i$) in LSSS and leaf node in access tree, only support the situation that each attribute is in a certain authorized set or not in, and don't support the one that an attribute is not in any authorized sets.
-However, it is necessary to non-monotone access structure that supporting each attribute being not in any authorized attribute sets.
+due to the fact that normal methods to express attribute in access structure, such as $\rho$($i$) in LSSS and leaf node in access tree, only support the situation that each attribute is in a certain qualified set or not in, and don't support the one that an attribute is not in any qualified sets.
+However, it is necessary to non-monotone access structure that supporting each attribute being not in any qualified attribute sets.
 In order to address non-monotone access structure with mature technology to achieve monotone access structure,
 "negative attribute" is supposed (\cite{Ostrovsky:CCS'07}).
 Based the comprehension of boolean formula ``$B~and~\overline{A}$", main idea of this supposition is shown as follows.
@@ -158,7 +158,7 @@ access tree for inputs of secret sharing in an arbitrary manner.
 
 
 As far as satisfaction between attributes and policy, there are two parts.
-One part called set part holds the authorized attribute set, and another called structure part holds the access structure.
+One part called set part holds the qualified attribute set, and another called structure part holds the access structure.
 
 
 In access tree, structure part chooses a polynomial $q_x$ for each node $x$ by the degree of the polynomial and points with the number of one more than degree.
@@ -173,11 +173,11 @@ Up to every leaf node in this way, we are finally aware of that the degree of ea
 and it only has one point, i.e, each $q_x$ of leaf node has been determined as a constant by the polynomial of its parent.
 
 
-We can see the secret value $s$ finally transmits to the constants in leaf nodes associating attributes in authorized set.
+We can see the secret value $s$ finally transmits to the constants in leaf nodes associating attributes in qualified set.
 In fact, process above is the reverse of secret sharing, the distribution for secret value $s$.
 
 
-The set part holds the authorized attribute set as mentioned above,
+The set part holds the qualified attribute set as mentioned above,
 and we assume that the part is provided the constants corresponding attributes in the set of it own after the distribution for secret value, and that set part have known the structure of access tree.
 Label the access tree with root $r$ as $\mathcal{T}$,
 and the subtree of $\mathcal{T}$ rooted at the node x as $\mathcal{T}_x$.
@@ -191,7 +191,7 @@ if and only if at least $k_x$ children equal to 1, i.e. at least $k_x$ points of
 so the $q_x(X)$ can be calculated by the degree $d_x=k_x-1$ and optional $k_x$ points gotten from children.
 After that, set part can again find a point in $q_{parent(x)}(X)$ containing $index(x)$ coupled with $q_x(0)$.
 Process above continues until acquires the value of $q_r(0)$, the secret value $s$.
-Additionally, if an extra part without authorized set attempts to pursue the secret value,
+Additionally, if an extra part without qualified set attempts to pursue the secret value,
 it can't go on in certain step of obtaining $q_x(X)$ due to the lack of some points.
 
 
@@ -261,7 +261,7 @@ then calculate $g_{m}^choose2$ and $g_{m}^choose3$, where $m=layer(k)$.
 And the secret value is $g_{l+1}^{r_{u+q}}$ same as $s$ on Table ~\ref{tab:notions}.
 
 
-we assume that the set part have known $e_{i,j}$ defined above, $g_1$, and for each attribute in the authorized set of its own, the part is also provided the corresponding $r_k$, where $k \geq u$ is a $input$.
+we assume that the set part have known $e_{i,j}$ defined above, $g_1$, and for each attribute in the qualified set of its own, the part is also provided the corresponding $r_k$, where $k \geq u$ is a $input$.
 Additionally, each \emph{AND} gate $k$ have been attached $choose1(k)$;
 For each \emph{OR} gate $k$,
 attach $choose2(k)$ to $k\prime$ first incoming wire and $choose3(k)$ to $k\prime$ second incoming wire.
@@ -269,7 +269,7 @@ attach $choose2(k)$ to $k\prime$ first incoming wire and $choose3(k)$ to $k\prim
 The set part achieve secret sharing from the bottom up as follows.
 
 For simple narration, denote that function $C_{k}(x)=1$,
-if and only if the $input$ $k$ is in the authorized set or logic of gate $k$ is true.
+if and only if the $input$ $k$ is in the qualified set or logic of gate $k$ is true.
 there are three case for $k$: $input$, gate \emph{AND} and \emph{OR}.
 Only when each $k$ let $C_{k}(x)=1$ holds, following calculation will be do.
 When $k$ is a $input$, calculates $e_{1,1}(g_{1}^{r_k},g_1)=g_{2}^{r_k}$;
@@ -334,14 +334,14 @@ due to more prepositive parameter such us those groups and pairing operation.
 
 
 Access structure in the LSSS is described as follows.
-Firstly, define a surjection, $\rho:\{1,\ldots, \ell\} \\rightarrow \{P_1,\ldots, P_u\}$,
+Firstly, define a surjection, $\rho:\{1,\ldots, \ell\} \rightarrow \{P_1,\ldots, P_u\}$,
 where $P_j$ is shown on Table~\ref{tab:notions}.
 There is a matrix $M$ with $\ell$ rows and $n$ columns, where $\ell\geq n$.
 Row index $i\in \{1,\ldots, \ell\}$ represents the label of $i¡¯th$ row of $M$,
 and $M_i$ represents the $i¡¯th$ row of $M$.
 Let $\rho(i)=P_j$ so that the row index of $M$ map to attributes.
 Then define a set $I=\{i | \rho(i)\in \gamma\}$,
-where $\gamma$ denotes an authorized set shown on Table~\ref{tab:notions},
+where $\gamma$ denotes a qualified set shown on Table~\ref{tab:notions},
 and the $M_{\gamma}$.
 $M_{\gamma}$ is constituted by combining $M_i$ for all $i\in I$.
 
@@ -457,7 +457,7 @@ As defined in \cite{Goyal:CCS'06}, a KP-ABE scheme consists of four algorithms: 
 
 \noindent \textbf{Setup}$(\lambda, U)$~The setup algorithm takes $\lambda,U$ as input parameters. Firstly,  let $U=\{1,2...n\}$ denote the universe of attributes, and define a tuple $(p,g,\mathbb{G}_1,\mathbb{G}_2,e)$ as above mentioned. Then choose a number $t_i$ uniformly at random for each attribute $i \in U$ and generate a random?value $y \in \mathbb{Z}_p$. Finally, the public parameters are published as PK=$(T_1,T_2,...,T_{|U|},Y)$, where $T_{i}=g^{t_i},i\in \{ 1,2...|U| \},Y=e(g,g)^y$. The master key is MK=$(t_1,...,t_{|U|},y)$.
 
-\noindent \textbf{Encryption}$(M,S,$ PK$)$~The encryption algorithm takes as input a message $M\in \mathbb{G}_2 $, a set of attributes $S$ and the public parameters PK. To encrypt the message $M$ under a set of attributes $S$, it chooses a a random value $\upsilon \in \mathbb{Z}_p $. Then The ciphertext is published as CT=$(S,C'=MY^{\upsilon},\{C_{i}=T_{i}^{\upsilon}\}_{i\in S})$;
+\noindent \textbf{Encryption}$(\mathcal{M},S,$ PK$)$~The encryption algorithm takes as input a message $\mathcal{M} \in \mathbb{G}_2 $, a set of attributes $S$ and the public parameters PK. To encrypt the message $\mathcal{M}$ under a set of attributes $S$, it chooses a a random value $\upsilon \in \mathbb{Z}_p $. Then The ciphertext is published as CT=$(S,C'=MY^{\upsilon},\{C_{i}=T_{i}^{\upsilon}\}_{i\in S})$;
 
 \noindent \textbf{Key Generation}$(\mathcal{T},$ MK$)$~The Key Generation algorithm takes an access structure $\mathcal{T}$ and the master key MK, then outputs a secret key SK. The SK enables the user to decrypt a message encrypted under a set of attributes $S$ if and only if $\mathcal{T}(S)$ = 1. First let the access structure $\mathcal{T}$ be a tree, then choose a polynomial $q_x$ for each node $x$ (including the leaves) in the tree $\mathcal{T}$.
 
@@ -489,11 +489,11 @@ F_x &= \prod_{z\in S_x}F_{z}^{\Delta_{t,s'_{x}}(0)}\\
 \end{aligned}
 $$
 and return the result.\\
- After computing, the equation DecryptNode$($CT$,$ SK$,r) = e(g, g)^{y\upsilon}= Y^\upsilon $ is true if and only if the ciphertext satisfies the tree. Since, $C'=MY^\upsilon$s the decryption algorithm simply divides out $Y^\upsilon$ and recovers the message $M$.
+ After computing, the equation DecryptNode$($CT$,$ SK$,r) = e(g, g)^{y\upsilon}= Y^\upsilon $ is true if and only if the ciphertext satisfies the tree. Since, $C'=MY^\upsilon$s the decryption algorithm simply divides out $Y^\upsilon$ and recovers the message $\mathcal{M}$.
 
 \subsubsection{CP-ABE (by Hao Zhang)}
 In Attribute-Based Encryption scheme is generally divided into two categories. One is key- policy attribute based encryption, in key-policy attribute based en- cryption, ciphertexts are associated with sets of descriptive attributes, and users? keys are associated with policies. Other is ciphertext-policy attribute-based en- cryption, in ciphertext-policy attribute-based encryption user?s private key will be associated with an arbitrary number of attributes expressed as strings. The most important to CP-ABE is access structure, CP-ABE has a variety of access struc- tures. For example, the tree in mathematics is one of its access structure, where nodes of the access structure are composed of threshold gates and the leaves de- scribe attributes. However, for CP-ABE scheme there is a very important prop- erty that is the collusion resistance. There are a number of ways to implement collusion resistance, John Bethencourt[] in his article gives one of the solutions of specific meth- ods. An ciphertext-policy attribute based encryption scheme con- sists of four fundamental algorithms:
 Setup, Encrypt, KeyGen, and Decrypt.\newline\newline  Setup. The setup algorithm takes no input other than the implicit security parameter. It outputs the public parameters PK and a master key MK.
-\newline\newline Encrypt(PK, M, A).The encryption algorithm takes as input the public parame- ters PK, a message M, and an access structure A over the universe of attributes. The algorithm will encrypt M and produce a ciphertext C such that only a user that possesses a set of attributes that satisfies the access structure will be able to decrypt the message. We will assume that the ciphertext implicitly contains A.\newline\newline
-Key Generation(MK, S ). The key generation al- gorithm takes as input the master key MK and a set of attributes S that describe the key. It outputs a private key SK.\newline\newline
-Decrypt(PK, C, SK). takes as input the public parameters PK, a ciphertext C, which contains an access policy A, and a private key SK, which is a private key for a set S of attributes. If the set S of attributes satisfies the access structure A then the algorithm will decrypt the ciphertext and return a message M.
+\newline\newline Encrypt(PK, $\mathcal{M}$, A).The encryption algorithm takes as input the public parame- ters PK, a message $\mathcal{M}$, and an access structure A over the universe of attributes. The algorithm will encrypt $\mathcal{M}$ and produce a ciphertext CT such that only a user that possesses a set of attributes that satisfies the access structure will be able to decrypt the message. We will assume that the ciphertext implicitly contains A.\newline\newline
+Key Generation(MK, S). The key generation al- gorithm takes as input the master key MK and a set of attributes S that describe the key. It outputs a private key SK.\newline\newline
+Decrypt(PK, CT, SK). takes as input the public parameters PK, a ciphertext C, which contains an access policy A, and a private key SK, which is a private key for a set S of attributes. If the set S of attributes satisfies the access structure A then the algorithm will decrypt the ciphertext and return a message $\mathcal{M}$.

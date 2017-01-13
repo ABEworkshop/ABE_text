@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.1.2)  8 JAN 2017 15:53
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2016.7.6)  9 JAN 2017 21:30
 entering extended mode
-**F:/github/ABE/ABE_text/defin.tex
-(F:/github/ABE/ABE_text/defin.tex
+**defin.tex
+(D:\temp\github\ABE\ABE_text\defin.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
 ! Undefined control sequence.
@@ -13,3 +13,13 @@ l.1 \section
             {definition}
 End of file on the terminal!
 
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 495355
+ 161 string characters out of 3182763
+ 44842 words of memory out of 3000000
+ 3276 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 5i,0n,1p,33b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

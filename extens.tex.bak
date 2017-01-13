@@ -9,13 +9,13 @@ With the rapid development of cloud computing, a growing number of users choose 
 
 However, almost all proposed ABE schemes have a main efficiency drawback, that is, computational cost for encryption and decryption is very high. More seriously, the computational cost grows with the complexity of access formula. In a resource-limited device, such as a smart phone, decrypting a ABE ciphertext is very difficult. Suppose that, you are traveling and only taking a smart phone, but your leader suddenly need you to do something immediately and send you a message which is encrypted by ABE. It＊s a terrible experience because you can＊t decrypt this message using a smart phone.
 
-To leverage computation burden on the user side, Green \emph{et al.} \cite{Matthew:USENIX'11} suggested to outsource decryption in attribute-based encryption. The schemes in \cite{Matthew:USENIX'11} allow a cloud to translate an ABE ciphertext satisfied by that user＊s attributes into a (constant-size) ElGamal-style ciphertext. Of course, the coulds who perform the translation operation cannot read any part of messages and the users＊ private keys. To outsource the decryption to a could, a user need to split his private key into a ※transformation key§ (denoted by TK), and an El Gamal-type secret key (denoted by DK). The user give the TK to the cloud, then the could translate the ABE ciphertext into an ElGamal-style ciphertex and send it to the user. Finally, the user utilize the DK to recover the encrypted message. In \cite{Matthew:USENIX'11}, Green \emph{et al.} also proposed replayable CCA(RCCA) security schemes in which the user can check the correctness of recovered message in random oracles(RO). But in their RCCA schemes,a malicious cloud could replace the original ciphertext and its tag which is used to check the correctness. So this method can not strictly guarantee the correctness of transformed ciphertext, to solve this problem, Attribute-Based Encryption with verifiable outsourced decryption was proposed by Lai \emph{et al.} \cite{Junzuo:TIFS'13}. In their schemes, a tag computed by a real message and a random message is used to verify the correctness of the real message. In addition, the original untransformed ciphertext also need to be inputted in the final decryption stage. As a result, this method causes approximately double overhead in both ciphertext size and decryption operation compared with \cite{Matthew:USENIX'11}. To increase the efficiency of ABE with verifiable outsourced decryption in \cite{Junzuo:TIFS'13}, Qin et al.\cite{Baodong:TIFS'15} and Lin \emph{et al.} \cite{Suqing:TIFS'15} introduced a key encapsulated mechanism (KEM). Their methods reduce the ciphertext and the computation costs almost by half compared with Lai \emph{et al.}＊s scheme \cite{Junzuo:TIFS'13}.
-On the other hand, in view of the huge overhead computation in the attribute authority, Li \emph{et al.} \cite{Jin:TPDS'14} proposed a new Secure Outsourced ABE system, which outsource the partial key-issuing and decryption. In their construction, the users＊ private keys are associated with users＊ attributes and a default attribute. The computation for users＊ attributes is outsourced to the clouds and the computation for the default attribute is performed by the attribute authority. The final users＊ private key can be gained by combining these two parts. And the method for outsourced decryption is the same as the method in \cite{Matthew:USENIX'11}. Furthermore, this construction also provide the checkability, but it also suffers from the attack existed in Green et al.＊s schemes \cite{Matthew:USENIX'11}. In \cite{Hui:TDSC'15}, Ma \emph{et al.} proposed two ciphertext-policy attribute-based key encapsulation mechanism (CP-AB-KEM) schemes. Their schemes for the first
+To leverage computation burden on the user side, Green \emph{et al.} \cite{Matthew:USENIX'11} suggested to outsource decryption in attribute-based encryption. The schemes in \cite{Matthew:USENIX'11} allow a cloud to translate an ABE ciphertext satisfied by that user＊s attributes into a (constant-size) ElGamal-style ciphertext. Of course, the coulds who perform the translation operation cannot read any part of messages and the users＊ private keys. To outsource the decryption to a could, a user need to split his private key into a ※transformation key§ (denoted by TK), and an El Gamal-type secret key (denoted by DK). The user give the TK to the cloud, then the could translate the ABE ciphertext into an ElGamal-style ciphertex and send it to the user. Finally, the user utilize the DK to recover the encrypted message. In \cite{Matthew:USENIX'11}, Green \emph{et al.} also proposed replayable CCA(RCCA) security schemes in which the user can check the correctness of recovered message in random oracles(RO). But in their RCCA schemes,a malicious cloud could replace the original ciphertext and its tag which is used to check the correctness. So this method can not strictly guarantee the correctness of transformed ciphertext, to solve this problem, Attribute-Based Encryption with verifiable outsourced decryption was proposed by Lai \emph{et al.} \cite{Junzuo:TIFS'13}. In their schemes, a tag computed by a real message and a random message is used to verify the correctness of the real message. In addition, the original untransformed ciphertext also need to be inputted in the final decryption stage. As a result, this method causes approximately double overhead in both ciphertext size and decryption operation compared with \cite{Matthew:USENIX'11}. To increase the efficiency of ABE with verifiable outsourced decryption in \cite{Junzuo:TIFS'13}, Qin \emph{et al.} \cite{Baodong:TIFS'15} and Lin \emph{et al.} \cite{Suqing:TIFS'15} introduced a key encapsulated mechanism (KEM). Their methods reduce the ciphertext and the computation costs almost by half compared with Lai \emph{et al.}＊s scheme \cite{Junzuo:TIFS'13}.
+On the other hand, in view of the huge overhead computation in the attribute authority, Li \emph{et al.} \cite{Jin:TPDS'14} proposed a new Secure Outsourced ABE system, which outsource the partial key-issuing and decryption. In their construction, the users＊ private keys are associated with users＊ attributes and a default attribute. The computation for users＊ attributes is outsourced to the clouds and the computation for the default attribute is performed by the attribute authority. The final users＊ private key can be gained by combining these two parts. And the method for outsourced decryption is the same as the method in \cite{Matthew:USENIX'11}. Furthermore, this construction also provide the checkability, but it also suffers from the attack existed in Green \emph{et al.}＊s schemes \cite{Matthew:USENIX'11}. In \cite{Hui:TDSC'15}, Ma \emph{et al.} proposed two ciphertext-policy attribute-based key encapsulation mechanism (CP-AB-KEM) schemes. Their schemes for the first
 time achieve both outsourced encryption and outsourced decryption. Moreover, their schemes not only offer the method to efficiently check the correctness of the outsourced encryption and decryption, but also exculpability, which means a user cannot accuse a Decryption Service Providers(DSP) of returning incorrect results when it return right results.
-The efficiency and communication cost comparison is presented in table 1 and table 2 respectively.
+The efficiency and communication cost comparison is presented in Table~\ref{effcom:outsource} and Table~\ref{comunication:outsource} respectively.
 \begin{table*}[htbp]
 \centering
- \caption{\label{tab:test}Efficiency Comparison }
+ \caption{\label{effcom:outsource}Efficiency Comparison for outsource ABE}
  \begin{tabular}{ccccccc}
   \toprule
   Schemes & Enc(Server)  & Enc(USER) & Dec(Server) &Dec(USER) & Enc.Verify & Dec.Verify\\
@@ -33,7 +33,7 @@ The efficiency and communication cost comparison is presented in table 1 and tab
 
 \begin{table*}[htbp]
 \centering
- \caption{\label{tab:test}Communication Cost Comparison }
+ \caption{\label{comunication:outsource}Communication Cost Comparison }
  \begin{tabular}{cccc}
   \toprule
   Schemes & Transfer Size(Enc)  & Full Size & Transfer Size(Enc) \\
@@ -52,16 +52,15 @@ The efficiency and communication cost comparison is presented in table 1 and tab
 
 
 
-\subsection{Proxy Re-encrypton (by Yi Wang)}
-Proxy Re-Encryption (PRE) is a cryptographic primitive first introduced by Blaze \emph{et al.} in 1998. In a PRE scheme, a proxy is allowed to transform a ciphertext encrypted by Alice＊s public key into another one that can be decrypted by Bob＊s secret key, this process is called re-encryption. Considering this case, an encrypted email is send to Alice, but Alice is off-line. Alice wishes another one Bob could still read the message in her encrypted email. With the PRE system, Bob could decrypted a re-encrypted email of the same message with his own secret key.
+Proxy Re-Encryption (PRE) is a cryptographic primitive first introduced by Blaze et.al in 1998. In a PRE scheme, a proxy is allowed to transform a ciphertext encrypted by Alice's public key into another one that can be decrypted by Bob's secret key, this process is called re-encryption. Considering this case, an encrypted email is send to Alice, but Alice is off-line. Alice wishes Bob could still read the message in her encrypted email. Therefore, Alice delegates a re-encryption key to the proxy. With the key, the proxy could transform the email to one that could be decrypted by Bob's secret key. With the PRE system, Bob could decrypt a re-encrypted email of the same message with his own secret key.
 
-In PRE system, the proxy is semi-trusted, but the user(Alice) does＊t need to delegate part of his decryption capability to others including the proxy. There is also an advantage that the user could finish any decryption only with his own secret key. So storing any additional decryption key is unnecessary. Otherwise, the proxy authority can only translate one ciphertext into another one under another public key.It is impossible for the delegation to obtain the corresponding plaintext and the original secret keys.With these advantages, PRE can be widely used into many public key cryptosystem.It also have many  practical applications. For example,encrypted email forwarding, distribute file system, and the DRM(Digital Rights Management) of Apple's iTunes.
+In PRE system, the proxy is semi-trusted, but the user(Alice) doesn't need to delegate part of her decryption capability to others including the proxy. There is also an advantage that the user could finish any decryption only with his own secret key. So storing any additional decryption key is unnecessary. Otherwise, the proxy authority can only translate one ciphertext into another one under another public key. It is impossible for the delegation to obtain the corresponding plaintext and the original secret keys. With these advantages, PRE can be widely used into many public key cryptosystem. It also have many  practical applications. For example, encrypted email forwarding, distribute file system, and the DRM(Digital Rights Management) of Apple's iTunes.
 
-Since PRE have been introduced in 1998, there are many related works on it. In the paper\cite{Matt:EUROCRYPT'98}, it proposed the first concrete bidirectional PRE scheme. This scheme allows the key holder to publish the proxy function. It applied by untrusted parties without further involvement by the original key holder.Their scheme also has multi-use property. Ateniese et al.\cite{Giuseppe:TISSEC'06}presented the first unidirectional.It is a single-use proxy re-encryption scheme. In 2007, Green and Ateniese\cite{Matthew:ACNS'07}provided identity-based PRE.The security of it is in the random oracle model. Chu et al.\cite{Chu:ISC'07}proposed new identity-based proxy re-encryption schemes in the standard model. Matsuo\cite{Toshihiko:ICPC'07}also proposed new  identity-based proxy re-encryption system , the solution needs a re-encryption key generator (RKG) to generate re-encryption keys. Guo et al.\cite{Shanqing:WUJ'08}proposed the first attribute-based proxy re-encryption(ABPRE) scheme, but their scheme is based on key policy and bidirectional. Liang et al.\cite{Xiaohui:ISICCS'09}proposed the first ciphertext policy attribute-based proxy re-encryption(CP-ABPRE) scheme which has the above properties except re-encryption control.In TCC 2012, Chandran et al.\cite{Shanqing:TTC'12}proposed an obfuscation for functional re-encryption with collusion resistant property. Recently, a CCA secure CP-ABPRE was proposed in \cite{Kaitai:INCS'13}, in this paper the scheme is proven in the random oracle model. In\cite{Kaitai:ISPEC'14}, a CP-ABPRE system was built and proven secure against CCA in the standard model.\\
+Since PRE have been introduced in 1998, there are many related works on it. In the paper \cite{Matt:EUROCRYPT'98}, it proposed the first concrete bidirectional PRE scheme. This scheme allows the key holder to publish the proxy function. It applied by untrusted parties without further involvement by the original key holder. Their scheme also has multi-use property. Ateniese \emph{et al.} \cite{Giuseppe:TISSEC'06} presented the first unidirectional. It is a single-use proxy re-encryption scheme. In 2007, Green and Ateniese\cite{Matthew:ACNS'07} provided identity-based PRE. The security of it is in the random oracle model. Chu \emph{et al.} \cite{Chu:ISC'07} proposed new identity-based proxy re-encryption schemes in the standard model. Matsuo \cite{Toshihiko:ICPC'07} also proposed new  identity-based proxy re-encryption system, the solution needs a re-encryption key generator (RKG) to generate re-encryption keys. Guo \emph{et al.} \cite{Shanqing:WUJ'08} proposed the first attribute-based proxy re-encryption(ABPRE) scheme, but their scheme is based on key policy and bidirectional. Liang \emph{et al.} \cite{Xiaohui:ISICCS'09} proposed the first ciphertext policy attribute-based proxy re-encryption(CP-ABPRE) scheme which has the above properties except re-encryption control. In TCC 2012, Chandran \emph{et al.} \cite{Shanqing:TTC'12} proposed an obfuscation for functional re-encryption with collusion resistant property. Recently, a CCA secure CP-ABPRE was proposed in \cite{Kaitai:INCS'13}, in this paper the scheme is proven in the random oracle model. In\cite{Kaitai:ISPEC'14}, a CP-ABPRE system was built and proven secure against CCA in the standard model.\\
 
 Next, we will give an ABPRE model in\cite{Xiaohui:ISICCS'09}.\\
 
-Definition:  \emph{An} ABPRE  \emph{scheme is a tuple of probabilistic polynomial time algorithms} (SETUP, KEYGEN, RKGEN, ENC, REENC, DEC).
+Definition:  \emph{An} ABPRE  \emph{scheme is a tuple of probabilistic polynomial time algorithms} (Setup, KeyGen, RKGen, Enc, ReEnc, Dec).
 
 \begin{itemize}
 \item \textbf{Setup}($1^k$)$\rightarrow$(\emph{pp,mk}): On input a security parameter $1^k$, the setup algorithm SETUP outputs a system public parameter \emph{pp} and a master key \emph{mk}.
@@ -72,7 +71,7 @@ Definition:  \emph{An} ABPRE  \emph{scheme is a tuple of probabilistic polynomia
 \item \textbf{Dec}(\emph{usk};\emph{C})$\rightarrow$(\emph{m}): On input a secret key \emph{usk} and a ciphertext \emph{C}, the decryption algorithm DEC first checks if the index set in \emph{usk} satisfies the access structure of \emph{C}. Then, if check passes, it outputs a message \emph{m} in the message space; otherwise, it outputs ``reject''.
 \end{itemize}
 
-Then, we present the construction with six algorithms SETUP, KGEN, ENC, RKGEN, REENC, DEC.\\
+Then, we present the construction with six algorithms Setup, KeyGen, ENC, RKGen, ReEnc, Dec.\\
 
 \noindent
 \textbf{Setup}($1^k$) Generate a bilinear group \emph{G} of prime order \emph{p}, with bilinear map \emph{e}:\emph{G}$\times$\emph{G} $\rightarrow$ \emph{$G_{T}$}. Next, it selects elements \emph{y}, \emph{$t_{i}$}(1$\leq$\emph{i}$\leq$3\emph{n}) in \emph{$Z_{p}$} and two generators \emph{g, h} of \emph{G} at random. Let \emph{Y}:=\emph{$e(g, h)^y$} and \emph{$T_{i}$}:=\emph{$g^{t_{i}}$}, \emph{$T'_{i}$}:=\emph{$h^\frac{1}{t_{i}}$}, for each 1$\leq$\emph{i}$\leq$3\emph{n}. The public parameter \emph{pp} includes
@@ -116,10 +115,11 @@ It outputs \emph{$\frac{\tilde{C}}{e(\hat{C}, \hat{D})\cdot\prod_{i \in \mathcal
 \item Else if \emph{C} is a multi-time re-encrypted well-formed ciphertext, decryption is similar with the above phases.
 \end{enumerate}
 
+
 \subsection{Multi-authority And distributed ABE}
 
 \subsubsection{Multi-authority And distributed ABE( by Prince)}
-In Distributed systems, it will not be user-friendly for access rules for objects to be based on identities considering the various dynamic sets of users in todays computing environment. In light of the above, the incipient proposal of Attribute Based Encryption in a landmark work by A. Sahai and B. Waters in 2005\cite{Sahai:EUROCRYPT'05} and later by Goyal et al\cite{Goyal:CCS'06} opened up various interests to the research community.
+In Distributed systems, it will not be user-friendly for access rules for objects to be based on identities considering the various dynamic sets of users in todays computing environment. In light of the above, the incipient proposal of Attribute Based Encryption in a landmark work by A. Sahai and B. Waters in 2005\cite{Sahai:EUROCRYPT'05} and later by Goyal \emph{et al.} \cite{Goyal:CCS'06} opened up various interests to the research community.
 
 In the traditional ABE scheme, there exist a central authority (CA) in charge of all attributes and responsible for the issuance of secret keys to users for decryption. Consequently, the CA can decrypt every ciphertext in the system by calculating the required secret keys at any time, this is the {\it key escrow problem} of ABE\cite{Rao:CMS'13}. This problem triggered the conceptualization of multi-authority and distributed ABE schemes. Imperatively, there are two major concepts under the ABE scheme, namely:
 
@@ -220,27 +220,27 @@ Comparatively, Cui \emph{et al.}'s scheme could be considered scalable as agains
 This scheme is securely constructed in the standard model. The dual encryption security technique is applied during the security proof. The keys and the ciphertexts are divided as normal and semi-functional: the normal keys can decrypt the semi-functional ciphertexts, the semi-functional keys can decrypt the normal ciphertexts, but the semi-functional keys cannot decrypt the semi-functional ciphertexts \cite{Brent:CRYPTO'09}.
 
 
-\subsubsection {Summary( by Prince)}
-
-
-
-
-\begin{table}[htp]
-\caption{default}
-\begin{center}
-\begin{tabular}{ccc}
-\hline
-ColA & ColB & ColC\\
-\hline
-43 & 200 & 75\\
-280 & 16 & 88\\
-102 & 77 & 340\\
-\hline
-\end{tabular}
-\end{center}
-\label{default}
-\end{table}%
-
+%\subsubsection {Summary( by Prince)}
+%
+%
+%
+%
+%\begin{table}[htp]
+%\caption{default}
+%\begin{center}
+%\begin{tabular}{ccc}
+%\hline
+%ColA & ColB & ColC\\
+%\hline
+%43 & 200 & 75\\
+%280 & 16 & 88\\
+%102 & 77 & 340\\
+%\hline
+%\end{tabular}
+%\end{center}
+%\label{default}
+%\end{table}%
+%
 
 \subsubsection{Multi-authority And distributed ABE (by Ziheng Ding)}
 \indent In traditional Attribute Based Encryption(ABE) scheme, it cannot solve the problem when attributes belong to diverse servers, since these servers cannot be totally trusted by others. For instance, if attributes which are ID number and major of one user belong to governmental authority and college respectively, information is unable to be shared because government and college do not believe each other. To solve this problem, the first solution titled Multi-Authority Attribute Based Encryption\cite{Chase:TCC'07} was proposed. Two methods was introduced in this scheme. The first one is Global Identifier(GID), which means every receiver is given a unique number illustrating their identity. GID are able to be verified by all authorities, while no one would have access to it expect the user himself. Another tool is Central Authority which is totally trusted by all users and other authority. The specific scheme was divided into 5 steps:
@@ -251,7 +251,7 @@ ColA & ColB & ColC\\
 \textbf{Encrypt}  this algorithm that takes a message m as input and the cipher text as output (E,E$_(CA)$).\\
 \textbf{Decrypt} Receiver has to recover the message according to its attributes.\\
 \indent The advantages are obvious. Central authority ensure that the scheme is safe even if some normal authorities are corrupted. To be more specific,when some are dishonest,the secret key of Central authority could prevent illegal decryption by other attributes which are still honest. It is also arguable that authorities are able to decrease their burden distributing secret keys as well as monitoring attributes. Since each attribute is monitored by a diverse authority and central authority monitor none. In addition,an increasing number of schemes was proposed to perfect Multi-Authority ABE with more functions. For example,in MA Verifiable ABE\cite{Qiang:JWU'08}, user has ability to check which authority gives wrong secret key and when key of authority fails in verification, he only need to send corresponding part again. In MA-ABE Scheme with Revocation \cite{XiaoFang:ICCCN'15}, revocation could be achieved by using attributes classification management.Cloud computing is also utilized in MA-ABE which is introduced in Online/offline unbounded MA-ABE for data sharing in mobile cloud computing \cite{Yinghui:Wiley'16}.
-\indent On the other hand, central authority are prone to bring certain risks that if it was corrupted, the whole scheme would be broken. Due to reducing the severe reliance on central authority, the Secure threshold multi authority attribute based encryption without a central authority was introduced\cite{Huang:INDOCRYPT'08}. Two protocols, distributed key generation protocol (DKG) and joint zero secret sharing protocol (JZSS), make the major contribution.Another approach is that several authorities could be in charge of the authorized specific attributes' key distribution in Efficient Statically-Secure Large-Universe Multi-Authority Attribute-Based Encryption\cite{Yannis:FC'15}.
+\indent On the other hand, central authority are prone to bring certain risks that if it was corrupted, the whole scheme would be broken. Due to reducing the severe reliance on central authority, the Secure threshold multi authority attribute based encryption without a central authority was introduced\cite{Huang:INDOCRYPT'08}. Two protocols, distributed key generation protocol (DKG) and joint zero secret sharing protocol (JZSS), make the major contribution.Another approach is that several authorities could be in charge of the qualified specific attributes' key distribution in Efficient Statically-Secure Large-Universe Multi-Authority Attribute-Based Encryption\cite{Yannis:FC'15}.
 \\
 \indent In terms of security,a wide range of security models is used in these proposals,which lies in the table1.
 \\
@@ -329,24 +329,27 @@ scheme&private key&ciphertext&encryption&decryption&security\\
 %\end{table}
 
 \subsection{Revocation (by Xiping Zhang)}
-\indent Revocation mechanism is necessary for any encryption schemes that involve many users,since a user$^{'}$s permissions change and key leakage may happen with time. Attrapadung,Imai \emph{et al.} \cite{Nuttapong:ICCC'09} first divided revocation mechanism into two types: direct revocation and indirect revocation according to the different executor. In an indirect revocation scheme, the key authority, who possesses the current revocation list, periodically announces a key update material at each time slot so that only non-revoked users can update their key and use it to decrypt ciphertexts encrypted at the present time. In a direct revocation scheme, senders are able to specify the revocation list directly when encrypting.But both schemes have some problem: The indirect revocation scheme the key update phase can be a bottleneck since it requires communication from the key authority to all non-revoked users at all time slots.The direct revocation scheme requires senders to possesses the current revocation list. It could be a troublesome task to manage the revocation list. Attrapadung,Imai \emph{et al.} \cite{Nuttapong:ICCC'09} designed a hybrid revocable ABE scheme that allows the senders to select when encrypting whether to use either direct or indirect revocation mode, and the reciever possesses only one key but will be able to decrypt ciphertexts that were constructed in either modes.\\
+\indent Revocation mechanism is necessary for any encryption schemes that involve many users, since a user$^{'}$s permissions change and key leakage may happen with time. Attrapadung, Imai \emph{et al.} \cite{Nuttapong:ICCC'09} first divided revocation mechanism into two types: direct revocation and indirect revocation according to the different executor. In an indirect revocation scheme, the key authority, who possesses the current revocation list, periodically announces a key update material at each time slot so that only non-revoked users can update their key and use it to decrypt ciphertexts encrypted at the present time. In a direct revocation scheme, senders are able to specify the revocation list directly when encrypting. But both schemes have some problem: The indirect revocation scheme the key update phase can be a bottleneck since it requires communication from the key authority to all non-revoked users at all time slots.The direct revocation scheme requires senders to possesses the current revocation list. It could be a troublesome task to manage the revocation list. Attrapadung,Imai \emph{et al.} \cite{Nuttapong:ICCC'09} designed a hybrid revocable ABE scheme that allows the senders to select when encrypting whether to use either direct or indirect revocation mode, and the reciever possesses only one key but will be able to decrypt ciphertexts that were constructed in either modes.\\
 \indent The directly revocation CP-ABE scheme is as follows:\\
-\noindent \textbf{Setup} The algorithm first picks a random generator g, v, h$_0$,\ldots, h$_{m'}$$\in$G and random $\alpha$, a, b$\in$Z$_p$. The public key is pk=(g, g$^a$, g$^{b^2}$, v, v$^b$, g$^a$, h$_0$,..., h$_m'$,e(g,g)$_汐$). The master key is msk=($\alpha$,b). It outputs(pk,msk). Define a function F:Zp$\rightarrow$G by F(x)=$\prod_{j=0}^{m'}$h$_j^{(x^j)}$\\
-\noindent \textbf{Encrypt}(S,(M,老),M,pk) Inputs to the encryption algorithm are a user index set S$\supset$U and a LSSS access structure (M, 老) for subjective policy. Let M be l$_s$ $\times$ k$_s$ matrix.Let R=U$\backslash$S. Denote R= /{ID$_1$,...ID$_r$/}. The algorithm first randomly chooses s,y$_2$,...,y$_{k_s}$$\in$Z$_p$ and lets u=(s,y$_2$,...,y$_{k_s}$). For i= 1 to l$_s$,it calculates 竹$_i$=M$_i$$\cdot$u,where M$_i$ is the vector corresponding to ith row of M.It also chooses random s$_1$,...s$_r$$\in$Z$_p$,such that s= s$_1$+ ...+ s$_r$.The ciphertext ct is set to ct=(C,C$_1$,\{C$_i^{(2)}$\}$_{i\in[1,l_s]}$, \{C$_i^{(3)}$\}$_{j\in[1,r]}$,\{C$_i^{(4)}$\}$_{j\in[1,r]}$),where    \\ \\
-\indent C=M$\cdot(e(g,g)^汐)^s$, \hspace{1cm} C$_1$=g$^s$,\hspace{2cm}  C$_i^{(2)}$=g$^a竹_i$F(老(i))$^{-s}$,\\
-\indent C$_j^{(3)}$=g$^{b\cdot s_j}$,\hspace{1.87cm} C$_j^{(4)}$=(g$^{b^2\cdot ID_j}$v$^b$)$^{s_j}$.\\\\
-\noindent \textbf{KeyGen}(ID, $\rho$, msk, pk) Inputs to the encryption algorithm are a user index ID$\in$U and an attribute set$\psi\supset$N.The algorithm randomly chooses t,r$\in Z_p$.It outputs the private key as sk=(D$^{(1)}$,D$^{(2)}$,\{D$_x^{(3)}$\}$_{x\in\psi}$,D$^{(4)}$,D$^{(5)}$)where\\
+\noindent \textbf{Setup} The algorithm first picks a random generator g, v, h$_0$, \ldots, h$_{m'}$$\in$G and random $\alpha$, a, b$\in$Z$_p$. The public key is pk=(g, g$^a$, g$^{b^2}$, v, v$^b$, g$^a$, h$_0$,..., h$_m'$,e(g,g)$_汐$). The master key is msk=($\alpha$,b). It outputs(pk,msk). Define a function F:Zp$\rightarrow$G by F(x)=$\prod_{j=0}^{m'}$h$_j^{(x^j)}$\\
+\noindent \textbf{Encrypt}(S,(M,老),M,pk) Inputs to the encryption algorithm are a user index set S$\supset$U and a LSSS access structure (M, 老) for subjective policy. Let M be l$_s$ $\times$ k$_s$ matrix. Let R=U$\backslash$S. Denote R= /{ID$_1$,...ID$_r$/}. The algorithm first randomly chooses s, y$_2$,...,y$_{k_s}$$\in$Z$_p$ and lets u=(s,y$_2$,...,y$_{k_s}$). For i= 1 to l$_s$, it calculates 竹$_i$=M$_i$$\cdot$u, where M$_i$ is the vector corresponding to ith row of M. It also chooses random s$_1$,...s$_r$$\in$Z$_p$, such that s= s$_1$+ ...+ s$_r$. The ciphertext ct is set to ct=(C,C$_1$,\{C$_i^{(2)}$\}$_{i\in[1,l_s]}$, \{C$_i^{(3)}$\}$_{j\in[1,r]}$,\{C$_i^{(4)}$\}$_{j\in[1,r]}$), where \\
+\begin{equation*}
+\begin{array}{ccc}
+ C=\mathcal{M}\cdot(e(g,g)^{\alpha})^s, & C^{(1)}=g^s, & C_i^{(2)}=g^{a\lambda_{i}}F(\rho(i))^{-s},\\
+ &C_j^{(3)}=g^{b\cdot s_j}, & C_j^{(4)}=(g^{b^2\cdot ID_j}v^b)^{s_j}.\\
+\end{array}
+\end{equation*}
+\noindent \textbf{KeyGen}(ID, $\rho$, msk, pk) Inputs to the encryption algorithm are a user index ID$\in$U and an attribute set$\psi\supset$N. The algorithm randomly chooses t,r$\in Z_p$. It outputs the private key as sk=(D$^{(1)}$,D$^{(2)}$,\{D$_x^{(3)}$\}$_{x\in\psi}$,D$^{(4)}$,D$^{(5)}$) where\\
 \indent D$^{(1)}$=g$^{\alpha+b^2t}\cdot$g$^{ar}$, \hspace{1cm} D$^{(2)}$=g$^r$,  \hspace{1cm}    D$_x^{(3)}$=F(x)$^r$,\\
 \indent D$^{(4)}$=(g$^{b\cdot ID}$v)$^t$, \hspace{1.17cm} D$^{(5)}$=g$^t$.\\\\
 \noindent\textbf{Decrypt}(ct,(S,(M,$\rho$)),sk,(ID,$\psi$),pk) Suppose that the attribute set $\psi$ satisfies the access structure (M, $\rho$)) and the user index ID$\in$ S (so that the decryption is possible). Let I$_s$=\{i$\rho(i)\in\psi$\}.It then calculates corresponding sets of reconstruction constants\{(i,$\mu_i$)\}$_{i\in I_s}$=Recon$_{(M,\rho)}(\psi)$.Then it computes\\
 K=$\dfrac{e(C^{(1)},D^{(1)})}{\prod_{i=1}^{l_s}\left(e(C_i^{(2)},D^{(2)})\cdot e(C^{(1)},D^{(3)}_{\rho(i)})\right)^{\mu_i}}\cdot\prod_{j=1}^{r}\left(\dfrac{e(D^{(5)},C^{(4)}_j)}{e(D^{(4)},C^{(3)}_j)}\right)^{1/(ID-ID_j)} $ \\
-where it can compute since ID=ID$_j$ for j=1,...,r. It then obtains M=C/K.\\\\
-\\ \\
-\indent In order to reduce the costs during the update phase,Liang, Xiaohui,Lu, Rongxing\cite{Xiaohui:Citeseer'10} designed a efficient scheme which used the binary tree technique to build a revocation tree. The revocation tree corresponds to time t and the identifier of revoked user is uid which is associated with one leaf node. In comparison with the traditional ciphertext policy attribute based encryption,the size of user secret key is increased by multiplying logn. In this scheme,the system manager should only publishes the revocation information according to a time stamp.The primary trigger control of the user＊s access ability is the update information.In direct revocation, Pratish Datta, Ratna Dutta\cite{Pratish:ISC'15}combined some existing encrypt technology and revocation technology, achieve very short ciphertext size without imposing any extra overhead on the decryption key for the added revocation functionality and reduce the number of group elements in the public parameters to logN$_{max}$\\
-\indent The revocation can also execute on uesrs$^{'}$ one attribute. Li, Qiang,Feng,Dengguo\cite{Qiang:GLOBECOM'12}implant attributes into users＊private key.It can revoke a user$^{'}$s one attribute without influencing his private key,if the revoked user＊s other attributes also satisfy the access structure,he can decrpyt the cipertext successfully.This realize fine-gained attribute revocation under direct revocation model.\\
-\indent There are also a ※direct revocation§ scheme called third-part revocation.The bring in of third-part to execute revocation can reduce the authority＊s work. Shi, Yanfeng,Zheng, Qingji \emph{et al.} researched this scheme and get ahead. In\cite{Yanfeng:InSc'15}, the ciphertext is divided into two part: the data and the authorize(identity)part,the trusted authority is allowed to revoke users by updating the revocation list and the third part is allowed to update ciphertexts with public information.\\
-\indent In addition,it＊s important to avoid the abuse of key, that is to trace the malicious user, Liu, Zhen,Wong, DuncanS\cite{Zhen:CJ'15} make great progress on blackbox trace, which is highly expressive and achieves the most efficient level to date.\\ \\
-Some comparison of the efficiency of the schemes are as follows.\\
+where it can compute since ID=ID$_j$ for j=1,...,r. It then obtains M=C/K.\\
+\indent In order to reduce the costs during the update phase,Liang, Xiaohui, Lu, Rongxing \cite{Xiaohui:Citeseer'10} designed a efficient scheme which used the binary tree technique to build a revocation tree. The revocation tree corresponds to time t and the identifier of revoked user is uid which is associated with one leaf node. In comparison with the traditional ciphertext policy attribute based encryption,the size of user secret key is increased by multiplying logn. In this scheme,the system manager should only publishes the revocation information according to a time stamp.The primary trigger control of the user＊s access ability is the update information.In direct revocation, Pratish Datta, Ratna Dutta \cite{Pratish:ISC'15} combined some existing encrypt technology and revocation technology, achieve very short ciphertext size without imposing any extra overhead on the decryption key for the added revocation functionality and reduce the number of group elements in the public parameters to logN$_{max}$\\
+\indent The revocation can also execute on uesrs$^{'}$ one attribute. Li, Qiang, Feng, Dengguo \cite{Qiang:GLOBECOM'12} implant attributes into users＊private key.It can revoke a user$^{'}$s one attribute without influencing his private key, if the revoked user＊s other attributes also satisfy the access structure, he can decrpyt the cipertext successfully.This realize fine-gained attribute revocation under direct revocation model.\\
+\indent There are also a ※direct revocation§ scheme called third-part revocation. The bring in of third-part to execute revocation can reduce the authority＊s work. Shi, Yanfeng,Zheng, Qingji \emph{et al.} researched this scheme and get ahead. In \cite{Yanfeng:InSc'15}, the ciphertext is divided into two part: the data and the authorize(identity)part,the trusted authority is allowed to revoke users by updating the revocation list and the third part is allowed to update ciphertexts with public information.\\
+\indent In addition,it＊s important to avoid the abuse of key, that is to trace the malicious user, Liu, Zhen,Wong, DuncanS \cite{Zhen:CJ'15} make great progress on blackbox trace, which is highly expressive and achieves the most efficient level to date.\\
+Some comparison of the efficiency of the schemes are shown on Table~\ref{tab:comvoca}.\\
 %\begin{table*}[t]
 %\centering  % 桶懈笢
 %\caption{comparison among revocation}
@@ -381,13 +384,13 @@ Scheme&Types&Directly&Indirectly&Ciphertext Size&SK Size&Decryption cost\\
 \hline
 \cite{Shlomi:CyberSecurity'12}&CP&$\surd$&$\times$&(2r+1)$|G_1|$&$3|G_1|+|G_2|$&3P\\
 \hline
-\cite{NuttapongAttrapadung:{2009}}(scheme1)&KP&$\surd$&$\times$&$(\omega+2)|G_1|+|G_2|$&$2l_0|G_1|$&$(2l_0+2)P+l_0E_{G2}$\\
+\cite{Nuttapong:ICPC'09}(scheme1)&KP&$\surd$&$\times$&$(\omega+2)|G_1|+|G_2|$&$2l_0|G_1|$&$(2l_0+2)P+l_0E_{G2}$\\
 \hline
-\cite{NuttapongAttrapadung:{2009}}(scheme2)&KP&$\surd$&$\times$&$(2r+\omega+1)|G1|+|G2|$&$(2l_0+2)|G1|$&$(2l_0+2r)P+(l_0+r)E_{G2}$\\
+\cite{Nuttapong:ICPC'09}(scheme2)&KP&$\surd$&$\times$&$(2r+\omega+1)|G1|+|G2|$&$(2l_0+2)|G1|$&$(2l_0+2r)P+(l_0+r)E_{G2}$\\
 \hline
-\cite{NuttapongAttrapadung:{2009}}(scheme1)&CP&$\surd$&$\times$&$(l_s+2)|G1|+|G2|$&$(2l_s+3)P+l_sE_{G2}$&$3|G1|$\\
+\cite{Nuttapong:ICPC'09}(scheme1)&CP&$\surd$&$\times$&$(l_s+2)|G1|+|G2|$&$(2l_s+3)P+l_sE_{G2}$&$3|G1|$\\
 \hline
-\cite{NuttapongAttrapadung:{2009}}(scheme2)&CP&$\surd$&$\times$&$4|G1|+|G2|$&$5|G1|$&$(2l_s+2r+1)P+(l_s+r)E_{G2}$\\
+\cite{Nuttapong:ICPC'09}(scheme2)&CP&$\surd$&$\times$&$4|G1|+|G2|$&$5|G1|$&$(2l_s+2r+1)P+(l_s+r)E_{G2}$\\
 \hline
 \cite{Xiaohui:Citeseer'10}&KP&$\surd$&$\times$&$(3+l_{n_{max}})|G1|+|G2|$&$(n_{max}+|S|+3)|G1|$&$(n_{max}+6)P+(n_{max}|I|+|I|+2)E_{G2}$\\
 \hline

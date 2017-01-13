@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.1.2)  8 JAN 2017 18:03
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2016.7.6)  12 JAN 2017 23:08
 entering extended mode
-**F:/github/ABE/ABE_text/a_survey_of_ABE.tex
-(F:/github/ABE/ABE_text/a_survey_of_ABE.tex
+**a_survey_of_ABE.tex
+(D:\temp\github\ABE\ABE_text\a_survey_of_ABE.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-(F:\github\ABE\ABE_text\IEEEtran.cls
+(D:\temp\github\ABE\ABE_text\IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -17,11 +17,11 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
 
-(F:\program\CTEX\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
--- Using PDF output.
+-- Using DVI output.
 \@IEEEnormalsizeunitybaselineskip=\dimen105
 -- This is a 10 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen106
@@ -111,24 +111,24 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
-) (F:\program\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty
+) ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-(F:\program\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(F:\program\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
 \ex@=\dimen126
 ))
-(F:\program\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen127
 )
-(F:\program\CTEX\MiKTeX\tex\latex\ams\math\amsopn.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count94
@@ -169,44 +169,36 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-(F:\program\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 )
-(F:\program\CTEX\MiKTeX\tex\latex\graphics\epsfig.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-(F:\program\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(F:\program\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks20
 )
-(F:\program\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(F:\program\CTEX\MiKTeX\tex\latex\graphics\trig.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(F:\program\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: dvips.def on input line 91.
 
-(F:\program\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(F:\program\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
-)
-(F:\program\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
-Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count106
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\dvips.def"
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
@@ -214,7 +206,7 @@ Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 \epsfxsize=\dimen137
 \epsfysize=\dimen138
 )
-(F:\program\CTEX\UserData\tex\latex\subfigure\subfigure.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\subfigure\subfigure.sty"
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigtopskip=\skip47
 \subfigcapskip=\skip48
@@ -222,40 +214,43 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfigbottomskip=\skip49
 \subfigcapmargin=\dimen140
 \subfiglabelskip=\skip50
-\c@subfigure=\count107
-\c@lofdepth=\count108
-\c@subtable=\count109
-\c@lotdepth=\count110
+\c@subfigure=\count106
+\c@lofdepth=\count107
+\c@subtable=\count108
+\c@lotdepth=\count109
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(F:\program\CTEX\UserData\tex\latex\subfigure\subfigure.cfg)
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\subfigure\subfigure.cfg")
 \subfig@top=\skip51
 \subfig@bottom=\skip52
 )
-(F:\program\CTEX\MiKTeX\tex\latex\graphics\color.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(F:\program\CTEX\MiKTeX\tex\latex\00miktex\color.cfg
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
-)
-(F:\program\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty
+Package color Info: Driver file: dvips.def on input line 130.
+
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\dvipsnam.def"
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-(F:\program\CTEX\MiKTeX\tex\latex\multirow\multirow.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen141
 )
-(F:\program\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2009/06/22 v3.00
 )
-(F:\program\CTEX\UserData\tex\latex\ntheorem\ntheorem.sty
-Style `ntheorem', Version 1.33 <2011/08/15>
-Package: ntheorem 2011/08/15 1.33
-(F:\program\CTEX\MiKTeX\tex\latex\base\ifthen.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ntheorem\ntheorem.sty"
+Style `ntheorem', Version 1.31 <2011/02/16>
+Package: ntheorem 2011/02/16 1.31
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \theorem@style=\toks21
@@ -266,38 +261,27 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \theorempostskipamount=\skip54
 \theoremframepreskipamount=\skip55
 \theoremframepostskipamount=\skip56
-\theoreminframepreskipamount=\skip57
-\theoreminframepostskipamount=\skip58
-\theorem@preskip=\toks25
-\theorem@postskip=\toks26
-\theorem@framepreskip=\toks27
-\theorem@framepostskip=\toks28
-\theorem@inframepreskip=\toks29
-\theorem@inframepostskip=\toks30
 \theoremindent=\dimen142
 \theorem@indent=\dimen143
-\theoremrightindent=\dimen144
-\theorem@rightindent=\dimen145
-\theoremheaderfont=\toks31
-\theoremseparator=\toks32
-\theoremprework=\toks33
-\theorempostwork=\toks34
-\theoremsymbol=\toks35
-\qedsymbol=\toks36
-\theoremkeyword=\toks37
-\qedsymbol=\toks38
-\thm@topsep=\skip59
-\thm@topsepadd=\skip60
-Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
-\c@endNonectr=\count111
-\c@currNonectr=\count112
-\mysavskip=\skip61
+\theoremheaderfont=\toks25
+\theoremseparator=\toks26
+\theoremprework=\toks27
+\theorempostwork=\toks28
+\theoremsymbol=\toks29
+\qedsymbol=\toks30
+\theoremkeyword=\toks31
+\qedsymbol=\toks32
+\thm@topsepadd=\skip57
+Package ntheorem Info: Option `thmmarks' loaded on input line 1066.
+\c@endNonectr=\count110
+\c@currNonectr=\count111
+\mysavskip=\skip58
 Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input
- line 1175.
-\thm@amstmpdepth=\dimen146
-\tagwidth=\dimen147
+ line 1066.
+\thm@amstmpdepth=\dimen144
+\tagwidth=\dimen145
 )
-(F:\program\CTEX\MiKTeX\tex\latex\tools\bm.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\tools\bm.sty"
 Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
@@ -305,36 +289,33 @@ Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
 LaTeX Info: Redefining \bm on input line 204.
 )
-(F:\program\CTEX\UserData\tex\latex\booktabs\booktabs.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen148
-\lightrulewidth=\dimen149
-\cmidrulewidth=\dimen150
-\belowrulesep=\dimen151
-\belowbottomsep=\dimen152
-\aboverulesep=\dimen153
-\abovetopsep=\dimen154
-\cmidrulesep=\dimen155
-\cmidrulekern=\dimen156
-\defaultaddspace=\dimen157
-\@cmidla=\count113
-\@cmidlb=\count114
-\@aboverulesep=\dimen158
-\@belowrulesep=\dimen159
-\@thisruleclass=\count115
-\@lastruleclass=\count116
-\@thisrulewidth=\dimen160
+\heavyrulewidth=\dimen146
+\lightrulewidth=\dimen147
+\cmidrulewidth=\dimen148
+\belowrulesep=\dimen149
+\belowbottomsep=\dimen150
+\aboverulesep=\dimen151
+\abovetopsep=\dimen152
+\cmidrulesep=\dimen153
+\cmidrulekern=\dimen154
+\defaultaddspace=\dimen155
+\@cmidla=\count112
+\@cmidlb=\count113
+\@aboverulesep=\dimen156
+\@belowrulesep=\dimen157
+\@thisruleclass=\count114
+\@lastruleclass=\count115
+\@thisrulewidth=\dimen158
 )
-(F:\program\CTEX\UserData\tex\latex\threeparttable\threeparttable.sty
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\threeparttable\threeparttable.st
+y"
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box30
 )
 ** ATTENTION: Overriding command lockouts (line 22).
-(F:\github\ABE\ABE_text\a_survey_of_ABE.aux
-
-LaTeX Warning: Label `tab:test' multiply defined.
-
-)
+(D:\temp\github\ABE\ABE_text\a_survey_of_ABE.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
@@ -349,68 +330,50 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 
 -- Lines per column: 58 (exact).
-(F:\program\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen161
-\scratchbox=\box31
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen162
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks40
-) (F:\github\ABE\ABE_text\introd.tex) (F:\github\ABE\ABE_text\defin.tex
+(D:\temp\github\ABE\ABE_text\introd.tex) (D:\temp\github\ABE\ABE_text\defin.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 6.
-
-(F:\program\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 6.
 
-(F:\program\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 Missing character: There is no ° in font ptmr7t!
 Missing character: There is no Ø in font ptmr7t!
-\c@currABEctr=\count123
-\c@endABEctr=\count124
-\c@ABE=\count125
+\c@currABEctr=\count116
+\c@endABEctr=\count117
+\c@ABE=\count118
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-[]\OT1/ptm/b/n/10 Decrypt\OT1/ptm/m/n/10 (PK$\OML/cmm/m/it/10 ;$ \OT1/ptm/b/n/1
-0 Key-Gen\OT1/ptm/m/n/10 (MK$\OML/cmm/m/it/10 ;$ \OT1/ptm/m/n/10 PK$\OML/cmm/m/
-it/10 ; X$\OT1/ptm/m/n/10 ), \OT1/ptm/b/n/10 En-cryp-t\OT1/ptm/m/n/10 ($\OML/cm
-m/m/it/10 M;$
+Underfull \hbox (badness 2521) in paragraph at lines 50--51
+[][]\OT1/ptm/b/n/10 Decrypt$\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 PK; CT[]; SK[]\OT
+1/cmr/m/n/10 )$ \OT1/ptm/m/n/10 The de-cryp-tion al-go-rith-m
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-
- []
-
-[1{F:/program/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
+[1
 
 
 ]
-\c@currABEgamectr=\count126
-\c@endABEgamectr=\count127
-\c@currABEsecctr=\count128
-\c@endABEsecctr=\count129
+\c@currABEgamectr=\count119
+\c@endABEgamectr=\count120
+\c@currABEsecctr=\count121
+\c@endABEsecctr=\count122
+ [2]
 
-[2]
+LaTeX Warning: Reference `wangyi' on page 3 undefined on input line 213.
 
-LaTeX Warning: Reference `wangyi' on page 3 undefined on input line 210.
+) (D:\temp\github\ABE\ABE_text\state.tex
 
-) (F:\github\ABE\ABE_text\state.tex [3])
-(F:\github\ABE\ABE_text\design_philosophy.tex
-\c@currMonotonicityctr=\count130
-\c@endMonotonicityctr=\count131
+LaTeX Warning: Citation `Nuttapong:ACNS'16' on page 3 undefined on input line 2
+4.
+
+[3]) (D:\temp\github\ABE\ABE_text\design_philosophy.tex
+\c@currMonotonicityctr=\count123
+\c@endMonotonicityctr=\count124
  [4] [5]
 Underfull \hbox (badness 10000) in paragraph at lines 254--257
-[]\OT1/ptm/m/n/10 Then, the struc-ture part choos-es ran-dom-ly
+[][]\OT1/ptm/m/n/10 Then, the struc-ture part choos-es ran-dom-ly
  []
 
 
@@ -425,37 +388,14 @@ Missing character: There is no ° in font cmr10!
 Missing character: There is no Ø in font cmr10!
 Missing character: There is no ° in font cmr10!
 Missing character: There is no Ø in font cmr10!
-
-Underfull \vbox (badness 4205) has occurred while \output is active []
-
  [7]
 Underfull \hbox (badness 10000) in paragraph at lines 456--457
 
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 458--459
-\OT1/ptm/m/n/10 ram-e-ter-s. First-ly, let $\OML/cmm/m/it/10 U \OT1/cmr/m/n/10 
-= \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/c
-mm/m/it/10 :::n\OMS/cmsy/m/n/10 g$ \OT1/ptm/m/n/10 de-note the u-ni-
- []
-
-
-Underfull \hbox (badness 2443) in paragraph at lines 458--459
-\OT1/ptm/m/n/10 verse of at-tributes, and de-fine a tu-ple $\OT1/cmr/m/n/10 (\O
-ML/cmm/m/it/10 p; g; \U/msb/m/n/10 G[]\OML/cmm/m/it/10 ; \U/msb/m/n/10 G[]\OML/
-cmm/m/it/10 ; e\OT1/cmr/m/n/10 )$
- []
-
-
-Underfull \hbox (badness 1515) in paragraph at lines 458--459
-\OT1/ptm/m/n/10 ly at ran-dom for each at-tribute $\OML/cmm/m/it/10 i \OMS/cmsy
-/m/n/10 2 \OML/cmm/m/it/10 U$ \OT1/ptm/m/n/10 and gen-er-ate
- []
-
-
-Overfull \hbox (30.52324pt too wide) detected at line 476
-[]\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []; x\OT1/cmr/m/n/10 ) = []
+Overfull \hbox (39.30403pt too wide) detected at line 476
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 CT; SK; x\OT1/cmr/m/n/10 ) = []
  []
 
 
@@ -470,20 +410,26 @@ e
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 495--67
-\OT1/ptm/m/n/10 based en- cryp-tion, ci-pher-texts are as-so-ci-at-ed with set-
-s
+Underfull \hbox (badness 10000) in paragraph at lines 495--67
+
  []
 
 
-Underfull \hbox (badness 1406) in paragraph at lines 495--67
-\OT1/ptm/m/n/10 of de-scrip-tive at-tributes, and user-s? keys are as-so-ci-at-
-ed
+Underfull \hbox (badness 10000) in paragraph at lines 495--67
+
  []
 
 
-Underfull \hbox (badness 6691) in paragraph at lines 495--67
-\OT1/ptm/m/n/10 cryp-tion, in ciphertext-policy attribute-based en-cryp-tion
+Underfull \hbox (badness 5022) in paragraph at lines 495--67
+\OT1/ptm/b/n/10 Encrypt$\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 PK; \OMS/cmsy/m/n/10 
+M\OML/cmm/m/it/10 ; \U/msb/m/n/10 A\OT1/cmr/m/n/10 )$\OT1/ptm/m/n/10 .The en-cr
+yp-tion al-go-rith-m takes as
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 495--67
+\OT1/ptm/m/n/10 ac-cess struc-ture $\U/msb/m/n/10 A$ \OT1/ptm/m/n/10 over the u
+-ni-verse of at-tributes. The
  []
 
 
@@ -496,22 +442,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 495--67
 
  []
 
-
-Underfull \hbox (badness 3803) in paragraph at lines 495--67
-\OT1/ptm/m/n/10 Encrypt(PK, M, A).The en-cryp-tion al-go-rith-m takes as
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 495--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 495--67
-
- []
-
-[8] (F:\github\ABE\ABE_text\extens.tex
+[8] (D:\temp\github\ABE\ABE_text\extens.tex
 Missing character: There is no ° in font ptmr7t!
 Missing character: There is no Ø in font ptmr7t!
 Missing character: There is no ° in font ptmr7t!
@@ -538,73 +469,41 @@ Missing character: There is no ° in font ptmr7t!
 Missing character: There is no Ø in font ptmr7t!
 
 Overfull \hbox (8.86205pt too wide) in paragraph at lines 19--32
- [][] 
+ [][][] 
  []
 
-Missing character: There is no ° in font ptmr7t!
-Missing character: There is no Ø in font ptmr7t!
-Missing character: There is no ° in font ptmr7t!
-Missing character: There is no Ø in font ptmr7t!
 [9]
-Missing character: There is no ° in font ptmr7t!
-Missing character: There is no Ø in font ptmr7t!
-
-Underfull \hbox (badness 1484) in paragraph at lines 60--61
+Underfull \hbox (badness 1484) in paragraph at lines 59--60
 \OT1/ptm/m/n/10 con-crete bidi-rec-tion-al PRE scheme. This scheme al-lows
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 60--61
-\OT1/ptm/m/n/10 Ateniese[[]]provided identity-based PRE.The se-cu-ri-ty of
- []
-
-
-Underfull \hbox (badness 2653) in paragraph at lines 60--61
+Underfull \hbox (badness 2653) in paragraph at lines 59--60
 \OT1/ptm/m/n/10 new identity-based prox-y re-encryption schemes in the
  []
 
 
-Underfull \hbox (badness 3029) in paragraph at lines 60--61
-\OT1/ptm/m/n/10 s-tan-dard mod-el. Matsuo[[]]also pro-posed new identity-
+Underfull \hbox (badness 1442) in paragraph at lines 59--60
+\OT1/ptm/m/n/10 based prox-y re-encryption sys-tem, the so-lu-tion need-s a
  []
 
 
-Underfull \hbox (badness 2790) in paragraph at lines 60--61
-\OT1/ptm/m/n/10 keys. Guo \OT1/ptm/m/it/10 et al. \OT1/ptm/m/n/10 [[]]proposed 
-the first attribute-based
+Underfull \hbox (badness 2744) in paragraph at lines 59--60
+\OT1/ptm/m/n/10 re-encryption(CP-ABPRE) scheme which has the above
  []
 
 
-Underfull \hbox (badness 3713) in paragraph at lines 60--61
-\OT1/ptm/m/n/10 prox-y re-encryption(ABPRE) scheme, but their scheme
+Underfull \hbox (badness 3724) in paragraph at lines 59--60
+\OT1/ptm/m/n/10 prop-er-ties ex-cep-t re-encryption con-trol. In TC-C 2012,
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 60--61
-\OT1/ptm/m/n/10 is based on key pol-i-cy and bidi-rec-tion-al. Liang \OT1/ptm/m
-/it/10 et al.
- []
-
-
-Underfull \hbox (badness 6063) in paragraph at lines 60--61
-\OT1/ptm/m/n/10 [[]]proposed the first ci-pher-tex-t pol-i-cy attribute-based
- []
-
-
-Underfull \hbox (badness 2828) in paragraph at lines 60--61
-\OT1/ptm/m/n/10 prox-y re-encryption(CP-ABPRE) scheme which has the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
@@ -612,62 +511,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 Underfull \vbox (badness 1389) has occurred while \output is active []
 
  [10]
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--83
+Underfull \hbox (badness 10000) in paragraph at lines 76--82
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 85.
-(F:\program\CTEX\MiKTeX\tex\latex\psnfss\omsptm.fd
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 84.
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--86
-\OT1/ptm/b/n/10 KeyGen\OT1/ptm/m/n/10 (\OT1/ptm/m/it/10 S\OT1/ptm/m/n/10 , \OT1
-/ptm/m/it/10 mk\OT1/ptm/m/n/10 ) Let \OT1/ptm/m/it/10 S \OT1/ptm/m/n/10 de-note
- an in-dex set of
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
+[]\OT1/ptm/b/n/10 KeyGen\OT1/ptm/m/n/10 (\OT1/ptm/m/it/10 S\OT1/ptm/m/n/10 , \O
+T1/ptm/m/it/10 mk\OT1/ptm/m/n/10 ) Let \OT1/ptm/m/it/10 S \OT1/ptm/m/n/10 de-no
+te an in-dex set of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--86
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 91.
-(F:\program\CTEX\MiKTeX\tex\latex\amsfonts\ueuf.fd
+LaTeX Font Info:    Try loading font information for U+euf on input line 90.
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2009/06/22 v3.00 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
-[]$\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 d[]$ \OT1/ptm/m/n/10 ap-pears in \OT1/ptm
-/m/it/10 AS\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = \OML/cmm/m
-/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]; D[]\OT1/cmr/m/n/10 ) =$
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+[][]$\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 d[]$ \OT1/ptm/m/n/10 ap-pears in \OT1/p
+tm/m/it/10 AS\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = \OML/cmm
+/m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]; D[]\OT1/cmr/m/n/10 ) =$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
-[]\OT1/ptm/m/n/10 It then com-putes $[]$=$\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 ([]
-\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) [][] \OML/cmm/m/it/10 E[] \OT1/cmr/m/n/1
-0 =$
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
+[][]\OT1/ptm/m/n/10 It then com-putes $[]$=$\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 (
+[]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 ) [][] \OML/cmm/m/it/10 E[] \OT1/cmr/m/n
+/10 =$
  []
 
 
-Underfull \hbox (badness 1975) in paragraph at lines 103--105
+Underfull \hbox (badness 1975) in paragraph at lines 102--104
 $\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]; h[]\OT1/cmr/m/n/10 ) 
 \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g; h\OT1
 /cmr/m/n/10 )[] = \OML/cmm/m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g; h\OT1/
@@ -675,39 +574,40 @@ cmr/m/n/10 )[]$\OT1/ptm/m/n/10 ;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
-[]\OT1/ptm/b/n/10 Dec\OT1/ptm/m/n/10 (\OT1/ptm/m/it/10 C\OT1/ptm/m/n/10 , \OT1/
-ptm/m/it/10 usk\OT1/ptm/m/n/10 ) Let \OT1/ptm/m/it/10 usk \OT1/ptm/m/n/10 de-no
-te a valid se-cret key
+Underfull \hbox (badness 10000) in paragraph at lines 105--107
+[][]\OT1/ptm/b/n/10 Dec\OT1/ptm/m/n/10 (\OT1/ptm/m/it/10 C\OT1/ptm/m/n/10 , \OT
+1/ptm/m/it/10 usk\OT1/ptm/m/n/10 ) Let \OT1/ptm/m/it/10 usk \OT1/ptm/m/n/10 de-
+note a valid se-cret key
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 106--108
+Underfull \hbox (badness 3168) in paragraph at lines 105--107
 $\OMS/cmsy/m/n/10 h$$\OML/cmm/m/it/10 S; [][]; []$$\OMS/cmsy/m/n/10 i$\OT1/ptm/
 m/n/10 . It check-s if \OT1/ptm/m/it/10 S \OT1/ptm/m/n/10 sat-is-fies \OT1/ptm/
 m/it/10 AS\OT1/ptm/m/n/10 , if
  []
 
 
+Underfull \hbox (badness 3724) in paragraph at lines 109--110
+[][]$\OT1/cmr/m/n/10 +\OML/cmm/m/it/10 d[]$ \OT1/ptm/m/n/10 ap-pears in \OT1/pt
+m/m/it/10 AS\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = \OML/cmm/
+m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]; D[]\OT1/cmr/m/n/10 ) =$
+ []
+
+
 Underfull \hbox (badness 3724) in paragraph at lines 110--111
-[]$\OT1/cmr/m/n/10 +\OML/cmm/m/it/10 d[]$ \OT1/ptm/m/n/10 ap-pears in \OT1/ptm/
-m/it/10 AS\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = \OML/cmm/m/
-it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]; D[]\OT1/cmr/m/n/10 ) =$
+[][]$\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 d[]$ \OT1/ptm/m/n/10 ap-pears in \OT1/p
+tm/m/it/10 AS\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = \OML/cmm
+/m/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]; D[]\OT1/cmr/m/n/10 ) =$
  []
 
-
-Underfull \hbox (badness 3724) in paragraph at lines 111--112
-[]$\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 d[]$ \OT1/ptm/m/n/10 ap-pears in \OT1/ptm
-/m/it/10 AS\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 E[] \OT1/cmr/m/n/10 = \OML/cmm/m
-/it/10 e\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C[]; D[]\OT1/cmr/m/n/10 ) =$
- []
-
-Missing character: There is no ¸ in font ptmr7t!
 Missing character: There is no ¸ in font ptmr7t!
 Missing character: There is no ¸ in font ptmr7t!
 [11]
+Missing character: There is no ¸ in font ptmr7t!
+
 Underfull \hbox (badness 7925) in paragraph at lines 185--186
-[]\OT1/ptm/b/n/10 User Col-lu-sion Avoid-ance Scheme for Privacy-
+[][]\OT1/ptm/b/n/10 User Col-lu-sion Avoid-ance Scheme for Privacy-
  []
 
 [12]
@@ -755,12 +655,16 @@ Missing character: There is no ¶ in font ptmr7t!
 Missing character: There is no — in font ptmr7t!
 Missing character: There is no ¶ in font ptmr7t!
 Missing character: There is no À in font ptmr7t!
-Missing character: There is no ¶ in font cmr7!
-Missing character: There is no ¡ in font cmr10!
-Missing character: There is no ¶ in font cmr10!
-Missing character: There is no À in font cmr10!
-Missing character: There is no ¶ in font ptmr7t!
-Missing character: There is no — in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--336
+
+ []
+
+
+Overfull \hbox (14.93222pt too wide) detected at line 341
+[]
+ []
+
 Missing character: There is no ° in font ptmr7t!
 Missing character: There is no Ø in font ptmr7t!
 Missing character: There is no ° in font ptmr7t!
@@ -776,73 +680,23 @@ Missing character: There is no Ø in font ptmr7t!
 Missing character: There is no ° in font ptmr7t!
 Missing character: There is no Ø in font ptmr7t!
 
-
-LaTeX Warning: Citation `NuttapongAttrapadung:{2009}' on page 14 undefined on i
-nput line 384.
-
-
-LaTeX Warning: Citation `NuttapongAttrapadung:{2009}' on page 14 undefined on i
-nput line 386.
-
-
-LaTeX Warning: Citation `NuttapongAttrapadung:{2009}' on page 14 undefined on i
-nput line 388.
-
-
-LaTeX Warning: Citation `NuttapongAttrapadung:{2009}' on page 14 undefined on i
-nput line 390.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--398
-\OT1/ptm/m/n/10 change and key leak-age may hap-pen with time.
+Overfull \hbox (0.96278pt too wide) in paragraph at lines 381--400
+ [][][] 
  []
 
 
-Underfull \hbox (badness 8094) in paragraph at lines 332--398
-\OT1/ptm/m/n/10 At-tra-padung,Imai \OT1/ptm/m/it/10 et al. \OT1/ptm/m/n/10 [[]]
- first di-vid-ed re-vo-ca-tion
- []
-
-
-Underfull \hbox (badness 1406) in paragraph at lines 332--398
-\OT1/ptm/m/n/10 can up-date their key and use it to de-cryp-t ci-pher-texts
- []
-
-
-Underfull \hbox (badness 3108) in paragraph at lines 332--398
-\OT1/ptm/m/n/10 en-crypt-ing.But both schemes have some prob-lem: The
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--398
+Underfull \hbox (badness 10000) in paragraph at lines 341--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--398
-[]\OT1/ptm/m/n/10 C=M$\OMS/cmsy/m/n/10 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e\OT1
-/cmr/m/n/10 (\OML/cmm/m/it/10 g; g\OT1/cmr/m/n/10 )[])[]$\OT1/ptm/m/n/10 ,   C$
-[]$=g$[]$,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--398
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--398
-
- []
-
-
-Underfull \hbox (badness 1715) in paragraph at lines 332--398
+Underfull \hbox (badness 1715) in paragraph at lines 341--401
 \OT1/ptm/m/n/10 in-dex ID$\OMS/cmsy/m/n/10 2$ \OT1/ptm/m/n/10 S (so that the de
 -cryp-tion is pos-si-ble). Let
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 332--398
+Underfull \hbox (badness 1552) in paragraph at lines 341--401
 \OT1/ptm/m/n/10 re-con-struc-tion constants\OMS/cmsy/m/n/10 f\OT1/ptm/m/n/10 (i
 ,$\OML/cmm/m/it/10 []$\OT1/ptm/m/n/10 )\OMS/cmsy/m/n/10 g$[]$\OT1/ptm/m/n/10 =
 Recon$[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10  \OT1/cmr/m/n/10 )$\OT1/ptm/m/n/10 .T
@@ -850,69 +704,57 @@ hen it
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--398
+Underfull \hbox (badness 10000) in paragraph at lines 341--401
 \OT1/ptm/m/n/10 K=$[] \OMS/cmsy/m/n/10 $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--398
-
+Underfull \hbox (badness 5637) in paragraph at lines 341--401
+\OT1/ptm/m/n/10 suc-cess-ful-ly.This re-al-ize fine-gained at-tribute re-vo-ca-
+tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--398
-
+Underfull \hbox (badness 1867) in paragraph at lines 341--401
+\OT1/ptm/m/it/10 et al. \OT1/ptm/m/n/10 re-searched this scheme and get a-head.
+ In [[]],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--398
-
- []
-
-
-Underfull \hbox (badness 6110) in paragraph at lines 332--398
-\OT1/ptm/m/n/10 can re-duce the au-thor-i-tys work. Shi, Yan-feng,Zheng,
- []
-
-
-Underfull \hbox (badness 2073) in paragraph at lines 332--398
+Underfull \hbox (badness 2073) in paragraph at lines 341--401
 \OT1/ptm/m/n/10 au-tho-rize(identity)part,the trust-ed au-thor-i-ty is al-lowed
  to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--398
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--398
+Underfull \hbox (badness 10000) in paragraph at lines 341--401
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
+ [14])
+(D:\temp\github\ABE\ABE_text\related.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(F:\github\ABE\ABE_text\related.tex) (F:\github\ABE\ABE_text\future.tex)
-(F:\github\ABE\ABE_text\a_survey_of_ABE.bbl [15]
+(D:\temp\github\ABE\ABE_text\future.tex)
+(D:\temp\github\ABE\ABE_text\a_survey_of_ABE.bbl [15]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ê in font ptmr7t!
 
 Underfull \hbox (badness 1742) in paragraph at lines 109--112
-[]\OT1/ptm/m/n/8 H.-M. R. Chun-I Fan, Vin-cen-t Shi-Ming Huang, ``Arbitrary-sta
-te
+[][]\OT1/ptm/m/n/8 H.-M. R. Chun-I Fan, Vin-cen-t Shi-Ming Huang, ``Arbitrary-s
+tate
  []
 
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no © in font ptmr7t!
-[16]
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
+[16]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
@@ -924,47 +766,18 @@ Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
 )
 \tf@thm=\write3
- [17] (F:\github\ABE\ABE_text\a_survey_of_ABE.aux)
+ [17] (D:\temp\github\ABE\ABE_text\a_survey_of_ABE.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 3913 strings out of 495354
- 56299 string characters out of 3183412
- 133136 words of memory out of 3000000
- 6979 multiletter control sequences out of 15000+200000
- 52425 words of font info for 111 fonts, out of 3000000 for 9000
+ 3430 strings out of 495355
+ 50968 string characters out of 3182763
+ 122911 words of memory out of 3000000
+ 6523 multiletter control sequences out of 15000+200000
+ 37094 words of font info for 97 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 34i,13n,28p,2597b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
-{F:/program/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<F:/program/CTEX/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmex10.pfb><F:/program/CTEX/MiKTeX/fonts/type
-1/public/amsfonts/cmextra/cmex7.pfb><F:/program/CTEX/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb><F:/program/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mmi5.pfb><F:/program/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><F:/p
-rogram/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><F:/program/CTEX/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><F:/program/CTEX/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmmib10.pfb><F:/program/CTEX/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmr10.pfb><F:/program/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5
-.pfb><F:/program/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><F:/progra
-m/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><F:/program/CTEX/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr8.pfb><F:/program/CTEX/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb><F:/program/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmsy5.pfb><F:/program/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><F
-:/program/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><F:/program/CTEX
-/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><F:/program/CTEX/MiKTeX/fo
-nts/type1/public/amsfonts/euler/eufm7.pfb><F:/program/CTEX/MiKTeX/fonts/type1/p
-ublic/amsfonts/symbols/msam10.pfb><F:/program/CTEX/MiKTeX/fonts/type1/public/am
-sfonts/symbols/msbm10.pfb><F:/program/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.
-pfb><F:/program/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><F:/program/CTEX/
-MiKTeX/fonts/type1/urw/times/utmr8a.pfb><F:/program/CTEX/MiKTeX/fonts/type1/urw
-/times/utmri8a.pfb>
-Output written on a_survey_of_ABE.pdf (17 pages, 400202 bytes).
-PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 32i,13n,28p,2574b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+Output written on a_survey_of_ABE.dvi (17 pages, 185948 bytes).
