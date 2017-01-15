@@ -60,59 +60,58 @@ Since PRE have been introduced in 1998, there are many related works on it. In t
 
 Next, we will give an ABPRE model in\cite{Xiaohui:ISICCS'09}.\\
 
-Definition:  \emph{An} ABPRE  \emph{scheme is a tuple of probabilistic polynomial time algorithms} (Setup, KeyGen, RKGen, Enc, ReEnc, Dec).
+Definition:  \emph{An} ABPRE  \emph{scheme is a tuple of probabilistic polynomial time algorithms} (\textbf{Setup}, \textbf{KeyGen}, \textbf{RKGen}, \textbf{Enc}, \textbf{ReEnc}, \textbf{Dec}).
 
 \begin{itemize}
-\item \textbf{Setup}($1^k$)$\rightarrow$(\emph{pp,mk}): On input a security parameter $1^k$, the setup algorithm SETUP outputs a system public parameter \emph{pp} and a master key \emph{mk}.
-\item \textbf{KeyGen}(\emph{S;mk})$\rightarrow$(\emph{usk}): On input an index set \emph{$S^1$} and a master key \emph{mk}, the key generation algorithm KEYGEN outputs a secret key \emph{usk}.
-\item \textbf{RKGen}(\emph{usk};\emph{AS})$\rightarrow$(\emph{rk}): On input a secret key \emph{usk} and an access structure \emph{AS}, the re-key generation algorithm RKGEN outputs a re-key \emph{rk}.
-\item \textbf{Enc}(\emph{AS};\emph{m})$\rightarrow$(\emph{C}): On input an access structure \emph{AS} and a message \emph{m}, the encryption algorithm ENC outputs a ciphertext \emph{C}.
-\item \textbf{ReEnc}(\emph{rk};\emph{C})$\rightarrow$(\emph{$C'$}): On input a re-key \emph{rk} and a ciphertext \emph{C}, the re-encryption algorithm REENC first checks if the index set in \emph{rk} satisfies the access structure of \emph{C}. Then, if check passes, it outputs a re-encrypted ciphertext \emph{$C'$}; otherwise, it outputs ``reject''.
-\item \textbf{Dec}(\emph{usk};\emph{C})$\rightarrow$(\emph{m}): On input a secret key \emph{usk} and a ciphertext \emph{C}, the decryption algorithm DEC first checks if the index set in \emph{usk} satisfies the access structure of \emph{C}. Then, if check passes, it outputs a message \emph{m} in the message space; otherwise, it outputs ``reject''.
+\item \textbf{Setup}$(1^\lambda) \rightarrow (pp,mk)$: On input a security parameter $1^\lambda$, the setup algorithm \textbf{Setup} outputs a system public parameter \emph{pp} and a master key $mk$.
+\item \textbf{KeyGen}$(S,mk) \rightarrow (usk)$: On input an index set \emph{$S^1$} and a master key $mk$, the key generation algorithm \textbf{KeyGen} outputs a secret key $usk$.
+\item \textbf{RKGen}$(usk,\mathbb{A}) \rightarrow (rk)$: On input a secret key $usk$ and an access structure $\mathbb{A}$, the re-key generation algorithm \textbf{RKGen} outputs a re-key $rk$.
+\item \textbf{Enc}$(\mathbb{A},\mathcal{M}) \rightarrow (CT)$: On input an access structure $\mathbb{A}$ and a message $\mathcal{M}$, the encryption algorithm \textbf{Enc} outputs a ciphertext $CT$.
+\item \textbf{ReEnc}$(rk,CT) \rightarrow (CT')$: On input a re-key $rk$ and a ciphertext $CT$, the re-encryption algorithm \textbf{ReEnc} first checks if the index set in $rk$ satisfies the access structure of $CT$. Then, if check passes, it outputs a re-encrypted ciphertext $C'$; otherwise, it outputs ``reject''.
+\item \textbf{Dec}$(usk,CT) \rightarrow (\mathcal{M})$: On input a secret key $usk$ and a ciphertext $CT$, the decryption algorithm \textbf{Dec} first checks if the index set in $usk$ satisfies the access structure of $CT$. Then, if check passes, it outputs a message $\mathcal{M}$ in the message space; otherwise, it outputs ``reject''.
 \end{itemize}
 
-Then, we present the construction with six algorithms Setup, KeyGen, ENC, RKGen, ReEnc, Dec.\\
+Then, we present the construction with six algorithms \textbf{Setup}, \textbf{KeyGen}, \textbf{ENC}, \textbf{RKGen}, \textbf{ReEnc}, \textbf{Dec}.\\
 
 \noindent
-\textbf{Setup}($1^k$) Generate a bilinear group \emph{G} of prime order \emph{p}, with bilinear map \emph{e}:\emph{G}$\times$\emph{G} $\rightarrow$ \emph{$G_{T}$}. Next, it selects elements \emph{y}, \emph{$t_{i}$}(1$\leq$\emph{i}$\leq$3\emph{n}) in \emph{$Z_{p}$} and two generators \emph{g, h} of \emph{G} at random. Let \emph{Y}:=\emph{$e(g, h)^y$} and \emph{$T_{i}$}:=\emph{$g^{t_{i}}$}, \emph{$T'_{i}$}:=\emph{$h^\frac{1}{t_{i}}$}, for each 1$\leq$\emph{i}$\leq$3\emph{n}. The public parameter \emph{pp} includes
-$\langle$
-\emph{e, g, h, Y, ${\{T_{i}, T'_{i}\}}_{1\leq i\leq 3n}$}
-$\rangle$.
-The master key \emph{mk} is $\langle$\emph{$y, \{{t_{i}}\}_{1\leq i\leq 3n}$}$\rangle$.\\
+\textbf{Setup}$(1^\lambda)$ Generate a bilinear group $\mathbb{G}$ of prime order $p$, with bilinear map 
+$e: \mathbb{G}\times\mathbb{G} \rightarrow \mathbb{G}_{T}$. Next, it selects elements $y$, $t_{i}$ ($1\leq i \leq3n$) in $\mathbb{Z}_{p}$ and two generators $g, h$ of $\mathbb{G}$ at random. Let $Y=e(g,h)^y$ and $T_{i}=g^{t_{i}}$, $T'_{i}=h^\frac{1}{t_{i}}$, for each $1\leq i \leq3n$. The public parameter $pp$ includes
+$\langle e, g, h, Y, \{T_{i}, T'_{i}\}_{1\leq i\leq 3n} \rangle$.
+The master key $mk$ is $\langle y, \{{t_{i}}\}_{1\leq i\leq 3n} \rangle$.\\
 
 \noindent
-\textbf{KeyGen}(\emph{S}, \emph{mk}) Let \emph{S} denote an index set of attributes. It chooses random \emph{$r_{1}$}$\cdots$\emph{$r_{n}$} from \emph{$Z_{p}$} and sets \emph{$r = r_{1} + r_{2} +\cdots+ r_{n}$}. Compute \emph{$\hat{D}$}=\emph{$h^{y-r}$},  and for each \emph{i} $\in$ $\mathcal{N}$($\mathcal{N}$=\{1, 2, $\cdots$, \emph{n}\}): if \emph{i} $\in$ \emph{S}, \emph{$D_{i, 1}$}=\emph{$h^\frac{r_{i}}{t_{i}}$}, \emph{$D_{i, 2}$}=\emph{$h^\frac{r_{i}}{t_{2n+i}}$}; otherwise, \emph{$D_{i, 1}$}=\emph{$h^\frac{r_{i}}{t_{n+i}}$}, \emph{$D_{i, 2}$}=\emph{$h^\frac{r_{i}}{t_{2n+i}}$}. It outputs a user's secret key \emph{usk}=$\langle$\emph{$S, {(D_{i, 1}, D_{i, 2})}_{i \in \mathcal{N}}, \hat{D}$}$\rangle$.\\
+\textbf{KeyGen}$(S,mk)$ Let $S$ denote an index set of attributes. It chooses random $r_{1}\cdots r_{n}$ from $\mathbb{Z}_{p}$ and sets $r=r_{1}+r_{2}+\cdots+r_{n}$. Compute $\hat{D}=h^{y-r}$,  and for each $i\in\mathcal{N}(\mathcal{N}=\{1,2,\cdots,n\})$, if $i\in S$, $D_{i,1}=h^\frac{r_{i}}{t_{i}}$,$D_{i,2}=h^\frac{r_{i}}{t_{2n+i}}$. Otherwise, $D_{i,1}=h^\frac{r_{i}}{t_{n+i}}$, $D_{i,2}=h^\frac{r_{i}}{t_{2n+i}}$. It outputs a user's secret key $usk=\langle S, {(D_{i, 1}, D_{i, 2})}_{i\in\mathcal{N}},\hat{D} \rangle$.\\
 
 \noindent
-\textbf{Enc}(\emph{m}, \emph{AS}) Let \emph{AS} denote an access structure. To encrypt a message \emph{m} $\in$ \emph{$G_{T}$}, it selects random \emph{s} $\in$ \emph{$Z_{p}$} and computes $\tilde{C}$=\emph{$m\cdot Y^s$}, $\hat{C}$=\emph{$g^s$}, $\breve{C}$=\emph{$h^s$}. For \emph{i} $\in$ $\mathcal{N}$: if \emph{$+d_{i}$} appears \emph{AS}, \emph{$C_{i}=T^s_{i}$}; if \emph{$-d_{i}$} appears \emph{AS}, \emph{$C_{i}=T^s_{n+i}$}; otherwise \emph{$C_{i}=T^s_{2n+i}$}. It outputs \emph{C}=$\langle$\emph{$AS, \tilde{C}, \hat{C}, \breve{C}, (C_{i})_{(i \in \mathcal{N})}$}$\rangle$.\\
+\textbf{Enc}$(\mathcal{M},\mathbb{A})$ Let $\mathbb{A}$ denote an access structure. To encrypt a message $\mathcal{M} \in G_{T}$, it selects random $s \in Z_{p}$ and computes $\tilde{C}=\mathcal{M} \cdot Y^s$, $\hat{C}=g^s$, $\breve{C}=h^s$. For $i \in \mathcal{N}$, if $+d_{i}$ appears $\mathbb{A}$, $C_{i}=T^s_{i}$; if $-d_{i}$ appears $\mathbb{A}$, $C_{i}=T^s_{n+i}$; otherwise $C_{i}=T^s_{2n+i}$. It outputs $CT=\langle \mathbb{A}, \tilde{C}, \hat{C}, \breve{C}, (C_{i})_{(i \in \mathcal{N})} \rangle$.\\
 
 \noindent
-\textbf{RKGen}(\emph{usk}, \emph{AS}) Let \emph{usk} denote a valid secret key consisting of $\langle$\emph{$S, {(D_{i, 1}, D_{i, 2})}_{i \in \mathcal{N}}, \hat{D}$}$\rangle$. and \emph{AS} denote an access structure.It selects random \emph{d} $\in$ \emph{$Z_{p}$} and set \emph{$\mathfrak{D}=g^d, \hat{D}'=\hat{D}$}. For \emph{i} $\in$ $\mathcal{N}$: if \emph{i} $\in$ \emph{S}, \emph{$D_{i, 1}'$}=\emph{$D_{i, 1}\cdot(T_{i}')^d$}, \emph{$D_{i, 2}'$}=\emph{$D_{i, 2}\cdot(T_{2n+i}')^d$}; otherwise, \emph{$D_{i, 1}'$}=\emph{$D_{i, 1}\cdot(T_{n+i}')^d$}, \emph{$D_{i, 2}'$}=\emph{$D_{i, 2}\cdot(T_{2n+i}')^d$}; $\mathfrak{C}$ is the ciphertext of $\mathfrak{D}$ under the access structure \emph{AS}.
+\textbf{RKGen}$(usk,\mathbb{A})$ Let $usk$ denote a valid secret key consisting of $\langle S,{(D_{i, 1},D_{i, 2})}_{i\in\mathcal{N}}, \hat{D} \rangle$, and $\mathbb{A}$ denote an access structure. It selects random $d\in \mathbb{Z}_{p}$ and set $\mathfrak{D}=g^d, \hat{D}'=\hat{D}$. For $i\in\mathcal{N}$, if $i\in S$, $D_{i, 1}'=D_{i, 1}\cdot(T_{i}')^d$, $D_{i, 2}'D_{i, 2}\cdot(T_{2n+i}')^d$; otherwise, $D_{i, 1}'=D_{i, 1}\cdot(T_{n+i}')^d$, $D_{i, 2}'=D_{i, 2}\cdot(T_{2n+i}')^d$; $\mathfrak{C}$ is the ciphertext of $\mathfrak{D}$ under the access structure $\mathbb{A}$.
 
-It outputs \emph{rk}=$\langle$\emph{$S, AS, {(D'_{i, 1}, D'_{i, 2})}_{i \in \mathcal{N}}, \hat{D}', \mathfrak{C}$}$\rangle$.\\
+It outputs $rk=\langle S,\mathbb{A}, {(D'_{i, 1}, D'_{i, 2})}_{i\in\mathcal{N}},\hat{D}',\mathfrak{C} \rangle$.\\
 
 \noindent
-\textbf{ReEnc}(\emph{rk}, \emph{C}) Let \emph{rk} denote a valid re-key consisting of $\langle$\emph{$S, AS', {(D'_{i, 1}, D'_{i, 2})}_{i \in \mathcal{N}}, \hat{D}', \mathfrak{C}$}$\rangle$ and \emph{C} denote a well-formed ciphertext $\langle$\emph{$AS, \tilde{C}, \hat{C}, \breve{C}, (C_{i})_{(i \in \mathcal{N})}$}$\rangle$, It checks if \emph{S} satisfies \emph{AS}, if not, output $\bot$; otherwise, for \emph{i} $\in$ $\mathcal{N}$:
+\textbf{ReEnc}$(rk,CT)$ Let $rk$ denote a valid re-key consisting of $\langle S,\mathbb{A}',{(D'_{i, 1}, D'_{i,2})}_{i\in\mathcal{N}}, \hat{D}',\mathfrak{C} \rangle$ and $CT$ denote a well-formed ciphertext $\langle \mathbb{A},\tilde{C},\hat{C},\breve{C},(C_{i})_{(i \in \mathcal{N})} \rangle$, It checks if $S$ satisfies $\mathbb{A}$, if not, output $\bot$; otherwise, for $i\in\mathcal{N}$:
 \begin{itemize}
-\item \emph{$+d_{i}$} appears in \emph{AS}, \emph{$E_{i}=e(C_{i}, D'_{i, 1})=e(g^{t_{i}s}, h^\frac{r_{i}+d}{t_{i}})=e(g, h)^{s(r_{i}+d)}$};
-\item \emph{$-d_{i}$} appears in \emph{AS}, \emph{$E_{i}=e(C_{i}, D'_{i, 1})=e(g^{t_{n+i}s}, h^\frac{r_{i}+d}{t_{n+i}})=e(g, h)^{s(r_{i}+d)}$};
-\item otherwise, \emph{$E_{i}=e(C_{i}, D'_{i, 1})=e(g^{t_{2n+i}s}, h^\frac{r_{i}+d}{t_{2n+i}})=e(g, h)^{s(r_{i}+d)}$};
+\item $+d_{i}$ appears in $\mathbb{A}$, $E_{i}=e(C_{i}$, $D'_{i, 1})=e(g^{t_{i}s}$, $h^\frac{r_{i}+d}{t_{i}})=e(g,h)^{s(r_{i}+d)}$;
+\item $-d_{i}$ appears in $\mathbb{A}$, $E_{i}=e(C_{i}$, $D'_{i, 1})=e(g^{t_{n+i}s}$, $h^\frac{r_{i}+d}{t_{n+i}})=e(g,h)^{s(r_{i}+d)}$;
+\item otherwise, $E_{i}=e(C_{i}$, $D'_{i, 1})=e(g^{t_{2n+i}s}$, $h^\frac{r_{i}+d}{t_{2n+i}})=e(g, h)^{s(r_{i}+d)}$;
 \end{itemize}
 
-It then computes $\bar{C}$=\emph{$e(\hat{C}, \hat{D}')\prod_{i \in \mathcal{N}}E_{i}=e(g^s, h^{y-\sum^n_{i=1}r_{i}})\cdot e(g, h)^{nds+s\sum^n_{i=1}r_{i}}=e(g, h)^{nds+ys}$}; output a re-encrypted
-ciphertext \emph{$C'$}=$\langle$\emph{$AS', \tilde{C}, \bar{C}, \breve{C}, \mathfrak{C}$}$\rangle$.
+It then computes $\bar{C}=e(\hat{C},\hat{D}')\prod_{i\in\mathcal{N}}E_{i}=e(g^s,h^{y-\sum^n_{i=1}r_{i}})\cdot e(g,h)^{nds+s\sum^n_{i=1}r_{i}}=e(g, h)^{nds+ys}$; output a re-encrypted
+ciphertext $CT'=\langle \mathbb{A}',\tilde{C},\bar{C},\breve{C},\mathfrak{C} \rangle$.
 
-\textbf{Dec}(\emph{C}, \emph{usk}) Let \emph{usk} denote a valid secret key $\langle$\emph{$S, {(D_{i, 1}, D_{i, 2})}_{i \in \mathcal{N}}, \hat{D}$}$\rangle$. It checks if \emph{S} satisfies \emph{AS}, if not, output $\bot$; otherwise, do
+\textbf{Dec}$(CT,usk)$ Let $usk$ denote a valid secret key $\langle S,{(D_{i, 1}, D_{i, 2})}_{i\in\mathcal{N}},\hat{D} \rangle$. It checks if $S$ satisfies $\mathbb{A}$, if not, output $\bot$; otherwise, do
 \begin{enumerate}
-\item If C is an original well-formed ciphertext consisting of $\langle$\emph{$AS, \tilde{C}, \hat{C}, \breve{C}, (C_{i})_{(i \in \mathcal{N})}$}$\rangle$, for \emph{i} $\in$ $\mathcal{N}$:
+\item If $CT$ is an original well-formed ciphertext consisting of $\langle \mathbb{A},\tilde{C},\hat{C},\breve{C},(C_{i})_{(i\in\mathcal{N})} \rangle$, for $i\in\mathcal{N}$:
     \begin{itemize}
-\item \emph{$+d_{i}$} appears in \emph{AS}, \emph{$E_{i}=e(C_{i}, D_{i, 1})=e(T^s_{i}, h^\frac{r_{i}}{t_{i}})=e(g, h)^{sr_{i}}$};
-\item \emph{$-d_{i}$} appears in \emph{AS}, \emph{$E_{i}=e(C_{i}, D_{i, 1})=e(T^s_{n+i}, h^\frac{r_{i}}{t_{n+i}})=e(g, h)^{sr_{i}}$};
+\item $+d_{i}$ appears in $\mathbb{A}$, $E_{i}=e(C_{i}$, $D_{i, 1})=e(T^s_{i}$,$h^\frac{r_{i}}{t_{i}})=e(g, h)^{sr_{i}}$;
+\item $-d_{i}$ appears in $\mathbb{A}$, $E_{i}=e(C_{i}$, $D_{i, 1})=e(T^s_{n+i}$,$h^\frac{r_{i}}{t_{n+i}})=e(g, h)^{sr_{i}}$;
 \item otherwise, \emph{$E_{i}=e(C_{i}, D_{2n+i, 1})=e(T^s_{i}, h^\frac{r_{i}}{t_{2n+i}})=e(g, h)^{sr_{i}}$};
     \end{itemize}
-It outputs \emph{$\frac{\tilde{C}}{e(\hat{C}, \hat{D})\cdot\prod_{i \in \mathcal{N}}E_{i}}=\frac{m\cdot e(g, h)^{ys}}{e(g, h^{y-r})\cdot e(g, h)^{sr}}=m$}.
-\item Else if \emph{C} is a re-encrypted well-formed ciphertext consisting of $\langle$\emph{$AS', \tilde{C}, \bar{C}, \breve{C}, \mathfrak{C}$}$\rangle$, it decrypts $\mathfrak{C}$ using \emph{usk} and obtains $\mathfrak{D}=g^d$. Then, it outputs \emph{$\frac{\tilde{C}e(\mathfrak{D}, \breve{C})^n}{\bar{C}}=\frac{m\cdot e(g, h)^{ys}\cdot e(g^d, h^s)^n}{e(g, h)^{ys+nds}}=m$}.
-\item Else if \emph{C} is a multi-time re-encrypted well-formed ciphertext, decryption is similar with the above phases.
+It outputs $\frac{\tilde{C}}{e(\hat{C},\hat{D})\cdot\prod_{i\in\mathcal{N}}E_{i}}=\frac{m\cdot e(g, h)^{ys}}{e(g,h^{y-r})\cdot e(g, h)^{sr}}=\mathcal{M}$.
+\item Else if $CT$ is a re-encrypted well-formed ciphertext consisting of $\langle \mathbb{A}',\tilde{C},\bar{C},\breve{C},\mathfrak{C} \rangle$, it decrypts $\mathfrak{C}$ using $usk$ and obtains $\mathfrak{D}=g^d$. Then, it outputs $\frac{\tilde{C}e(\mathfrak{D},\breve{C})^n}{\bar{C}}=\frac{m\cdot e(g,h)^{ys}\cdot e(g^d, h^s)^n}{e(g,h)^{ys+nds}}=\mathcal{M}$.
+\item Else if $CT$ is a multi-time re-encrypted well-formed ciphertext, decryption is similar with the above phases.
 \end{enumerate}
 
 
@@ -245,10 +244,10 @@ This scheme is securely constructed in the standard model. The dual encryption s
 \subsubsection{Multi-authority And distributed ABE (by Ziheng Ding)}
 \indent In traditional Attribute Based Encryption(ABE) scheme, it cannot solve the problem when attributes belong to diverse servers, since these servers cannot be totally trusted by others. For instance, if attributes which are ID number and major of one user belong to governmental authority and college respectively, information is unable to be shared because government and college do not believe each other. To solve this problem, the first solution titled Multi-Authority Attribute Based Encryption\cite{Chase:TCC'07} was proposed. Two methods was introduced in this scheme. The first one is Global Identifier(GID), which means every receiver is given a unique number illustrating their identity. GID are able to be verified by all authorities, while no one would have access to it expect the user himself. Another tool is Central Authority which is totally trusted by all users and other authority. The specific scheme was divided into 5 steps:
 
-\noindent\textbf{System}  It output the system public key and security parameter and system public key Y$_{0}$.   \\
-\textbf{Attribute Authority k} For authority k, authority secret key (s$_{k}$,t$_{k,1}$...t$_{k,n}$,) and authority public key (T$_{k,1}$...T$_{k,n}$) is established in this step.Besides, user u would have a unique secret key D$_{k,i}$ here.\\
-\textbf{Central Authority}  Every authority gets a central authority secret key s$_{k}$ here. Like other authority, a secret key D$_{CA}$ would be established. Noteworthy is that includes the secret key of all authorities.   \\
-\textbf{Encrypt}  this algorithm that takes a message m as input and the cipher text as output (E,E$_(CA)$).\\
+\noindent\textbf{System}  It output the system public key and security parameter and system public key $Y_{0}$.   \\
+\textbf{Attribute Authority $k$} For authority $k$, authority secret key ($s_{k}$,$t_{k,1}$...$t_{k,n}$), and authority public key ($T_{k,1}$...$T_{k,n}$) is established in this step. Besides, user u would have a unique secret key $D_{k,i}$ here.\\
+\textbf{Central Authority}  Every authority gets a central authority secret key $s_{k}$ here. Like other authority, a secret key $D_{CA}$ would be established. Noteworthy is that includes the secret key of all authorities.   \\
+\textbf{Encrypt}  this algorithm that takes a message m as input and the cipher text as output($E,E_(CA)$).\\
 \textbf{Decrypt} Receiver has to recover the message according to its attributes.\\
 \indent The advantages are obvious. Central authority ensure that the scheme is safe even if some normal authorities are corrupted. To be more specific,when some are dishonest,the secret key of Central authority could prevent illegal decryption by other attributes which are still honest. It is also arguable that authorities are able to decrease their burden distributing secret keys as well as monitoring attributes. Since each attribute is monitored by a diverse authority and central authority monitor none. In addition,an increasing number of schemes was proposed to perfect Multi-Authority ABE with more functions. For example,in MA Verifiable ABE\cite{Qiang:JWU'08}, user has ability to check which authority gives wrong secret key and when key of authority fails in verification, he only need to send corresponding part again. In MA-ABE Scheme with Revocation \cite{XiaoFang:ICCCN'15}, revocation could be achieved by using attributes classification management.Cloud computing is also utilized in MA-ABE which is introduced in Online/offline unbounded MA-ABE for data sharing in mobile cloud computing \cite{Yinghui:Wiley'16}.
 \indent On the other hand, central authority are prone to bring certain risks that if it was corrupted, the whole scheme would be broken. Due to reducing the severe reliance on central authority, the Secure threshold multi authority attribute based encryption without a central authority was introduced\cite{Huang:INDOCRYPT'08}. Two protocols, distributed key generation protocol (DKG) and joint zero secret sharing protocol (JZSS), make the major contribution.Another approach is that several authorities could be in charge of the qualified specific attributes' key distribution in Efficient Statically-Secure Large-Universe Multi-Authority Attribute-Based Encryption\cite{Yannis:FC'15}.
@@ -282,10 +281,11 @@ This scheme is securely constructed in the standard model. The dual encryption s
 %\end{tabular}}
 %\end{table}
 \\
-\indent table2 and table 3 contains the comparison in the length of user's key and ciphertext and performance comparison. t$_{e1}$,t$_{e2}$ denotes the time spent on two different bilinear group operations, t$_{p}$ denotes the time spent on pairing operation, k means the number of authority. The table compares the efficiency of diverse scheme.
+\indent Table~\ref{tab:commult} contains the comparison in the length of user's key and ciphertext and performance comparison. t$_{e1}$,t$_{e2}$ denotes the time spent on two different bilinear group operations, $t_{p}$ denotes the time spent on pairing operation, $k$ means the number of authority. The table compares the efficiency of diverse scheme.
 \\
 \begin{table*}
 \caption{the comparison in the length of user's key and ciphertext  }
+\label{tab:commult}
  \centering
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
