@@ -244,10 +244,10 @@ This scheme is securely constructed in the standard model. The dual encryption s
 \subsubsection{Multi-authority And distributed ABE (by Ziheng Ding)}
 \indent In traditional Attribute Based Encryption(ABE) scheme, it cannot solve the problem when attributes belong to diverse servers, since these servers cannot be totally trusted by others. For instance, if attributes which are ID number and major of one user belong to governmental authority and college respectively, information is unable to be shared because government and college do not believe each other. To solve this problem, the first solution titled Multi-Authority Attribute Based Encryption\cite{Chase:TCC'07} was proposed. Two methods was introduced in this scheme. The first one is Global Identifier(GID), which means every receiver is given a unique number illustrating their identity. GID are able to be verified by all authorities, while no one would have access to it expect the user himself. Another tool is Central Authority which is totally trusted by all users and other authority. The specific scheme was divided into 5 steps:
 
-\noindent\textbf{System}  It output the system public key and security parameter and system public key Y$_{0}$.   \\
-\textbf{Attribute Authority k} For authority k, authority secret key (s$_{k}$,t$_{k,1}$...t$_{k,n}$,) and authority public key (T$_{k,1}$...T$_{k,n}$) is established in this step.Besides, user u would have a unique secret key D$_{k,i}$ here.\\
-\textbf{Central Authority}  Every authority gets a central authority secret key s$_{k}$ here. Like other authority, a secret key D$_{CA}$ would be established. Noteworthy is that includes the secret key of all authorities.   \\
-\textbf{Encrypt}  this algorithm that takes a message m as input and the cipher text as output (E,E$_(CA)$).\\
+\noindent\textbf{System}  It output the system public key and security parameter and system public key $Y_{0}$.   \\
+\textbf{Attribute Authority $k$} For authority $k$, authority secret key ($s_{k}$,$t_{k,1}$...$t_{k,n}$), and authority public key ($T_{k,1}$...$T_{k,n}$) is established in this step. Besides, user u would have a unique secret key $D_{k,i}$ here.\\
+\textbf{Central Authority}  Every authority gets a central authority secret key $s_{k}$ here. Like other authority, a secret key $D_{CA}$ would be established. Noteworthy is that includes the secret key of all authorities.   \\
+\textbf{Encrypt}  this algorithm that takes a message m as input and the cipher text as output($E,E_(CA)$).\\
 \textbf{Decrypt} Receiver has to recover the message according to its attributes.\\
 \indent The advantages are obvious. Central authority ensure that the scheme is safe even if some normal authorities are corrupted. To be more specific,when some are dishonest,the secret key of Central authority could prevent illegal decryption by other attributes which are still honest. It is also arguable that authorities are able to decrease their burden distributing secret keys as well as monitoring attributes. Since each attribute is monitored by a diverse authority and central authority monitor none. In addition,an increasing number of schemes was proposed to perfect Multi-Authority ABE with more functions. For example,in MA Verifiable ABE\cite{Qiang:JWU'08}, user has ability to check which authority gives wrong secret key and when key of authority fails in verification, he only need to send corresponding part again. In MA-ABE Scheme with Revocation \cite{XiaoFang:ICCCN'15}, revocation could be achieved by using attributes classification management.Cloud computing is also utilized in MA-ABE which is introduced in Online/offline unbounded MA-ABE for data sharing in mobile cloud computing \cite{Yinghui:Wiley'16}.
 \indent On the other hand, central authority are prone to bring certain risks that if it was corrupted, the whole scheme would be broken. Due to reducing the severe reliance on central authority, the Secure threshold multi authority attribute based encryption without a central authority was introduced\cite{Huang:INDOCRYPT'08}. Two protocols, distributed key generation protocol (DKG) and joint zero secret sharing protocol (JZSS), make the major contribution.Another approach is that several authorities could be in charge of the qualified specific attributes' key distribution in Efficient Statically-Secure Large-Universe Multi-Authority Attribute-Based Encryption\cite{Yannis:FC'15}.
@@ -281,10 +281,11 @@ This scheme is securely constructed in the standard model. The dual encryption s
 %\end{tabular}}
 %\end{table}
 \\
-\indent table2 and table 3 contains the comparison in the length of user's key and ciphertext and performance comparison. t$_{e1}$,t$_{e2}$ denotes the time spent on two different bilinear group operations, t$_{p}$ denotes the time spent on pairing operation, k means the number of authority. The table compares the efficiency of diverse scheme.
+\indent Table~\ref{tab:commult} contains the comparison in the length of user's key and ciphertext and performance comparison. t$_{e1}$,t$_{e2}$ denotes the time spent on two different bilinear group operations, $t_{p}$ denotes the time spent on pairing operation, $k$ means the number of authority. The table compares the efficiency of diverse scheme.
 \\
 \begin{table*}
 \caption{the comparison in the length of user's key and ciphertext  }
+\label{tab:commult}
  \centering
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline

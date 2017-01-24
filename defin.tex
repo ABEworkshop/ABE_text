@@ -71,12 +71,12 @@ due to the fact that the direct construct of ABE schemes can usually be achieved
 
 Compared with normal public key encryption,
 ABE has some subtle variations for the reason of the fine-grained property mentioned in our introduction.
-Fine-grained property coucludes two sides: granting differential access rights to a set of users and 
+Fine-grained property coucludes two sides: granting differential access rights to a set of users and
 allowing flexibility in specifying the access rights of individual users.
 Then both of the two sides naturally result in that
-it is most probable that the adversary can obtain the private keys for the many permission $X$( i.e, attribute sets for CP-ABE or access structure for KP-ABE) from other users or from the adversary himself. 
-For example, there are two data encrypted to $S1$ and $S2$ respectively in a KP-ABE system. 
-the adversary, who is qualified to data$1$ and not to data$2$, obtains the the private key for his access structure from himself, in order to break the data$1$ .
+it is most probable that the adversary can obtain the private keys for the many permission $X$( i.e, attribute sets for CP-ABE or access structure for KP-ABE) from other users or from the adversary himself.
+For example, there are two data encrypted to set $S1$ and set $S2$ respectively in a KP-ABE system.
+The adversary, who is qualified to data$1$ and not to data$2$, obtains the the private key for his access structure from himself, in order to break the data$2$ .
 Therefore, when the weakest \textbf{IND-CPA} of three security models is straightforward defined on ABE,
 the ABE scheme under normal \textbf{IND-CPA} is completely insecure.
 Implementing in ABE, other security models have the same problem in the same way.
@@ -117,7 +117,7 @@ Similarly, the decryption oracle $\mathcal{O}_{dec}$ for ABE have the analogous 
 formal definition on $\mathcal{O}_{keygen}$ and $\mathcal{O}_{dec}$ are shown as follows.
 \begin{itemize}
   \item $\mathcal{O}_{keygen}$: On input a permission $X$, outputs a private key $SK_X \leftarrow$ \textbf{KeyGen}$(MK,PK,X)$.
-  If the challenge ciphertext index $Y^\ast$ has not been submitted yet, 
+  If the challenge ciphertext index $Y^\ast$ has not been submitted yet,
   the inputs $X$ do not have any constraint.
   Otherwise, those inputs $X_i$ satisfying $f_{as}(X_i,Y)=1$ are invalid for $\mathcal{O}_{keygen}$.
   \item $\mathcal{O}_{dec}$: On input a ciphertext $CT_Y$ encrypted to $Y$,

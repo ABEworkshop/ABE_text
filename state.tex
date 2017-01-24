@@ -1,24 +1,24 @@
 \section{State-of-the-Art}
 %In this section,we attempt to survey the existing literature and constructions for ABE schemes over the period 2005-2016 from the aspects of three trunk clues,function,efficiency and security.Then we explain how do we arrive at more  logical and clear clues on the development of ABE.\subsection{the development Of ABE}
 \subsection{the birth of ABE (by Lei Xu)}
-Attribute-based encryption originates from fuzz identity based encryption \cite{Sahai:EUROCRYPT'05} by Sahai and Waters. 
+Attribute-based encryption originates from fuzz identity based encryption \cite{Sahai:EUROCRYPT'05} by Sahai and Waters.
 %this idea Hierarchical identity-based encryption schemes\cite{Danfeng:CCS'04}and
 Fuzz identity based encryption supports decrypting by the attributes with selectable lower-limit number,
 due to use of the threshold secret sharing technology \cite{Shamir:CACM'79}.
 After that, beyond the threshold policy, much attention on general policy has been paid.
 The general policy can tie data owner with data user by a series of formalized constraint,
-which supports general relationship among attributes.
+which supports general constraint among attributes.
 %point-to-point constraint(corresponding the privilege management infrastructure technology)
-Access control technology just performs well,
+For the general policy, access control technology just performs well,
 and attribute-based encryption has perfectly formed only when this technology are put into use.
-More specifically, by using access control technology, ABE inherently includes two types of manners, KP-ABE and CP-ABE.
+Further, by using access control technology, ABE inherently includes two types of manners, KP-ABE and CP-ABE.
 Goyal \emph{et al.} \cite{Goyal:CCS'06} propose the first KP-ABE scheme,
 while Bethencourt \emph{et al.} \cite{Bethencourt:SP'07} constructs the first CP-ABE scheme.
 These two schemes concretely achieve the access control,
 so we contend that they sign the birth of ABE.
 Since then, the researches on ABE tend to be booming,
 and we summarize the trunk directions of development on ABE,
-i.e, function, efficiency, security and expressions on access control.
+i.e, function, security and efficiency.
 \subsection{efficiency (by Hao Zhang)}
 ABE brings a new idea of encryption. Whereas in today's life it is not widely used, the traditional ABE encryption and decryption speed can not make people satisfied in nowadays big data situation on the Internet. Based on this dilemma, many new ABE schemes are proposed to improve the efficiency of ABE. The first is ABE with constant ciphertext length. The length of the ciphertext depends on the number of attributes in previous ABE schemes. Emura \cite{Keita:ISPEC'09} first put forward the ABE with constant ciphertext length, unlike the previous ABE schemes they put the user attributes in one set, the whole set is used as the generation of ciphertext, so that fixed the ciphertext length. Then Herranz \cite{Javier:PKC'10} propose the collusion-resistant ABE scheme with constant ciphertext length. Even if the ABE with constant ciphertext length is not secure enough, thus in 2013 Doshi \cite{Nishant:Wiley'14} proposed a fully secure ABE with constant ciphertext length, that makes the ABE with constant ciphertext length can be in the security with a higher efficiency.
 	However, in order to improve the efficiency of the ABE scheme, not only the constant ciphertext length of this scheme. Guo \cite{Fuchun:TIFS'14} in 2014 proposed a constant keys length rather than the ciphertext length of the ABE scheme makes ABE scheme can be applied to lightweight devices. In addition to constant ciphertext and constant keys way, there is another way to improve efficiency. Ibraimi \cite{Luan:ISPEC'09} proposed a highly efficient CP-ABE scheme with "?" and "?" access structure. By operating on the access structure, decryption is used only once to improve efficiency. Attrapadung \cite{Nuttapong:ACNS'16} proposed the size of the ciphertext and the size of the key tradeoff scheme can be carried out directly to improve the efficiency of ABE scheme.

@@ -44,14 +44,15 @@ Attribute Based Encryption can be divided into two categories: Key-Policy Attrib
 An attribute-based encryption is defined by the following algorithms
 \end{ABE}
 \begin{itemize}
-\item\textbf{Setup}$(\lambda,U)$~This is a randomized algorithm that takes the inputs, security parameter $\lambda$ and system attribute set $U$. It outputs the public parameters PK and a master key MK.
-\item\textbf{KeyGen}$($MK$,$ PK$,X)$~The key generation algorithm takes as input the master key MK, public parameters PK and an permission $X$, It outputs a private key SK$_X$.
-\item\textbf{Encrypt}$(\mathcal{M},$ PK$,Y)$~This is a randomized algorithm that takes as input a message $\mathcal{M}$, the public parameters PK and a ciphertext index $Y$. It outputs the ciphertext CT$_Y$.
-\item\textbf{Decrypt}$($PK$,$ CT$_Y,$ SK$_X)$~The decryption algorithm takes as input the public parameters PK, a ciphertext CT$_Y$, the decryption key SK$_X$. It outputs the result of decrypt $\mathcal{M}$.
+\item\textbf{Setup}$(\lambda,U)$~This is a randomized algorithm that takes the inputs, security parameter $\lambda$ and system attribute set $U$. It outputs the public parameters $PK$ and a master key $MK$.
+\item\textbf{KeyGen}$(MK,PK,X)$~The key generation algorithm takes as input the master key $MK$, public parameters $PK$ and a permission $X$, It outputs a private key $SK_X$.
+\item\textbf{Encrypt}$(\mathcal{M},PK,Y)$~This is a randomized algorithm that takes as input a message $\mathcal{M}$, the public parameters $PK$ and a ciphertext index $Y$. It outputs the ciphertext $CT_Y$.
+\item\textbf{Decrypt}$(PK,CT_Y,SK_X)$~The decryption algorithm takes as input the public parameters $PK$, a ciphertext $CT_Y$, the decryption key $SK_X$. It outputs the result of decrypt $\mathcal{M}$.
 \end{itemize}
 \textbf{correctness}. The correctness of a attribute based encryption scheme requires that the following equations hold with probability one:
 
-\noindent\textbf{Decrypt}$($PK$,$\textbf{KeyGen}$($MK$,$PK$,X),$\textbf{Encrypt}$(\mathcal{M},$PK$,Y))=~\mathcal{M}$
+\noindent\textbf{Decrypt}$(PK,$\textbf{KeyGen}$(MK,PK,X),$\textbf{Encrypt}$(\mathcal{M},PK,Y))\\
+=\mathcal{M}$
 
 \indent It should be noted that the permission $X$ of CP-ABE is a set of attributes that describe the key while in KP-ABE is an access structure. The ciphertext index $Y$ is an access structure in CP-ABE and is a set of attribute in KP-ABE.
 In addition, for the sake of avoiding distinguishing KP-ABE with CP-ABE,
@@ -70,10 +71,12 @@ due to the fact that the direct construct of ABE schemes can usually be achieved
 
 Compared with normal public key encryption,
 ABE has some subtle variations for the reason of the fine-grained property mentioned in our introduction.
-Fine-grained property means that granting differential access rights to a set of users and that
+Fine-grained property coucludes two sides: granting differential access rights to a set of users and
 allowing flexibility in specifying the access rights of individual users.
-Then both of the characteristics of ABE naturally result in that
+Then both of the two sides naturally result in that
 it is most probable that the adversary can obtain the private keys for the many permission $X$( i.e, attribute sets for CP-ABE or access structure for KP-ABE) from other users or from the adversary himself.
+For example, there are two data encrypted to $S1$ and $S2$ respectively in a KP-ABE system.
+the adversary, who is qualified to data$1$ and not to data$2$, obtains the the private key for his access structure from himself, in order to break the data$2$ .
 Therefore, when the weakest \textbf{IND-CPA} of three security models is straightforward defined on ABE,
 the ABE scheme under normal \textbf{IND-CPA} is completely insecure.
 Implementing in ABE, other security models have the same problem in the same way.
@@ -113,15 +116,15 @@ where $f_{as}(X_i,Y^\ast)=1$ for all $j$.
 Similarly, the decryption oracle $\mathcal{O}_{dec}$ for ABE have the analogous restriction.
 formal definition on $\mathcal{O}_{keygen}$ and $\mathcal{O}_{dec}$ are shown as follows.
 \begin{itemize}
-  \item $\mathcal{O}_{keygen}$: On input a permission $X$, outputs a private key SK$_X \leftarrow$ \textbf{KeyGen}$($MK$,$PK,$X)$.
+  \item $\mathcal{O}_{keygen}$: On input a permission $X$, outputs a private key $SK_X \leftarrow$ \textbf{KeyGen}$(MK,PK,X)$.
   If the challenge ciphertext index $Y^\ast$ has not been submitted yet,
   the inputs $X$ do not have any constraint.
   Otherwise, those inputs $X_i$ satisfying $f_{as}(X_i,Y)=1$ are invalid for $\mathcal{O}_{keygen}$.
-  \item $\mathcal{O}_{dec}$: On input a ciphertext CT$_Y$ encrypted to $Y$,
+  \item $\mathcal{O}_{dec}$: On input a ciphertext $CT_Y$ encrypted to $Y$,
   $\mathcal{O}_{dec}$ create a $X$, which make $f_{as}(X,Y)=1$ hold.
-  Then runs SK$_X \leftarrow$ \textbf{KeyGen}$($MK$,$ PK$,X)$ and $\mathcal{M} \leftarrow$ \textbf{Decrypt}$($PK$,$ CT$_Y,$ SK$_X)$.
+  Then runs $SK_X \leftarrow$ \textbf{KeyGen}$(MK,PK,X)$ and $\mathcal{M} \leftarrow$ \textbf{Decrypt}$(PK,CT_Y,SK_X)$.
   Finally, outputs the $\mathcal{M}$. Note that the input can be the ciphertext encrypted to $Y^\ast$,
-  while the challenge ciphertext CT$^\ast$ submitted is invalid input for $\mathcal{O}_{keygen}$.
+  while the challenge ciphertext $CT^\ast$ submitted is invalid input for $\mathcal{O}_{keygen}$.
 \end{itemize}
 
 
@@ -161,7 +164,7 @@ $\{\mathcal{O}_{keygen},\mathcal{O}_{dec}\}$&$\{\mathcal{O}_{keygen},\mathcal{O}
 Although there has not been a present ABE scheme with CCA1 security,
 we also describe CCA1 attack model in order to deal with the situation that the ABE scheme under CCA1 attack without any assistant technologies appears.
 
-\subsubsection{Attack Definition}
+\subsubsection{Security Definition}
 The definition of security in ABE processes by incorporating the indistinguishability game
 and the family of the above-mentioned attack models.
 For indistinguishability game with respect to three kinds attack models,
@@ -171,23 +174,23 @@ the only difference lies in whether or not $\mathcal{A}_1$ and $\mathcal{A}_2$ a
 Let $\Sigma$ = (\textbf{Setup}, \textbf{KeyGen}, \textbf{Encrypt}, \textbf{Decrypt}) be a attribute-based encryption scheme,
 $\mathcal{A} = (\mathcal{A}_1, \mathcal{A}_2)$ be a probabilistic polynomial-time adversary and
 $\mathcal{O}_1$ and $\mathcal{O}_2$ be the set of available oracles for $\mathcal{A}_1$ and $\mathcal{A}_2$, respectively.
-For the security parameter $k \in \mathbb{N}$ and $atk \in \{CPA, CCA1, CCA2\}$,
+For the security parameter $\lambda \in \mathbb{N}$ and $atk \in \{\text{CPA, CCA1, CCA2}\}$,
 the indistinguishability game is defined by the following experiment.
 \end{ABEgame}
-\textbf{Exp}$_{\Sigma,\mathcal{A},b}^{IND-atk}(k)$:
+\textbf{Exp}$_{\Sigma,\mathcal{A},b}^{IND-atk}(\lambda)$:
 \begin{eqnarray*}
-  (\text{MK}, \text{PK}) &\leftarrow& \textbf{Setup}(\lambda,U); \\
-  (M_0,M_1,Y^\ast) &\leftarrow& \mathcal{A}_1^{\mathcal{O}_1}(\text{PK}); \\
+  (MK,PK) &\leftarrow& \textbf{Setup}(\lambda,U); \\
+  (\mathcal{M}_0,\mathcal{M}_1,Y^\ast) &\leftarrow& \mathcal{A}_1^{\mathcal{O}_1}(PK); \\
   b &\leftarrow& \{0, 1\}; \\
-  CT^\ast &\leftarrow& \textbf{Encrypt}(\text{PK},Y^\ast,M_b); \\
-  b^\prime &\leftarrow& \mathcal{A}_2^{\mathcal{O}_2}(\text{PK},CT^\ast,M_0,M_1,Y^\ast).
+  CT^\ast &\leftarrow& \textbf{Encrypt}(PK,Y^\ast,\mathcal{M}_b); \\
+  b^\prime &\leftarrow& \mathcal{A}_2^{\mathcal{O}_2}(\text{PK},CT^\ast,\mathcal{M}_0,\mathcal{M}_1,Y^\ast).
 \end{eqnarray*}
 where $\mathcal{O}_1$ and $\mathcal{O}_2$ are defined according to the attack model atk,
 as described on Table~\ref{tab:attackmodel}.
 
 \newtheorem{ABEsec}[ABE]{Definition}
 \begin{ABEsec}
-For $\lambda \in N$, the ABE scheme $\Sigma$ is said to be \textbf{IND-ABE-atk} secure
+For $\lambda \in \mathbb{N}$, the ABE scheme $\Sigma$ is said to be \textbf{IND-ABE-atk} secure
 if all probabilistic polynomial-time adversaries $\mathcal{A}$ have at most negligible advantage to win the indistinguishability experiment \textbf{Exp}$_{\Sigma,\mathcal{A},b}^{IND-atk}(k)$, where advantage of $\mathcal{A}$ is given by\end{ABEsec}
 \begin{align*}
 %\begin{array}{cc}
@@ -200,12 +203,12 @@ Different from the security models under three attack models,
 the challenge ciphertext index $Y^\ast$ is committed by adversary before the stage \textbf{Setup} in \textbf{Exp}$_{\Sigma,\mathcal{A},b}^{IND-atk}(k)$.
 
 Now we illustrate the defined security models with examples of representative ABE schemes.
-Although Vipul Goyal $et~al.$  and John Bethencourt $et~al.$ content that
+Although Goyal $et~al.$  and Bethencourt $et~al.$ content that
 their KP-ABE scheme \cite{Goyal:CCS'06} and CP-ABE scheme \cite{Bethencourt:SP'07} respectively can be converted to \textbf{IND-ABE-CCA2} security by revising the Canetti-Halevi-Katz (CHK) approach \cite{Ran:EUROCRYPT'04},
 indeed, the two schemes themselves are \textbf{IND-ABE-CPA} security.
-Ling Cheung and Calvin Newport \cite{Ling:CCS'07} apply the CHK technique to construct a IND-ABE-CCA2-secure CP-ABE scheme.
+Cheung and Newport \cite{Ling:CCS'07} apply the CHK technique to construct a IND-ABE-CCA2-secure CP-ABE scheme.
 Given above IND-ABE-CCA2-secure ABE scheme involve one-time signatures due to the CHK technique,
-Weiran Liu $et~al.$ \cite{Weiran:ESORICS'14} exploit Chameleon hash to achieve IND-ABE-CCA2-secure KP-ABE scheme without one-time signature.
+Liu $et~al.$ \cite{Weiran:ESORICS'14} exploit Chameleon hash to achieve IND-ABE-CCA2-secure KP-ABE scheme without one-time signature.
 As mentioned above, as far as we know there has been not a ABE scheme just satisfying the \textbf{IND-ABE-CCA1} security.
 The concrete comparison of the representative ABE schemes involved in security notions can be found in the Table~\ref{wangyi}.
 
